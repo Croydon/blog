@@ -21,7 +21,11 @@ for subdir, dirs, files in os.walk("./"):
                         "content=\"http://localhost/", 
                         "content=\"https://blog.cr0ydon.com/"
                         )
-                    
+                    line = line.replace(
+                        "content=\"/assets/",
+                        "content=\"https://blog.cr0ydon.com/assets/"
+                    )
+
                     content += re.sub("href=\"(?!http)(.*)/index\.html\"",
                                     "href=\"\\1/\"", 
                                     line
