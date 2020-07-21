@@ -13,7 +13,7 @@ jobs:
     - name: "Checkout Blog Theme"
       uses: actions/checkout@v2
       with:
-        repository: "Croydon/pico-template-historia"
+        repository: "Croydon/pico-theme-historia"
         path: "theme"
     - name: "Checkout Blog Assets"
       uses: actions/checkout@v2
