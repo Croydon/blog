@@ -7,7 +7,7 @@
  * <https://github.com/picocms/pico-composer/blob/master/index.php>
  *
  * SPDX-License-Identifier: MIT
- * License-Filename: LICENSE
+ * License-Filename: pico-LICENSE
  */
 
 // load dependencies
