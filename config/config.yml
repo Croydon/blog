@@ -1,0 +1,33 @@
+##
+# Basic
+
+# The title of your website
+site_title: Cr0ydon's Blog
+# A boolean (true or false) indicating whether URL rewriting is forced
+rewrite_url: true                  
+
+
+##
+# Theme
+
+# The name of your custom theme
+theme: historia                     
+
+
+##
+# Content
+
+# Pico's default date format;
+# See https://php.net/manual/en/function.strftime.php for more info
+date_format: "%d %B %Y"
+# Change how Pico sorts pages ("alpha" for alphabetical order, "date", or "meta")
+pages_order_by: date               
+# Sort pages in ascending ("asc") or descending ("desc") order
+pages_order: asc                 
+
+##
+# Custom
+
+# Note im Footer
+footnote: "© Cr0ydon"
+icon_png: "/assets/general/icon/icon.png"

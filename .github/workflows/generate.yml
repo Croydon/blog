@@ -1,0 +1,66 @@
+on: [push,]
+
+jobs:
+  generate-blog:
+    name: "Generate Blog"
+    runs-on: ubuntu-20.04
+    steps:
+    - name: "Checkout Blog Content"
+      uses: actions/checkout@v2
+      with:
+        path: "pico"
+        fetch-depth: "0"
+    - name: "Checkout Blog Theme"
+      uses: actions/checkout@v2
+      with:
+        repository: "Croydon/pico-template-historia"
+        path: "theme"
+    - name: "Checkout Blog Assets"
+      uses: actions/checkout@v2
+      with:
+        repository: "Croydon/blog-assets"
+        path: "assets"
+    - name: "Install PHP"
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: "7.4"
+        tools: composer
+        extensions: dom, mbstring
+    - name: "Install Python"
+      uses: actions/setup-python@v2
+      with:
+        python-version: "3.x"
+    - name: "Install Apache2 and Wget"
+      run: |
+        sudo apt-get install wget apache2 libapache2-mod-php7.4
+        sudo a2enmod rewrite
+        sudo -u root cp $GITHUB_WORKSPACE/pico/config/apache-site-config.conf /etc/apache2/sites-available/000-default.conf
+        sudo -u root cp $GITHUB_WORKSPACE/pico/config/apache-site-config.conf /etc/apache2/sites-enabled/000-default.conf
+        sudo service apache2 restart
+    - name: "Install Pico"
+      run: |
+        sudo -u root rm -r /var/www/html/*
+        sudo -u root cp -r pico/. /var/www/html/
+        sudo -u root cp -r theme/historia/ /var/www/html/themes/
+        sudo -u root cp -r assets/. /var/www/html/assets/
+        sudo -u root composer --working-dir=/var/www/html install
+    - name: "Generate static export"
+      run: |
+        wget -r -l inf -N --no-verbose --convert-links --adjust-extension "http://localhost"
+        cp pico/config/CNAME localhost/CNAME
+        cd localhost
+        python ../pico/replace-urls.py
+        ls -la 
+    - name: "Deploy 🚀"
+      run: |
+        cd $GITHUB_WORKSPACE/pico 
+        git fetch
+        git checkout gh-pages
+        git config --global user.email "bot@cr0ydon.com"
+        git config --global user.name "CroydonBot"
+        rm -rf ./*
+        sudo -u root cp -r ../localhost/* ./ 
+        git add -A
+        now="$(date +'%Y-%m-%d %H:%M:%S')"
+        git commit -am "Export $now" 
+        git push
