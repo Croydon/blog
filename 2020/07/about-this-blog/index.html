@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>About This Blog - Cr0ydon's Blog</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Technical setup and background information about my blog" />
+
+			<link rel="icon" type="image/png" href="../../../assets/general/icon/icon.png">
+	
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="About This Blog"/>
+	<meta property="og:image" content="/assets/2020/pico/pico.png"/>
+	<meta property="og:url" content="http://localhost/2020/07/about-this-blog/"/>
+	<meta property="og:site_name" content="Cr0ydon's Blog"/>
+	<meta property="og:description" content="Technical setup and background information about my blog"/>
+	<meta name="twitter:title" content="About This Blog" />
+	<meta name="twitter:image" content="/assets/2020/pico/pico.png" />
+	<meta name="twitter:url" content="http://localhost/2020/07/about-this-blog/" />
+	<meta name="twitter:card" content="summary_large_image" />
+
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="../../../themes/historia/css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="../../../themes/historia/css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="../../../themes/historia/css/bootstrap.css">
+	
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="../../../themes/historia/css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="../../../themes/historia/js/modernizr-2.6.2.min.js"></script>
+
+	</head>
+	<body class="single">
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+		<div id="fh5co-aside" style="background-image: url(../../../assets/2020/pico/pico.png)" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<nav role="navigation">
+				<ul>
+					<li><a href="../../../"><i class="icon-home"></i></a></li>
+				</ul>
+			</nav>
+			<div class="page-title">
+				<span>21 July 2020</span>
+				<h2>About This Blog</h2>
+			</div>
+		</div>
+		<div id="fh5co-main-content">
+			<div class="fh5co-post"> 
+				<div class="fh5co-entry padding">
+					<div>
+						<h1>Some Background Information</h1>
+<h2>The Past</h2>
+<p>Previously, I had a German tech blog called  <em>Go DEV!</em> and I posted on it from August 2011 until Juli 2014 with two final posts in April and March 2016.</p>
+<p>It ran with WordPress and therefore with PHP and MySQL. First on one of my webspaces, later on one of my vServers.</p>
+<p>On <em>Go DEV!</em> I posted regularly at the beginning, but the frequency eventually died down. As I explained in the first post back then, the primary concept was to write about computer science news and software which are rather less common - since full-time bloggers will write about the "big news" better anyway as I could as a project in my spare time - but also about computer science basics and every topic that I currently spending time on.</p>
+<p>I tried to write most posts in a formal way, optimized site speed and SEO and spent quite a lot of time on making it more <em>professional</em> (whatever that <em>actual</em> means).
+This did cost too much time eventually.</p>
+<p>In April 2016, I tried to change the concept of the blog. I wrote my first article in English with the title <em>That Is Why Video Games Matter</em>, which was also the first post where I directly wrote about the influence tech can have on a single person and society as a whole.</p>
+<p>Shortly after, in March 2016, I gave the blog a new design, added a TLS certificate / HTTPS support via Let's Encrypt (which was much more unstable and harder to do than today) and wrote about it in a final post.</p>
+<p>A while after, my MySQL server had a complete database corruption, which I could never recover. Thanks to the lack of a comprehensive automated backup strategy, I did not have any up to date version of my blog I could simply restore.</p>
+<p>This was the final blow and my motivation to keep <em>Go DEV!</em> going was gone.</p>
+<h2>The Present</h2>
+<p>Since 2016 I considered several times to start blogging again. Sometimes, there are topics that I would like to write about and share my opinion on. Or I worked on projects, learned a few things and would have loved to share this knowledge with more people.</p>
+<p>It never came that far as I spent my time in university and at home with the original vision of <a href="https://inexor.org">Inexor</a>, which also brought me to <a href="https://conan.io">Conan</a> and <a href="https://github.com/bincrafters">Bincrafters</a>. Not to forget my Firefox add-on <a href="https://github.com/croydon/vertical-tabs-reloaded">Vertical Tabs Reloaded</a> and tons of other bigger and smaller projects. Oh, and I also have a private life.</p>
+<p>Starting today, I give it another shot. My posts will be much more informal than what I wrote on <em>Go DEV!</em> and I will have other priorities about the topics.</p>
+<p>Writing things down is a great way to reflect and getting to the essential information about an issue, without all the noise going on when actively working on a project.</p>
+<p>Which effectively means, that I'm writing for myself too.</p>
+<p>And if anyone else likes to read about it and maybe even can learn a thing or two - great!</p>
+<h2>The Setup</h2>
+<p>While I still think that WordPress has some great features it is just too much for my needs.</p>
+<p>This blog is powered by <a href="http://picocms.org">Pico</a> - a small, simple, flat file CMS. Meaning it has exactly zero MySQL databases which can go corrupt 😄. I have forked the Pico theme <a href="https://github.com/BesrourMS/story"><em>Story</em></a> and named it <a href="https://github.com/Croydon/pico-theme-historia"><em>Historia</em></a> since <em>Story</em> lagged several features that I wanted.</p>
+<p>Pico allows me to write all pages in Markdown, which has none of the confusing layout issues, WordPress produced sometimes which their WYSIWYG-HTML editor.</p>
+<p>All content of this blog is saved in Git repositories - <a href="https://github.com/Croydon/blog/">Croydon/blog</a> and <a href="https://github.com/Croydon/blog-assets">Croydon/blog-assets</a> - meaning a backup strategy is now automatically included by default.</p>
+<p>A GitHub Actions Workflow is installing all parts in their correct places, then it starts an Apache web server and Wget is saving all pages to static HTML files, which are then pushed to GitHub Pages and served with my custom domain <em>blog.cr0ydon.com</em>.</p>
+<p>Voi­là!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="fh5co-navigation">
+		<div class="fh5co-cover prev fh5co-cover-sm" style="background-image: url(../../../assets/2020/hello/hello.png)">
+			<div class="overlay"></div>
+
+			<a class="copy" href="../hello-world/">
+				<div class="display-t">
+					<div class="display-tc">
+						<div>
+							<span>Previous Post</span>
+							<h2>Hello World!</h2>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="fh5co-cover prev fh5co-cover-sm">
+			<div class="overlay"></div>
+			<span class="copy">
+				<div class="display-t">
+				</div>
+			</span>
+		</div>
+	</div>
+	<footer>
+		<div>
+			© Cr0ydon | Design based on <a href="https://demos.freehtml5.co/story/" target="_blank">FreeHTML5.co/story</a> and <a href="https://besrourms.github.io" target="_blank">Mohamed Safouan Besrour</a>'s work.
+		</div>
+	</footer>
+
+	<div class="gototop js-top">
+		<a href="index.html#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="../../../themes/historia/js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script defer src="../../../themes/historia/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script defer src="../../../themes/historia/js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script defer src="../../../themes/historia/js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="../../../themes/historia/js/jquery.stellar.min.js"></script>
+	<!-- Main -->
+	<script src="../../../themes/historia/js/main.js"></script>
+
+	</body>
+</html>
