@@ -22,6 +22,10 @@ for subdir, dirs, files in os.walk("./"):
                         "content=\"https://blog.cr0ydon.com/"
                         )
                     line = line.replace(
+                        "/feed",
+                        "/feed.xml"
+                    )
+                    line = line.replace(
                         "content=\"/assets/",
                         "content=\"https://blog.cr0ydon.com/assets/"
                     )
@@ -33,3 +37,7 @@ for subdir, dirs, files in os.walk("./"):
              
             with open(filepath, "w") as file:
                 file.write(content)
+
+
+# Make feed being parserd as actual xml
+os.rename("feed.html", "feed.xml")
