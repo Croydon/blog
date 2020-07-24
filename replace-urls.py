@@ -21,9 +21,14 @@ for subdir, dirs, files in os.walk("./"):
                         "content=\"http://localhost/", 
                         "content=\"https://blog.cr0ydon.com/"
                         )
+                    if file.endswith(".xml.html"):
+                        line = line.replace(
+                            "http://localhost",
+                            "https://blog.cr0ydon.com"
+                        )
                     line = line.replace(
-                        "/feed",
-                        "/feed.xml"
+                        "/feed.xml.html\"",
+                        "/feed.xml\""
                     )
                     line = line.replace(
                         "content=\"/assets/",
