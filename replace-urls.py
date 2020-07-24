@@ -7,9 +7,9 @@ import re
 # which wget is adding for URls whcih ended on a slash 
 
 for subdir, dirs, files in os.walk("./"):
-    for file in files:
-        if file.endswith(".html"):
-            filepath = os.path.join(subdir, file)
+    for filename in files:
+        if filename.endswith(".html"):
+            filepath = os.path.join(subdir, filename)
             print(filepath)
             content = ""
             with open(filepath) as file:
@@ -21,7 +21,7 @@ for subdir, dirs, files in os.walk("./"):
                         "content=\"http://localhost/", 
                         "content=\"https://blog.cr0ydon.com/"
                         )
-                    if file.endswith(".xml.html"):
+                    if filename.endswith(".xml.html"):
                         line = line.replace(
                             "http://localhost",
                             "https://blog.cr0ydon.com"
