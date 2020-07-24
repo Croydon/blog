@@ -21,13 +21,13 @@ for subdir, dirs, files in os.walk("./"):
                         "content=\"http://localhost/", 
                         "content=\"https://blog.cr0ydon.com/"
                         )
-                    if filename.endswith(".xml.html"):
+                    if filename.endswith("feed.html"):
                         line = line.replace(
                             "http://localhost",
                             "https://blog.cr0ydon.com"
                         )
                     line = line.replace(
-                        "/feed.xml.html\"",
+                        "/feed.html\"",
                         "/feed.xml\""
                     )
                     line = line.replace(
