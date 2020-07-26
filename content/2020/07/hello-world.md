@@ -1,7 +1,7 @@
 ---
 Title: Hello World!
 Description: Welcome to my new blog!
-Date: 2020-07-21 10:00
+Date: 2020-07-21 10:00 +0200
 Image: /assets/2020/hello/hello.png
 Template: single
 ---
