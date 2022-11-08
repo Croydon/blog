@@ -19,8 +19,6 @@
 	<meta property="og:site_name" content="Cr0ydon's Blog">
 	<meta property="og:description" content="Technical setup and background information about my blog">
 
-	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
-	
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="../../../themes/historia/css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -76,8 +74,8 @@ This did cost too much time eventually.</p>
 <p>And if anyone else likes to read about it and maybe even learns a thing or two - great!</p>
 <h2>The Setup</h2>
 <p>While I still think that WordPress has some great features it is just too much for my needs.</p>
-<p>This blog is powered by <a href="http://picocms.org">Pico</a> - a small, simple, flat file CMS. Meaning it has exactly zero MySQL databases which can go corrupt 😄. I have forked the Pico theme <a href="https://github.com/BesrourMS/story"><em>Story</em></a> and named it <a href="https://github.com/Croydon/pico-theme-historia"><em>Historia</em></a> since <em>Story</em> lagged several features that I wanted.</p>
-<p>Pico allows me to write all pages in Markdown, which has none of the confusing layout issues, WordPress produced sometimes which their WYSIWYG-HTML editor.</p>
+<p>This blog is powered by <a href="https://picocms.org">Pico</a> - a small, simple, flat file CMS. Meaning it has exactly zero MySQL databases which can go corrupt 😄. I have forked the Pico theme <a href="https://github.com/BesrourMS/story"><em>Story</em></a> and named it <a href="https://github.com/Croydon/pico-theme-historia"><em>Historia</em></a> since <em>Story</em> lagged several features that I wanted.</p>
+<p>Pico allows me to write all pages in Markdown, which has none of the confusing layout issues, WordPress produced sometimes with their WYSIWYG-HTML editor.</p>
 <p>All content of this blog is saved in Git repositories - including <a href="https://github.com/Croydon/blog/">Croydon/blog</a> and <a href="https://github.com/Croydon/blog-assets">Croydon/blog-assets</a> - meaning a backup strategy is now automatically included by default.</p>
 <p>A GitHub Actions Workflow is installing all parts in their correct places, then it starts an Apache web server and Wget is saving all pages to static HTML files, which are then pushed to GitHub Pages and served with my custom domain <em>blog.cr0ydon.com</em>.</p>
 <p>Voi­là!</p>

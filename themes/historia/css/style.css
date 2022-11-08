@@ -1,3 +1,25 @@
+/* =======================================================
+*
+* 	New classes, fonts etc
+*   that did not exist in the original theme
+*
+* ======================================================= */
+
+/***
+*  Work Sans is licened under the SIL OPEN FONT LICENSE Version 1.1
+*/
+
+@font-face {
+  font-family: "Work Sans";
+  /* font-style: normal; */
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("../fonts/worksans/WorkSans-VariableFont_wght.ttf") format("truetype");
+}
+
+
+/* End of new section */
+
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot%3Fsrf3rx");
