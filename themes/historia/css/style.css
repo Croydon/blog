@@ -826,8 +826,11 @@ footer {
 
 .fh5co-loader {
   position: fixed;
-  left: 0px;
-  top: 0px;
+  top: -100%;
+  right: -100%;
+  left: -100%;
+  bottom: -100%;
+  margin: auto;
   width: 80px;
   height: 80px;
   z-index: 9999;
