@@ -49,7 +49,7 @@ And if anyone else likes to read about it and maybe even learns a thing or two -
 
 While I still think that WordPress has some great features it is just too much for my needs.
 
-This blog is powered by [Pico](http://picocms.org) - a small, simple, flat file CMS. Meaning it has exactly zero MySQL databases which can go corrupt 😄. I have forked the Pico theme [_Story_](https://github.com/BesrourMS/story) and named it [_Historia_](https://github.com/Croydon/pico-theme-historia) since _Story_ lagged several features that I wanted.
+This blog is powered by [Pico](https://picocms.org) - a small, simple, flat file CMS. Meaning it has exactly zero MySQL databases which can go corrupt 😄. I have forked the Pico theme [_Story_](https://github.com/BesrourMS/story) and named it [_Historia_](https://github.com/Croydon/pico-theme-historia) since _Story_ lagged several features that I wanted.
 
 Pico allows me to write all pages in Markdown, which has none of the confusing layout issues, WordPress produced sometimes with their WYSIWYG-HTML editor.
 
