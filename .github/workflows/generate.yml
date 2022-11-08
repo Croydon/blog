@@ -3,20 +3,20 @@ on: [push,]
 jobs:
   generate-blog:
     name: "Generate Blog"
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
     - name: "Checkout Blog Content"
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         path: "pico"
         fetch-depth: "0"
     - name: "Checkout Blog Theme"
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         repository: "Croydon/pico-theme-historia"
         path: "theme"
     - name: "Checkout Blog Assets"
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         repository: "Croydon/blog-assets"
         path: "assets"
@@ -27,7 +27,7 @@ jobs:
         tools: composer
         extensions: dom, mbstring
     - name: "Install Python"
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: "3.x"
     - name: "Install Apache2 and Wget"
