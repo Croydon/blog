@@ -18,8 +18,8 @@ for subdir, dirs, files in os.walk("./"):
                     # On the home page the home page link contains just index.html
                     line = line.replace("href=\"index.html\"", "href=\"/\"")
                     line = line.replace(
-                        "content=\"http://localhost/", 
-                        "content=\"https://blog.cr0ydon.com/"
+                        "content=\"http://localhost", 
+                        "content=\"https://blog.cr0ydon.com"
                         )
                     if filename.endswith("feed.html"):
                         line = line.replace(
