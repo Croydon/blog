@@ -2,7 +2,7 @@
     "name": "picocms/pico-composer",
     "type": "project",
     "description": "Pico is a flat file CMS, this means there is no administration backend and database to deal with. You simply create .md files in the \"content\" folder and that becomes a page.",
-    "keywords": [ "pico", "picocms", "pico-cms", "simple", "flat-file", "cms", "content-management", "website", "markdown-to-html", "php", "markdown", "yaml", "twig", "composer-project" ],
+    "keywords": ["pico", "picocms", "pico-cms", "simple", "flat-file", "cms", "content-management", "website", "markdown-to-html", "php", "markdown", "yaml", "twig", "composer-project"],
     "homepage": "https://picocms.org/",
     "license": "MIT",
     "authors": [
@@ -25,17 +25,25 @@
         "issues": "https://github.com/picocms/Pico/issues",
         "source": "https://github.com/picocms/Pico"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Croydon/pico-theme-historia.git"
+        }
+    ],
     "require": {
         "picocms/pico": "^2.1",
         "picocms/pico-theme": "^2.1",
         "picocms/pico-deprecated": "^2.1",
-        "picocms/composer-installer": "^1.0"
+        "picocms/composer-installer": "^1.0",
+        "croydon/pico-theme-historia": "dev-main"
     },
     "minimum-stability": "beta",
     "prefer-stable": true,
     "config": {
         "allow-plugins": {
-            "picocms/composer-installer": true
+            "picocms/composer-installer": true,
+            "composer/installers": true
         }
     }
 }
