@@ -1,0 +1,37 @@
+{
+    "name": "Blog",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "PHP_VERSION": "7.4"
+        }
+    },
+
+    "forwardPorts": [80],
+    "otherPortsAttributes": {
+        "onAutoForward": "ignore"
+    },
+    
+    "workspaceMount": "source=${localWorkspaceFolder},target=/var/www/html,type=bind,consistency=cached",
+    "workspaceFolder": "/var/www/html",
+
+    // Configure tool-specific properties.
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+            // Set *default* container specific settings.json values on container create.
+            "settings": {
+                "php.validate.executablePath": "/usr/local/bin/php"
+            },
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "bmewburn.vscode-intelephense-client",
+                "mrmlnc.vscode-apache",
+                "mblode.twig-language-2"
+            ]
+        }
+    },
+
+    "postCreateCommand": "/var/www/html/.devcontainer/postCreateCommand.sh",
+    "postStartCommand": "/var/www/html/.devcontainer/postStartCommand.sh"
+}

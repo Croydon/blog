@@ -10,11 +10,6 @@ jobs:
       with:
         path: "pico"
         fetch-depth: "0"
-    - name: "Checkout Blog Assets"
-      uses: actions/checkout@v3
-      with:
-        repository: "Croydon/blog-assets"
-        path: "assets"
     - name: "Install PHP"
       uses: shivammathur/setup-php@v2
       with:
@@ -37,8 +32,8 @@ jobs:
       run: |
         sudo -u root rm -r /var/www/html/*
         sudo -u root cp -r pico/. /var/www/html/
-        sudo -u root cp -r assets/. /var/www/html/assets/
-        sudo -u root composer --working-dir=/var/www/html install
+        sudo -u root pico/.devcontainer/postCreateCommand.sh
+        sudo -u root pico/.devcontainer/postStartCommand.sh
     - name: "Generate static export"
       run: |
         wget -r -l inf -N --no-verbose --convert-links --adjust-extension "http://localhost"
