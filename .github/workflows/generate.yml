@@ -23,7 +23,7 @@ jobs:
     - name: "Install Apache2 and Wget"
       run: |
         sudo apt-get update
-        sudo apt-get install -y wget apache2 libapache2-mod-php7.4
+        sudo apt-get install -y --no-install-recommends wget apache2 libapache2-mod-php7.4
         sudo a2enmod rewrite
         sudo -u root cp $GITHUB_WORKSPACE/pico/config/apache-site-config.conf /etc/apache2/sites-available/000-default.conf
         sudo -u root cp $GITHUB_WORKSPACE/pico/config/apache-site-config.conf /etc/apache2/sites-enabled/000-default.conf
