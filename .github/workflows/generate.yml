@@ -4,53 +4,26 @@ name: "Generate Blog"
 jobs:
   generate-blog:
     name: "Generate Blog"
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
     - name: "Checkout Blog Content"
       uses: actions/checkout@v3
       with:
-        path: "pico"
         fetch-depth: "0"
-    - name: "Install PHP"
-      uses: shivammathur/setup-php@v2
+    - name: "Generate Static Export"
+      uses: devcontainers/ci@v0.2
       with:
-        php-version: "7.4"
-        tools: composer
-        extensions: dom, mbstring
-    - name: "Install Python"
-      uses: actions/setup-python@v4
-      with:
-        python-version: "3.x"
-    - name: "Install Apache2 and Wget"
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y --no-install-recommends wget apache2 libapache2-mod-php7.4
-        sudo a2enmod rewrite
-        sudo -u root cp $GITHUB_WORKSPACE/pico/config/apache-site-config.conf /etc/apache2/sites-available/000-default.conf
-        sudo -u root cp $GITHUB_WORKSPACE/pico/config/apache-site-config.conf /etc/apache2/sites-enabled/000-default.conf
-        sudo service apache2 restart
-    - name: "Install Pico"
-      run: |
-        sudo -u root rm -r /var/www/html/*
-        sudo -u root cp -r pico/. /var/www/html/
-        sudo -u root COMPOSER_ALLOW_SUPERUSER=1 ./pico/.devcontainer/postCreateCommand.sh
-        sudo -u root COMPOSER_ALLOW_SUPERUSER=1 ./pico/.devcontainer/postStartCommand.sh
-    - name: "Generate static export"
-      run: |
-        wget -r -l inf -N --no-verbose --convert-links --adjust-extension "http://localhost"
-        cp pico/config/CNAME localhost/CNAME
-        cd localhost
-        python ../pico/replace-urls.py
-        ls -la 
+        runCmd: ./var/www/html/.devcontainer/staticCreate.sh
     - name: "Deploy 🚀"
       run: |
-        cd $GITHUB_WORKSPACE/pico 
+        mkdir ../export
+        cp -r static/* ../export/
         git fetch
         git checkout gh-pages
         git config --global user.email "bot@cr0ydon.com"
         git config --global user.name "CroydonBot"
         rm -rf ./*
-        sudo -u root cp -r ../localhost/* ./ 
+        cp -r ../export/* ./ 
         git add -A
         now="$(date +'%Y-%m-%d %H:%M:%S')"
         git commit -am "Export $now" 
