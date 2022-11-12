@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-rm -r /var/www/html/static
+rm -rf /var/www/html/static
 mkdir -p /var/www/html/static
 
 wget -r -l="inf" -N --no-verbose --convert-links --adjust-extension --directory-prefix="/var/www/html/static" --no-host-directories "http://localhost"
