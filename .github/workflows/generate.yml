@@ -9,22 +9,28 @@ jobs:
     - name: "Checkout Blog Content"
       uses: actions/checkout@v3
       with:
+        path: "blog"
+        fetch-depth: "0"
+    - name: "Checkout Static Content"
+      uses: actions/checkout@v3
+      with:
+        ref: "gh-pages"
+        path: "pages"
         fetch-depth: "0"
     - name: "Generate Static Export"
       uses: devcontainers/ci@v0.2
       with:
+        subFolder: "blog"
         runCmd: /var/www/html/.devcontainer/staticCreate.sh
     - name: "Deploy 🚀"
       run: |
-        mkdir ../export
-        cp -r static/* ../export/
-        git fetch
-        git checkout gh-pages
+        rm -r pages/*
+        cp -r blog/static/* pages/
+        cd pages/
         git config --global user.email "bot@cr0ydon.com"
         git config --global user.name "CroydonBot"
-        rm -rf ./*
-        cp -r ../export/* ./ 
+        ls -la
         git add -A
         now="$(date +'%Y-%m-%d %H:%M:%S')"
-        git commit -am "Export $now" 
+        git diff-index --quiet HEAD || git commit -am "Export $now" 
         git push
