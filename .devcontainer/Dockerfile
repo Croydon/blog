@@ -5,7 +5,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV COMPOSER_ALLOW_SUPERUSER=1
 
 RUN apt-get update \
-  && apt-get -y --no-install-recommends install git zip unzip wget \
+  && apt-get -y --no-install-recommends install git zip unzip wget python3 \
+  && update-alternatives --install /usr/bin/python python /usr/bin/python3 10
   && curl -sSL https://getcomposer.org/installer | php \
   && chmod +x composer.phar \
   && mv composer.phar /usr/local/bin/composer \

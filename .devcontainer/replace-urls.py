@@ -26,6 +26,10 @@ for subdir, dirs, files in os.walk("./"):
                             "http://localhost",
                             "https://blog.cr0ydon.com"
                         )
+                        line = line.replace(
+                            "https://blog.cr0ydon.com/feed",
+                            "https://blog.cr0ydon.com/feed.xml"
+                        )
                     line = line.replace(
                         "/feed.html\"",
                         "/feed.xml\""
@@ -44,5 +48,6 @@ for subdir, dirs, files in os.walk("./"):
                 file.write(content)
 
 
+# TODO: Fix timezone
 # Make feed being parserd as actual xml
 os.rename("feed.html", "feed.xml")
