@@ -1,4 +1,5 @@
 on: [push,]
+name: "Generate Blog"
 
 jobs:
   generate-blog:
@@ -32,8 +33,8 @@ jobs:
       run: |
         sudo -u root rm -r /var/www/html/*
         sudo -u root cp -r pico/. /var/www/html/
-        sudo -u root pico/.devcontainer/postCreateCommand.sh
-        sudo -u root pico/.devcontainer/postStartCommand.sh
+        sudo -u root COMPOSER_ALLOW_SUPERUSER=1 ./pico/.devcontainer/postCreateCommand.sh
+        sudo -u root COMPOSER_ALLOW_SUPERUSER=1 ./pico/.devcontainer/postStartCommand.sh
     - name: "Generate static export"
       run: |
         wget -r -l inf -N --no-verbose --convert-links --adjust-extension "http://localhost"
