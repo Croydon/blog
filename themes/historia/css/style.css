@@ -5,6 +5,25 @@
 *
 * ======================================================= */
 
+:root {
+  --historia-font-primary: "Work Sans", Arial, sans-serif;
+  --historia-grid-gutter-width: 40px;
+  --historia-border-radius-base: 4px;
+  --historia-padding-base-vertical: 14px;
+  --historia-brand-primary: #FC5185;
+  --historia-brand-white: #fff;
+  --historia-brand-black: #000;
+  --historia-brand-darker: #444;
+  --historia-brand-gray: #ccc;
+  --historia-brand-lighter: #e9e9e9;
+  --historia-brand-body-color: #818892;
+  --historia-brand-selection-color: #f9f6f0;
+  --historia-brand-overlay-color: #4c4a8a;
+  --historia-brand-bg-color: var(--historia-brand-white);
+  --historia-input-border-focus: var(--historia-brand-primary);
+  --historia-form-group-margin-bottom: 30px;
+}
+
 /***
 *  Work Sans is licened under the SIL OPEN FONT LICENSE Version 1.1
 */
@@ -27,6 +46,22 @@
   }
 }
 
+.historia-loader {
+  position: fixed;
+  top: -100%;
+  right: -100%;
+  left: -100%;
+  bottom: -100%;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  z-index: 9999;
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid var(--historia-brand-primary);
+  animation: loader 1s linear infinite;
+}
+
 /* End of new section */
 
 /* =======================================================
@@ -35,12 +70,12 @@
 *
 * ======================================================= */
 body {
-  font-family: "Work Sans", Arial, sans-serif;
+  font-family: var(--historia-font-primary);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
   color: #828282;
-  background: #fff;
+  background: var(--historia-brand-white);
 }
 
 #page {
@@ -67,11 +102,11 @@ body {
 }
 
 a {
-  color: #FC5185;
+  color: var(--historia-brand-primary);
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: #FC5185;
+  color: var(--historia-brand-primary);
   outline: none;
   text-decoration: none;
 }
@@ -83,15 +118,15 @@ p, ul, ol {
 }
 
 h1, h2, h3, h4, h5, h6, figure {
-  color: #000;
-  font-family: "Work Sans", Arial, sans-serif;
+  color: var(--historia-brand-black);
+  font-family: var(--historia-font-primary);
   font-weight: 400;
   margin: 0 0 30px 0;
 }
 
 ::selection {
-  color: #fff;
-  background: #FC5185;
+  color: var(--historia-brand-white);
+  background: var(--historia-brand-primary);
 }
 
 .fh5co-nav {
@@ -140,14 +175,14 @@ h1, h2, h3, h4, h5, h6, figure {
   text-transform: uppercase;
   font-weight: bold;
   font-weight: 700;
-  font-family: "Work Sans", Arial, sans-serif;
+  font-family: var(--historia-font-primary);
 }
 .fh5co-nav #fh5co-logo a span {
-  color: #FC5185;
+  color: var(--historia-brand-primary);
 }
 .fh5co-nav a {
   padding: 5px 10px;
-  color: #fff;
+  color: var(--historia-brand-white);
 }
 @media screen and (max-width: 768px) {
   .fh5co-nav .menu-1 {
@@ -188,7 +223,7 @@ h1, h2, h3, h4, h5, h6, figure {
   top: 40px;
   left: 0;
   text-align: left;
-  background: #000;
+  background: var(--historia-brand-black);
   padding: 20px;
   border-radius: 4px;
   transition: 0s;
@@ -202,7 +237,7 @@ h1, h2, h3, h4, h5, h6, figure {
   width: 0;
   position: absolute;
   pointer-events: none;
-  border-bottom-color: #000;
+  border-bottom-color: var(--historia-brand-black);
   border-width: 8px;
   margin-left: -8px;
 }
@@ -223,16 +258,16 @@ h1, h2, h3, h4, h5, h6, figure {
   letter-spacing: 0;
 }
 .fh5co-nav ul li.has-dropdown .dropdown li a:hover {
-  color: #fff;
+  color: var(--historia-brand-white);
 }
 .fh5co-nav ul li.has-dropdown:hover a, .fh5co-nav ul li.has-dropdown:focus a {
-  color: #fff;
+  color: var(--historia-brand-white);
 }
 .fh5co-nav ul li.btn-cta a {
-  color: #fff;
+  color: var(--historia-brand-white);
 }
 .fh5co-nav ul li.btn-cta a span {
-  background: #FC5185;
+  background: var(--historia-brand-primary);
   padding: 4px 20px;
   display: -moz-inline-stack;
   display: inline-block;
@@ -245,7 +280,7 @@ h1, h2, h3, h4, h5, h6, figure {
   box-shadow: 0px 14px 20px -9px rgba(0, 0, 0, 0.75);
 }
 .fh5co-nav ul li.active > a {
-  color: #fff !important;
+  color: var(--historia-brand-white) !important;
 }
 
 .fh5co-navigation .prev {
@@ -306,7 +341,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .fh5co-navigation .fh5co-cover .copy .display-tc div h2 {
   margin-bottom: 0;
-  color: #fff;
+  color: var(--historia-brand-white);
   font-weight: 300;
 }
 
@@ -332,7 +367,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: rgba(255, 255, 255, 0.5);
 }
 #fh5co-aside a:hover {
-  color: #fff;
+  color: var(--historia-brand-white);
 }
 @media screen and (max-width: 768px) {
   #fh5co-aside {
@@ -363,7 +398,7 @@ h1, h2, h3, h4, h5, h6, figure {
   text-align: center;
 }
 #fh5co-aside .featured h2, #fh5co-aside nav h2, #fh5co-aside .page-title h2 {
-  color: #fff;
+  color: var(--historia-brand-white);
   font-weight: 300;
 }
 .single #fh5co-aside .featured h2, .single #fh5co-aside nav h2, .single #fh5co-aside .page-title h2 {
@@ -411,7 +446,7 @@ h1, h2, h3, h4, h5, h6, figure {
   background: rgba(255, 255, 255, 0.1);
 }
 #fh5co-aside nav ul li a:hover {
-  color: #000;
+  color: var(--historia-brand-black);
   background: white;
 }
 
@@ -503,10 +538,10 @@ footer {
   }
 }
 .fh5co-post .fh5co-entry > div a {
-  color: #000;
+  color: var(--historia-brand-black);
 }
 .fh5co-post .fh5co-entry > div a:hover {
-  color: #FC5185;
+  color: var(--historia-brand-primary);
 }
 .fh5co-post .fh5co-entry > div h2 {
   margin-bottom: 10px;
@@ -539,7 +574,7 @@ footer {
   height: 50px;
   display: table;
   background: rgba(0, 0, 0, 0.5);
-  color: #fff;
+  color: var(--historia-brand-white);
   text-align: center;
   border-radius: 4px;
 }
@@ -560,7 +595,7 @@ footer {
   text-decoration: none;
 }
 .fh5co-nav-toggle.active i::before, .fh5co-nav-toggle.active i::after {
-  background: #444;
+  background: var(--historia-brand-darker);
 }
 .fh5co-nav-toggle:hover, .fh5co-nav-toggle:focus, .fh5co-nav-toggle:active {
   outline: none;
@@ -588,11 +623,11 @@ footer {
   transition: all .2s ease-out;
 }
 .fh5co-nav-toggle.fh5co-nav-white > i {
-  color: #fff;
-  background: #fff;
+  color: var(--historia-brand-white);
+  background: var(--historia-brand-white);
 }
 .fh5co-nav-toggle.fh5co-nav-white > i::before, .fh5co-nav-toggle.fh5co-nav-white > i::after {
-  background: #fff;
+  background: var(--historia-brand-white);
 }
 
 .fh5co-nav-toggle i::before {
@@ -648,7 +683,7 @@ footer {
 .btn {
   margin-right: 4px;
   margin-bottom: 4px;
-  font-family: "Work Sans", Arial, sans-serif;
+  font-family: var(--historia-font-primary);
   font-size: 16px;
   font-weight: 400;
   border-radius: 30px;
@@ -667,9 +702,9 @@ footer {
 }
 
 .btn-primary {
-  background: #FC5185;
-  color: #fff;
-  border: 2px solid #FC5185;
+  background: var(--historia-brand-primary);
+  color: var(--historia-brand-white);
+  border: 2px solid var(--historia-brand-primary);
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background: #fc6a97 !important;
@@ -677,17 +712,17 @@ footer {
 }
 .btn-primary.btn-outline {
   background: transparent;
-  color: #FC5185;
-  border: 2px solid #FC5185;
+  color: var(--historia-brand-primary);
+  border: 2px solid var(--historia-brand-primary);
 }
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-  background: #FC5185;
-  color: #fff;
+  background: var(--historia-brand-primary);
+  color: var(--historia-brand-white);
 }
 
 .btn-success {
   background: #5cb85c;
-  color: #fff;
+  color: var(--historia-brand-white);
   border: 2px solid #5cb85c;
 }
 .btn-success:hover, .btn-success:focus, .btn-success:active {
@@ -701,12 +736,12 @@ footer {
 }
 .btn-success.btn-outline:hover, .btn-success.btn-outline:focus, .btn-success.btn-outline:active {
   background: #5cb85c;
-  color: #fff;
+  color: var(--historia-brand-white);
 }
 
 .btn-info {
   background: #5bc0de;
-  color: #fff;
+  color: var(--historia-brand-white);
   border: 2px solid #5bc0de;
 }
 .btn-info:hover, .btn-info:focus, .btn-info:active {
@@ -720,12 +755,12 @@ footer {
 }
 .btn-info.btn-outline:hover, .btn-info.btn-outline:focus, .btn-info.btn-outline:active {
   background: #5bc0de;
-  color: #fff;
+  color: var(--historia-brand-white);
 }
 
 .btn-warning {
   background: #f0ad4e;
-  color: #fff;
+  color: var(--historia-brand-white);
   border: 2px solid #f0ad4e;
 }
 .btn-warning:hover, .btn-warning:focus, .btn-warning:active {
@@ -739,12 +774,12 @@ footer {
 }
 .btn-warning.btn-outline:hover, .btn-warning.btn-outline:focus, .btn-warning.btn-outline:active {
   background: #f0ad4e;
-  color: #fff;
+  color: var(--historia-brand-white);
 }
 
 .btn-danger {
   background: #d9534f;
-  color: #fff;
+  color: var(--historia-brand-white);
   border: 2px solid #d9534f;
 }
 .btn-danger:hover, .btn-danger:focus, .btn-danger:active {
@@ -758,7 +793,7 @@ footer {
 }
 .btn-danger.btn-outline:hover, .btn-danger.btn-outline:focus, .btn-danger.btn-outline:active {
   background: #d9534f;
-  color: #fff;
+  color: var(--historia-brand-white);
 }
 
 .btn-outline {
@@ -788,7 +823,7 @@ footer {
   padding-right: 50px;
 }
 .btn.with-arrow:hover i {
-  color: #fff;
+  color: var(--historia-brand-white);
   right: 18px;
   visibility: visible;
   opacity: 1;
@@ -805,7 +840,7 @@ footer {
 .form-control:active, .form-control:focus {
   outline: none;
   box-shadow: none;
-  border-color: #FC5185;
+  border-color: var(--historia-brand-primary);
 }
 
 .row-pb-md {
@@ -816,24 +851,6 @@ footer {
   padding-bottom: 2em !important;
 }
 
-.fh5co-loader {
-  position: fixed;
-  top: -100%;
-  right: -100%;
-  left: -100%;
-  bottom: -100%;
-  margin: auto;
-  width: 80px;
-  height: 80px;
-  z-index: 9999;
-  border: 10px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 10px solid #FC5185;
-  animation: loader 1s linear infinite;
-}
-
 .js .animate-box {
   opacity: 0;
 }
-
-/*# sourceMappingURL=style.css.map */
