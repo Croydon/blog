@@ -31,3 +31,22 @@ pages_order: asc
 # Note im Footer
 footnote: "© Cr0ydon"
 icon_png: "/assets/general/icon/icon.png"
+
+
+# Link Tree
+link_tree:
+    github:
+      display: GitHub
+      url: https://github.com/Croydon
+    gitlab:
+      display: GitLab
+      url: https://gitlab.com/Cr0ydon
+      alt_icon: git
+    linked:
+      display: LinkedIn
+      url: https://www.linkedin.com/in/cr0ydon/
+      alt_icon: linkedin
+    rss:
+      display: RSS
+      url: https://blog.cr0ydon.com/feed
+      alt_button: default
