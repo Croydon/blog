@@ -7,18 +7,18 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
     - name: "Checkout Blog Content"
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         path: "blog"
         fetch-depth: "0"
     - name: "Checkout Static Content"
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         ref: "gh-pages"
         path: "pages"
         fetch-depth: "0"
     - name: "Generate Static Export"
-      uses: devcontainers/ci@v0.2
+      uses: devcontainers/ci@v0.3
       with:
         subFolder: "blog"
         runCmd: /var/www/html/.devcontainer/staticCreate.sh
