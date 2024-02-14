@@ -49,3 +49,8 @@ link_tree:
       display: RSS
       url: https://blog.cr0ydon.com/feed
       alt_button: default
+    firefox:
+      display: Firefox Add-ons
+      url: https://addons.mozilla.org/firefox/user/4788738/
+      alt_icon: browser-firefox
+      alt_button: reddit
