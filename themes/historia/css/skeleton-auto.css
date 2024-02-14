@@ -147,23 +147,6 @@ a:focus {
 }
 }
 
-/* Code
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-code {
-  padding: 0.2rem 0.5rem;
-  margin: 0 0.2rem;
-  font-size: 90%;
-  white-space: nowrap;
-  background: #f1f1f1;
-  border: 1px solid #e1e1e1;
-  border-radius: 4px;
-}
-pre > code {
-  display: block;
-  padding: 1rem 1.5rem;
-  white-space: pre;
-}
-
 /* Spacing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 button,
@@ -200,25 +183,4 @@ ol {
 }
 .u-pull-left {
   float: left;
-}
-
-/* Misc
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-hr {
-  margin-top: 3rem;
-  margin-bottom: 3.5rem;
-  border-width: 0;
-  border-top: 1px solid #e1e1e1;
-}
-/* Radius values:
-
-10%-40%: Squircles
-50% (default): True circle
-*/
-.avatar {
-  width: 128px;
-  height: 128px;
-  object-fit: cover;
-  background-position: center;
-  border-radius: 50%;
 }
