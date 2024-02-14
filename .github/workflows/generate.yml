@@ -22,6 +22,7 @@ jobs:
       with:
         subFolder: "blog"
         runCmd: /var/www/html/.devcontainer/staticCreate.sh
+        push: never
     - name: "Deploy 🚀"
       run: |
         rm -r pages/*
