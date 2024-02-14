@@ -41,7 +41,6 @@ link_tree:
     gitlab:
       display: GitLab
       url: https://gitlab.com/Cr0ydon
-      alt_icon: git
     linked:
       display: LinkedIn
       url: https://www.linkedin.com/in/cr0ydon/
