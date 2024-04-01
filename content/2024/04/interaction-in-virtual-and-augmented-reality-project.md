@@ -11,6 +11,14 @@ This is my report for my university project for the course Interaction in Virtua
 
 ## Motivation
 
+We have been given an existing VR project. In this virtual environment exists a race track through a city. Along the way are collectable coins. The race track is structured in three different areas. Shortly before a new area, a task has to be done, at which a T-shaped object has be selected and be moved in the second T-shaped object. Ideally, those two T-objects are then exactly at the same position with the same rotation, so that you can't distingish them anymore.
+
+We had the following tasks:
+  * Implement a locomotion method
+  * Implement a method that allows selection, moving and rotation of the T-objects
+  * Implement something that reduces cyber-sickness
+  * Design and execute a study to evalute the results
+
 
 ## Concept Idea
 
@@ -48,3 +56,10 @@ This is my report for my university project for the course Interaction in Virtua
 
 
 ## Conclusion
+
+
+## Resources
+
+  * [Implementation repository](https://github.com/Croydon/tuda-vr-parkour)
+  * [Study data repository](https://github.com/Croydon/tuda-vr-parkour-study)
+  * [Study Task Walkthrough](https://www.youtube.com/watch?v=WJ9H1r-tjjA)
