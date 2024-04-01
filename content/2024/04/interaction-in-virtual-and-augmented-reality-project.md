@@ -62,6 +62,28 @@ I also changed many implementation details, including the logging for the study 
 
 ### Locomotion 
 
+I kept the original idea of enabling the player to fly, but eventually gave up on trying to implement a flying methode that feels "natural". "Natural" meaning, that there is some mechanism that adds some amount of vertical force on the player and the player only slows down through gravity, crashing into another object or through some kind of break mechanism. 
+
+Getting the physics right for a scenario, where players have to constantly and quickly change directions is hard. I went through many interations of differnt kinds of force-logic, some can be found in my git history, many others did not even make it so far. Most of them were really hard to control from a player perspective or caused very strong cyber-sickerness symptoms.
+
+In one of those intermediate interactions, I had added a flying force by pressing the right trigger button. The player would than naturally fall down with gravity again. I eventually figured our physics numbers that made it controllable rather well, but I did not want this to be the final flying methode, as it did not feel creative and innovative enough. It is still possible to turn this control on in my final solution, but it is off by default and can only be changed before a build, not during runtime.
+
+In another one of those intermediate interations, I experimented with using the body height of the player to control the flying height, or to be more preceise, the height of the headset in relation to the floor height. Standing straight would mean having the maximum flying height, getting closer to a pre-determined min-height would bring down the player more and more. The max and min height needs to be determined before the game begins in order for such a logic to work. For the max work to be correct, the game has to be sure that the player is standing straight at the point of taking this value. And a min value has to be recorded in a moment the player is aware of too. One might think, that the floor can be taken as such a point, but that wouldn't be good either: 
+
+  * It would be a terrible idea that the player have to bring their head completely down on the floor to reach the min flying height.
+  * Different people have a different comfort level of how far they can bend their kness, not once, but often and for a longer time.
+
+It turned out, that the to be expected height difference of the headset, between standing straight and going down as far as it is comfortable and holdable for a longer time period, is too small for this use case. Even slight height chances would change the virtual player position dramatically. Therefore this method did not allow a precise enough control.
+
+However, my final solution build upon this concept. Instead of the height of the headset in relation to the floor, I used the right controller height in relation to the virtual player object. Now, the implememtation requires the player at the start to put up their right hand as far as comfortable and press a specific button. Then, they have to put their right hand down as far as comfortable and press another button. These min and max heights are then mapped to specific vertical forces. Within this height range:
+
+  * For the bottom < 45% height positions, the player gets added a vertical force, that pulls them down. The lower the position, the quicker they will fall down, if the are already in the air flying.
+  * For 45% until 56% (excluding) height positions, the player gets removed (almost) all vertical forces. This causes an "elevator flight" effect and enables the player to (almost) stand still in the air. (There is still a very tiny force downwards, as I have technically not disabled gravity for the player object, however, that is only noticeable at all, if there is no other velocity and if you really pay attention. For all practical purposes within the parkour it is irrelvant.)
+  * For positions at 56% height and above, the players gets added a vertical force upwards. The force added is more the heigher the position is.
+
+This "elevator flight" has assumingly a big enough range to control the flying preceisily enough and fast enough for our race track. On the other hand, it was also the reason why I gave upon the superhero-theming alltogether.
+
+For the vertical movement I rather kept it simple: By pressing the left trigger button a certain force is getting added in the direction in which the player looks. The longer the button is pressed the more force is building up, allowing accerlation and giving a "drifting-feel". However, this lead to the problem that sudden changes of directions are really hard to control. In my final solution, I did not just leave it to gravity and player-added counter-forces to let the player slow down, but implemented that the horizontal velocity is artificial reduced to zero over a few seconds, as soon as the player is not adding new horizontal speed.
 
 
 ### Cyber-Sickness Reduction
@@ -76,7 +98,7 @@ The first two probably did not work due to imcompatibilities with my used Unity 
 
 Ultimately, I am succesfully using the [Tilia.Visuals.Vignette.Unity](https://github.com/ExtendRealityLtd/Tilia.Visuals.Vignette.Unity) package. The vignette gets bigger/smaller/disabled dynamically, basd on the player's overall velocity, both horizontal and vertical.
 
-![An image from inside VR, that shows both the road blockade before a new area of the race track and the vignette that appears when the player moves quickly.](/assets/2024/ivar/blockade_and_vignette.JPG "An image from inside VR, that shows both the road blockade before a new area of the race track and the vignette that appears when the player moves quickly.")
+![An image from inside VR, that shows both the road blockade before a new area of the race track and the vignette that appears when the player moves quickly.](/assets/2024/ivar/blockade_and_vignette.jpg "An image from inside VR, that shows both the road blockade before a new area of the race track and the vignette that appears when the player moves quickly.")
 
 
 ### Interaction
