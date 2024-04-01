@@ -32,8 +32,22 @@ For the cyper-sickness reduction, I planned to implement a tunnling vignette.
 ## Technical Details and Actual Implementation
 
 ### General
-  * Unity upgrade, Oculus -> Meta SDK migration
-  * Requirements: Meta Quest 2, Unity version
+
+The implementation is build with Unity and requires a Meta Quest 2 headset to run. 
+
+The original implementation used Unity 2021.3.10f1 and the Oculus Integration 46.0 package. Over the timespan of my development, I first updated to the latest Unity patch version and later performed an upgrade to Unity 2022.3.19f1. First of all, I wanted to be able to use all currently existing engine features and packages, that only work with newer Unity versions, and secondly, even more important, I also had another university project at the same time, that was also implemented in this Unity version. I did not want to learn and work with two different Unity version simultaneously, particular as I keep getting the impression, that Unity is changing things regularly in a backwards incompatible way.
+
+Upgrading Unity to the 2022.3 LTS version also forced me to migrate from the now legacy Oculus integration, that was directly available from the Unity package registry, to the new Meta SDKs, that are either available from the Unity Asset Store or directly via Meta's npm registry. (Side node: The Unity package manager builds upon npm. Therefore other npm registries can be added and then directly used inside the Unity Editor's package manger.) I first went with the Asset Store version as I was already used to this workflow as I am also using other assets from there, but I had to switch to Meta's npm registry later on, when I added continuous integration (CI) and continuous delivery (CD) to my git repository, since the Asset Store always requires authentication with an Unity account, even for free assets, and my CI system does not support this for the Asset Store at the moment.
+
+Unity itself has several official packages for XR development. I experimented around with several of them, but ultimately do not use them in my final state of the project. Those XR packages do not seem to be compatible with Meta SDKs, therefore would have required me to re-implement everything and re-learn a lot. For this, the time was to limited. However, I have the impression that Unity's XR packages are probably a solid choice for any new project, for several reason:
+
+  * They work with a wider range of XR hardware, not just Meta hardware.
+  * They come with a lot of ready-to-use functionality for interactions, locomotions and cyber-sickness reduction methods I would have been interested in, that in part do not exist at all or in that specific way in the Meta SDKs.
+  * My subjective, perhabs misleading, impression is also, that there seems to be an overall trend towards those Unity packages. I oftentimes found more up-to-date information how to do X, Y, Z with those integrations, but had a much harder time to find the same information for the Meta SDKs.
+
+
+At the end, I also enabled Meta Quest 3 as a build target, however, this is completely untested and my project might not work at all with Quest 3 hardware.
+
 
 ### Locomotion 
 
@@ -45,6 +59,9 @@ For the cyper-sickness reduction, I planned to implement a tunnling vignette.
 
 ## Unity Quirks (rename, remove?)
 
+This was also a major pain point while working with Unity in general...
+
+Incompatibility between Unity versions, Unity package versions, different implementation methods to accomplish very similar things etc. make it really, really hard to find information and resources that are actually working for my specific use case. Several scripts and packages did not work with my version etc.
 
 ## CI / CD
 
