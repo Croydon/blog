@@ -125,7 +125,7 @@
 <p>I also experimented with exit portals that have their front side inverse to the entry portal (basically a rotation ~180 degree), but this was too hard to control. Therefore such exit portals are not part of the parkour. Within a certain range, the exit portal and the T-objects' positions and rotations are randomized, causing sometimes easier interaction task and sometimes tough ones.</p>
 <p>One of the positive effects of this portal interaction methode is, that objects can be reached that normally could not be reached with the given physical limitations. To conclude, I ended up with the same advantage as my original idea would have had, but ended up with a methode, that still feels more natural than shooting spider webs or some energy laser.</p>
 <h2>Unity Quirks and Interation Time</h2>
-<p>While Unity is a powerful tool with many features, it has also many quirks that, at times, really frustrated more.</p>
+<p>While Unity is a powerful tool with many features, it has also many quirks that, at times, were really frustrating.</p>
 <p>My biggest pain point with Unity are the incompatibilities everywhere. Not just between different version of the Unity Editor itself, but also between different versions of official(!) Unity packages. And even within the same Unity Editor version with the same sets of packages and package version, you can find many project-based toggles than switch between some old implementations and behaviours of <em>something</em> or you have many fundamental component choices like which Unity <a href="https://docs.unity3d.com/Manual/render-pipelines.html">render pipeline</a> your project uses, that have signifiant influrence on what you can do in the first place. And changing later might mean re-work major parts of a project, which is oftentimes not feasiable.</p>
 <p>All of those things, lead to the phenomenon that whenever you are searching for learning resources, packages, scripts, assets etc. there is an enourmously high chance, that it won't work for your project for one reason or another. This does not apply to basics, so while learning the basics of Unity, you should be fine. Unity experts are probably also not that much effected by that, as they have enough knowledge to workaround this or implement everything by themselves in the first place. But for everyone falling in-between, this is frustrating.</p>
 <p>Moreover, I encountered some things, that might or might not be (directly) Unity faults. For some time, I had my Unity project saved on an external drive instead of an internal one. This caused Unity several times to crash for no apparent reasons. Somehow this crash managed to also disconnect all external devices of my computer for a while, before they automatically came back. One time, the crash even corrupted my git repository that contains the Unity project. Thankfully, I could clone my work from GitHub and had lost very little work. Those Unity crashes stopped instantly when I moved the project to an internal drive. And just for the protocol, I have all my other git project on this external drive and never encountered problems.</p>
@@ -135,12 +135,29 @@
 <p>I also added CI and CI for my project via GitHub Actions. For each git push, the Unity projects gets build, any warnings and errors get reported and if the build is successful, the APK file is getting uploaded to GitHub as a build artifact. When I tag a new version of my implementation, a GitHub Release gets created and the APK file is getting uploaded to it as well.</p>
 <p>You can find the <a href="https://github.com/Croydon/tuda-vr-parkour/actions">CI runs  here</a> and the <a href="https://github.com/Croydon/tuda-vr-parkour/releases">releases here</a>.</p>
 <h2>Study</h2>
+<p>I desinged an user study, made some early test run with a pre-study and then, with some small study adjustments and a heavily changed implementation, I performed the actual study.</p>
 <h3>Study Design</h3>
+<p>The general design of the user study is as follows:</p>
+<ul>
+<li>Welcome / Introduction</li>
+<li>Ethnical disclaimer (participants are voluntary, unpaied, can end the experiment at any given time)</li>
+<li>Privacy disclaimer (what data is saved and published?)</li>
+<li>Pre-Questionnaire</li>
+<li>Teaching / Explanation of the hardware, virtual environment, tasks and control</li>
+<li>Participants can try the controls, locomotion and and interaction for some time</li>
+<li>Explain the task once more: As many rounds as possible, as many collected coins as possible, as precisie at the interaction task as possible. Your own choice where your priorities are.</li>
+<li>10 minute task performance</li>
+<li>Post-Questionnaire</li>
+<li>Goodbye / Hardware cleaning</li>
+</ul>
+<p>You can find checklists that I made for myself to execute this study with participants in the study data repository. Such notes ensure, that every participant hears all explanations and experience all training and tasks, in the same order and in the same way.</p>
+<p>Here is a video of myself doing the 10 minute task:</p>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WJ9H1r-tjjA?si=LRXK7RNcCNR2oxgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <h3>Study Results</h3>
 <h4>Pre-Study</h4>
 <h4>Study</h4>
-<h4>Discussions</h4>
+<h4>Results</h4>
+<p>All results can be found in the <a href="https://github.com/Croydon/tuda-vr-parkour-study">study data repository</a>.</p>
 <h2>Future Work</h2>
 <h2>Conclusion</h2>
 <h2>Resources</h2>
