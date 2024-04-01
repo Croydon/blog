@@ -127,7 +127,7 @@
 <p>One of the positive effects of this portal interaction methode is, that objects can be reached that normally could not be reached with the given physical limitations. To conclude, I ended up with the same advantage as my original interaction idea would have had, but also finished with a methode, that still feels more natural than shooting spider webs or some energy laser.</p>
 <h2>Unity Quirks and Iteration Time</h2>
 <p>While Unity is a powerful tool with many features, it has also many quirks that, at times, were really frustrating.</p>
-<p>My biggest pain point with Unity are the incompatibilities everywhere. Not just between different version of the Unity Editor itself, but also between different versions of official(!) Unity packages. And even within the same Unity Editor version with the same sets of packages and package version, you can find many project-based toggles than switch between some old implementations and behaviours of <em>something</em> or you have many fundamental component choices like which Unity <a href="https://docs.unity3d.com/Manual/render-pipelines.html">render pipeline</a> your project uses, that have signifiant influrence on what you can do in the first place. And changing later might mean re-work major parts of a project, which is oftentimes not feasiable.</p>
+<p>My biggest pain point with Unity are the incompatibilities everywhere. Not just between different version of the Unity Editor itself, but also between different versions of official(!) Unity packages. And even within the same Unity Editor version with the same sets of packages and package version, you can find many project-based toggles than switch between some old implementations and behaviours of <em>something</em> or you have many fundamental component choices like which Unity <a href="https://docs.unity3d.com/Manual/render-pipelines.html">render pipeline</a> your project uses, that have signifiant influrence on what you can do in the first place. And changing later might require re-working major parts of a project, which is oftentimes not feasiable.</p>
 <p>All of those things, lead to the phenomenon that whenever you are searching for learning resources, packages, scripts, assets etc. there is an enourmously high chance, that it won't work for your project for one reason or another. This does not apply to basics, so while learning the basics of Unity, you should be fine. Unity experts are probably also not that much effected by that, as they have enough knowledge to workaround this or implement everything by themselves in the first place. But for everyone falling in-between, this is frustrating.</p>
 <p>Moreover, I encountered some things, that might or might not be (directly) Unity faults. For some time, I had my Unity project saved on an external drive instead of an internal one. This caused Unity several times to crash for no apparent reasons. Somehow this crash managed to also disconnect all external devices of my computer for a while, before they automatically came back. One time, the crash even corrupted my git repository that contains the Unity project. Thankfully, I could clone my work from GitHub and had lost very little work. Those Unity crashes stopped instantly when I moved the project to an internal drive. And just for the protocol, I have all my other git project on this external drive and never encountered problems.</p>
 <p>Another annoying obstacles has been the iteration time for each (change -&gt; build -&gt; test) cyclus. Whenever I changed a script of my project, the Unity Editor starts to re-import all Assets (scripts count as assets in Unity's terminology), leaving me with a progress bar that takes one to two minutes. Only after that, I can even trigger a new build. If you are doing this for a few months, it becomes almost like a trance where you oftentimes don't even know anymore if you waited for the first process to finish or the second one. Unity lacks a clear indication if there were any project changes after the last build.</p>
@@ -160,18 +160,18 @@
 <li>How fast the participant was for each object interaction.</li>
 <li>Some more logging for position and vectors, but those are mostly debug information that shouldn't matter for the actual study.</li>
 </ul>
-<p>And last but not least, for the final study, the view inside the VR headset is also video recorded for every participant. You can find a playlist of all participant task videos here: TODO</p>
-<p>Here is a video of myself doing the 10 minute task:</p>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WJ9H1r-tjjA?si=LRXK7RNcCNR2oxgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<h3>Study Results</h3>
-<p>Due to time constraints, I could only perform the pre-study and actual study with a small mount of people.</p>
 <p>I made some improvements to the study execution and the automatic logging after the pre-study, but my task instruction and the pre- and post-questionnaire were identical for both. You can find the full questionnaires here: </p>
 <ul>
 <li><a href="https://github.com/Croydon/tuda-vr-parkour-study/blob/main/study/pre_questionnaire/pre-questionnaire.md">Pre-Questionnaire</a></li>
 <li><a href="https://github.com/Croydon/tuda-vr-parkour-study/blob/main/study/post_questionnaire/post-questionnaire.md">Post-Questionnaire</a></li>
 </ul>
+<p>For the final study, the view inside the VR headset was also video recorded for every participant. You can find a playlist of all participant task videos here: TODO</p>
+<p>Here is a video of myself doing the 10 minute task:</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WJ9H1r-tjjA?si=LRXK7RNcCNR2oxgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<h3>Study Results</h3>
+<p>Due to time constraints, I could only perform the pre-study and actual study with a small mount of people.</p>
 <h4>Pre-Study</h4>
-<p>For the pre-study, I had two participants, that were given an implementation that had a very different locomotion methode, no cyber-sickness reduction methode and the interaction was done without and portals or other more complex things directly by the controllers.</p>
+<p>For the pre-study, I had two participants, that were given an implementation that had a very different locomotion methode, no cyber-sickness reduction methode and the interaction was done directly by the controllers, without the portals or other more complex things.</p>
 <p>TODO</p>
 <h4>Study</h4>
 <p>For the final study, I had four participants, that were given the final implementation of the locomation and interaction methode and with enabled tunneling vignette.</p>
@@ -192,7 +192,8 @@ Start area</p>
 </ul>
 </li>
 <li><a href="https://github.com/Croydon/tuda-vr-parkour-study">Study Data Repository</a></li>
-<li><a href="https://www.youtube.com/watch?v=WJ9H1r-tjjA">Study Task Walkthrough</a></li>
+<li><a href="https://www.youtube.com/watch?v=WJ9H1r-tjjA">Study Task Video Walkthrough</a></li>
+<li><a href="https://github.com/wenjietseng/VR-locomotion-parkour">Original Parkour Implementation</a></li>
 </ul>
 					</div>
 				</div>
