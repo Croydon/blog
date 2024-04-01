@@ -185,31 +185,41 @@ Here is a video of myself doing the 10 minute task:
 
 Due to time constraints, I could only perform the pre-study and actual study with a small mount of people.
 
-I made some improvements to the study execution and the automatic logging after the pre-study, but my task instruction and the pre- and post-questionnaire were identical for both.
+I made some improvements to the study execution and the automatic logging after the pre-study, but my task instruction and the pre- and post-questionnaire were identical for both. You can find the full questionnaires here: 
+  * [Pre-Questionnaire](https://github.com/Croydon/tuda-vr-parkour-study/blob/main/study/pre_questionnaire/pre-questionnaire.md)
+  * [Post-Questionnaire](https://github.com/Croydon/tuda-vr-parkour-study/blob/main/study/post_questionnaire/post-questionnaire.md)
 
 
 #### Pre-Study
 
 For the pre-study, I had two participants, that were given an implementation that had a very different locomotion methode, no cyber-sickness reduction methode and the interaction was done without and portals or other more complex things directly by the controllers.
 
+TODO
 
 #### Study
 
 For the final study, I had four participants, that were given the final implementation of the locomation and interaction methode and with enabled tunneling vignette.
+
+TODO
 
 
 #### Results
 
 All results can be found in the [study data repository](https://github.com/Croydon/tuda-vr-parkour-study).
 
+TODO
+
 
 ## Future Work
 
 In the future, the study could be performed with more people to get more significant data. Furhermore, it should be performed with different locomotions and interactions methods, to have more data to compare it to other implementations.
 
+TODO
+Start area
 
 ## Conclusion
 
+TODO 
 
 ## Resources
 
