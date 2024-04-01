@@ -11,7 +11,7 @@ This is my report for my university project for the course Interaction in Virtua
 
 ## Motivation
 
-We have been given an existing VR project. In this virtual environment exists a race track through a city. Along the way are collectable coins. The race track is structured in three different areas. Shortly before a new area, a task has to be done, at which a T-shaped object has be selected and be moved in the second T-shaped object. Ideally, those two T-objects are then exactly at the same position with the same rotation, so that you can't distingish them anymore.
+We have been given an [existing VR project](https://github.com/wenjietseng/VR-locomotion-parkour). In this virtual environment exists a race track through a city. Along the way are collectable coins. The race track is structured in three different areas. Shortly before a new area, a task has to be done, at which a T-shaped object has to be selected, rotated and moved in the second T-shaped object. Ideally, those two T-objects are then exactly at the same position with the same rotation, so that you can't distingish them anymore.
 
 We had the following tasks:
   * Implement a locomotion method
@@ -20,10 +20,27 @@ We had the following tasks:
   * Design and execute a study to evalute the results
 
 
-## Concept Idea
+## Initial Implementation Idea
+
+My initial idea was to implement some flying. Either some Ironman-like flying locomotion where you put your open hands down horizontally and it applies some upwards force and some force in the direction of where you are looking. Or some Superman-like flying where you have some power-pose that let you fly in the direction of your strechted arm, both horizontal and vertical.
+
+For the interaction task, I wanted to stay in this superhero-themed setting and either use some Ironman-like energy beams that attach to the T-object on the first hit and then rotates and moves with your hand. Or effectively the same thing with some Spiderman webs.
+
+For the cyper-sickness reduction, I planned to implement a tunnling vignette.
 
 
-## Technical Implementation
+## Technical Details and Actual Implementation
+
+### General
+  * Unity upgrade, Oculus -> Meta SDK migration
+  * Requirements: Meta Quest 2, Unity version
+
+### Locomotion 
+
+### Cyber-Sickness Reduction
+
+### Interaction
+
 
 
 ## Unity Quirks (rename, remove?)
@@ -60,6 +77,7 @@ We had the following tasks:
 
 ## Resources
 
-  * [Implementation repository](https://github.com/Croydon/tuda-vr-parkour)
-  * [Study data repository](https://github.com/Croydon/tuda-vr-parkour-study)
+  * [Implementation Repository](https://github.com/Croydon/tuda-vr-parkour)
+    * [APK Downloads for Meta Quest 2](https://github.com/Croydon/tuda-vr-parkour/releases)
+  * [Study Data Repository](https://github.com/Croydon/tuda-vr-parkour-study)
   * [Study Task Walkthrough](https://www.youtube.com/watch?v=WJ9H1r-tjjA)
