@@ -123,7 +123,7 @@ One of the positive effects of this portal interaction methode is, that objects 
 
 ## Unity Quirks and Interation Time
 
-While Unity is a powerful tool with many features, it has also many quirks that, at times, really frustrated more.
+While Unity is a powerful tool with many features, it has also many quirks that, at times, were really frustrating.
 
 My biggest pain point with Unity are the incompatibilities everywhere. Not just between different version of the Unity Editor itself, but also between different versions of official(!) Unity packages. And even within the same Unity Editor version with the same sets of packages and package version, you can find many project-based toggles than switch between some old implementations and behaviours of _something_ or you have many fundamental component choices like which Unity [render pipeline](https://docs.unity3d.com/Manual/render-pipelines.html) your project uses, that have signifiant influrence on what you can do in the first place. And changing later might mean re-work major parts of a project, which is oftentimes not feasiable.
 
@@ -145,10 +145,27 @@ You can find the [CI runs  here](https://github.com/Croydon/tuda-vr-parkour/acti
 
 ## Study
 
+I desinged an user study, made some early test run with a pre-study and then, with some small study adjustments and a heavily changed implementation, I performed the actual study.
+
 
 ### Study Design
 
+The general design of the user study is as follows:
 
+  * Welcome / Introduction
+  * Ethnical disclaimer (participants are voluntary, unpaied, can end the experiment at any given time)
+  * Privacy disclaimer (what data is saved and published?)
+  * Pre-Questionnaire
+  * Teaching / Explanation of the hardware, virtual environment, tasks and control
+  * Participants can try the controls, locomotion and and interaction for some time
+  * Explain the task once more: As many rounds as possible, as many collected coins as possible, as precisie at the interaction task as possible. Your own choice where your priorities are.
+  * 10 minute task performance
+  * Post-Questionnaire
+  * Goodbye / Hardware cleaning
+
+You can find checklists that I made for myself to execute this study with participants in the study data repository. Such notes ensure, that every participant hears all explanations and experience all training and tasks, in the same order and in the same way.
+
+Here is a video of myself doing the 10 minute task:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WJ9H1r-tjjA?si=LRXK7RNcCNR2oxgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -160,7 +177,9 @@ You can find the [CI runs  here](https://github.com/Croydon/tuda-vr-parkour/acti
 #### Study
 
 
-#### Discussions
+#### Results
+
+All results can be found in the [study data repository](https://github.com/Croydon/tuda-vr-parkour-study).
 
 
 ## Future Work
