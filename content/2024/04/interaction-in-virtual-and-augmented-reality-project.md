@@ -55,7 +55,7 @@ At the end, I also enabled Meta Quest 3 as a build target, however, this is comp
 
 I made several changes and enhancements to the game loop logic. As my study design has the task to get as many rounds done in 10 minutes as possible I had to change the logic that previously ended the parkour after a single round. Now, the logic resets everything so that an endless amount of rounds are doable within the time limit. All coins, even previously collected ones, do re-spawn.
 
-Originally, the interaction task was completely ignoreable as people could just walk (or fly) past it. I added a road blockade until all 5 T-objects for each area are done. The blockade also displays the number of objects that have yet to be positioned. Furthermore, when the appearance of the task is triggerd, all locomotion techniques are disabled for the duration of the task, preventing all escape attempts.
+Originally, the interaction task was completely ignoreable as people could just walk (or fly) past it. I added a road blockade until all 5 T-objects for each area are done. The blockade also displays the number of objects that have yet to be positioned. Furthermore, when the appearance of the task is triggerd, all locomotion techniques are disabled for the duration of the task, preventing (most) escape and cheat attempts.
 
 I also changed many implementation details, including the logging for the study data.
 
@@ -116,14 +116,14 @@ But it also means, that you are limited by your arm lenght and physical environm
 
 I kept the general idea of using this kind of direct, controller-based interaction, but advanced it by adding portals. Now, when the object task is triggered, a blue entry portal appears directly in front of the player. On the left border side of this portal, a "start" button appears. Once the players touches it, an orange exit portal appears together with the moveable T-object and the target T-object. As soon as the players moves one or both physical controller through the blue entry portal, the virtual controllers are getting teleported to the orange exit portal. Being there, they can generally still be controlled as always. However, when the exit portal is not parallel to the entry portal, there is some re-thinking required as the rotation of the controllers is different than their physical counterparts. 
 
-I also experimented with exit portals that have their front side inverse to the entry portal (basically a rotation of ~180 degree), but this was too hard to control. Therefore such exit portals are not part of the parkour. Within a certain range, the exit portal and the T-objects' positions and rotations are randomized, causing sometimes easier interaction task and sometimes tough ones.
+I also experimented with exit portals that have their front side inverse to the entry portal (basically a rotation of ~180 degree), but this was way too hard to control. Therefore such exit portals are not part of the parkour. Within certain ranges, the exit portal and the T-objects' positions and rotations are randomized, causing sometimes easier interaction task and sometimes tough ones.
 
 Whenever the player thinks that they are done with placing one T-object, they can hit a "done" button on the right side of the entry portal. After a short cool off, the "start" button re-appears and has to be hit again for the next exit portal and T-objects to appear.
 
-One of the positive effects of this portal interaction methode is, that objects can be reached that normally could not be reached with the given physical limitations. To conclude, I ended up with the same advantage as my original idea would have had, but also finshed with a methode, that still feels more natural than shooting spider webs or some energy laser.
+One of the positive effects of this portal interaction methode is, that objects can be reached that normally could not be reached with the given physical limitations. To conclude, I ended up with the same advantage as my original interaction idea would have had, but also finished with a methode, that still feels more natural than shooting spider webs or some energy laser.
 
 
-## Unity Quirks and Interation Time
+## Unity Quirks and Iteration Time
 
 While Unity is a powerful tool with many features, it has also many quirks that, at times, were really frustrating.
 
