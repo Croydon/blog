@@ -116,9 +116,11 @@ But it also means, that you are limited by your arm lenght and physical environm
 
 I kept the general idea of using this kind of direct, controller-based interaction, but advanced it by adding portals. Now, when the object task is triggered, a blue entry portal appears directly in front of the player. On the left border side of this portal, a "start" button appears. Once the players touches it, an orange exit portal appears together with the moveable T-object and the target T-object. As soon as the players moves one or both physical controller through the blue entry portal, the virtual controllers are getting teleported to the orange exit portal. Being there, they can generally still be controlled as always. However, when the exit portal is not parallel to the entry portal, there is some re-thinking required as the rotation of the controllers is different than their physical counterparts. 
 
-I also experimented with exit portals that have their front side inverse to the entry portal (basically a rotation ~180 degree), but this was too hard to control. Therefore such exit portals are not part of the parkour. Within a certain range, the exit portal and the T-objects' positions and rotations are randomized, causing sometimes easier interaction task and sometimes tough ones.
+I also experimented with exit portals that have their front side inverse to the entry portal (basically a rotation of ~180 degree), but this was too hard to control. Therefore such exit portals are not part of the parkour. Within a certain range, the exit portal and the T-objects' positions and rotations are randomized, causing sometimes easier interaction task and sometimes tough ones.
 
-One of the positive effects of this portal interaction methode is, that objects can be reached that normally could not be reached with the given physical limitations. To conclude, I ended up with the same advantage as my original idea would have had, but ended up with a methode, that still feels more natural than shooting spider webs or some energy laser.
+Whenever the player thinks that they are done with placing one T-object, they can hit a "done" button on the right side of the entry portal. After a short cool off, the "start" button re-appears and has to be hit again for the next exit portal and T-objects to appear.
+
+One of the positive effects of this portal interaction methode is, that objects can be reached that normally could not be reached with the given physical limitations. To conclude, I ended up with the same advantage as my original idea would have had, but also finshed with a methode, that still feels more natural than shooting spider webs or some energy laser.
 
 
 ## Unity Quirks and Interation Time
@@ -163,8 +165,7 @@ The general design of the user study is as follows:
   * Post-Questionnaire
   * Goodbye / Hardware cleaning
 
-You can find checklists that I made for myself to execute this study with participants in the study data repository. Such notes ensure, that every participant hears all explanations and experience all training and tasks, in the same order and in the same way.
-
+You can find checklists that I made for myself to execute this study with participants in the study data repository. Such notes ensure, that every participant hears all explanations and experience all trainings and tasks, in the same order and in the same way.
 
 During the 10 minute task, I make notes of everything interesting the participant might do and say. Furthermore, there is automatical logging of:
   * How many coins were collected in which area and round.
@@ -173,6 +174,7 @@ During the 10 minute task, I make notes of everything interesting the participan
   * How fast the participant was for each object interaction.
   * Some more logging for position and vectors, but those are mostly debug information that shouldn't matter for the actual study.
 
+And last but not least, for the final study, the view inside the VR headset is also video recorded for every participant. You can find a playlist of all participant task videos here: TODO
 
 Here is a video of myself doing the 10 minute task:
 
@@ -182,6 +184,8 @@ Here is a video of myself doing the 10 minute task:
 ### Study Results
 
 Due to time constraints, I could only perform the pre-study and actual study with a small mount of people.
+
+I made some improvements to the study execution and the automatic logging after the pre-study, but my task instruction and the pre- and post-questionnaire were identical for both.
 
 
 #### Pre-Study
