@@ -122,8 +122,9 @@
 </ul>
 <p>But it also means, that you are limited by your arm lenght and physical environment to reach things. </p>
 <p>I kept the general idea of using this kind of direct, controller-based interaction, but advanced it by adding portals. Now, when the object task is triggered, a blue entry portal appears directly in front of the player. On the left border side of this portal, a "start" button appears. Once the players touches it, an orange exit portal appears together with the moveable T-object and the target T-object. As soon as the players moves one or both physical controller through the blue entry portal, the virtual controllers are getting teleported to the orange exit portal. Being there, they can generally still be controlled as always. However, when the exit portal is not parallel to the entry portal, there is some re-thinking required as the rotation of the controllers is different than their physical counterparts. </p>
-<p>I also experimented with exit portals that have their front side inverse to the entry portal (basically a rotation ~180 degree), but this was too hard to control. Therefore such exit portals are not part of the parkour. Within a certain range, the exit portal and the T-objects' positions and rotations are randomized, causing sometimes easier interaction task and sometimes tough ones.</p>
-<p>One of the positive effects of this portal interaction methode is, that objects can be reached that normally could not be reached with the given physical limitations. To conclude, I ended up with the same advantage as my original idea would have had, but ended up with a methode, that still feels more natural than shooting spider webs or some energy laser.</p>
+<p>I also experimented with exit portals that have their front side inverse to the entry portal (basically a rotation of ~180 degree), but this was too hard to control. Therefore such exit portals are not part of the parkour. Within a certain range, the exit portal and the T-objects' positions and rotations are randomized, causing sometimes easier interaction task and sometimes tough ones.</p>
+<p>Whenever the player thinks that they are done with placing one T-object, they can hit a "done" button on the right side of the entry portal. After a short cool off, the "start" button re-appears and has to be hit again for the next exit portal and T-objects to appear.</p>
+<p>One of the positive effects of this portal interaction methode is, that objects can be reached that normally could not be reached with the given physical limitations. To conclude, I ended up with the same advantage as my original idea would have had, but also finshed with a methode, that still feels more natural than shooting spider webs or some energy laser.</p>
 <h2>Unity Quirks and Interation Time</h2>
 <p>While Unity is a powerful tool with many features, it has also many quirks that, at times, were really frustrating.</p>
 <p>My biggest pain point with Unity are the incompatibilities everywhere. Not just between different version of the Unity Editor itself, but also between different versions of official(!) Unity packages. And even within the same Unity Editor version with the same sets of packages and package version, you can find many project-based toggles than switch between some old implementations and behaviours of <em>something</em> or you have many fundamental component choices like which Unity <a href="https://docs.unity3d.com/Manual/render-pipelines.html">render pipeline</a> your project uses, that have signifiant influrence on what you can do in the first place. And changing later might mean re-work major parts of a project, which is oftentimes not feasiable.</p>
@@ -150,7 +151,7 @@
 <li>Post-Questionnaire</li>
 <li>Goodbye / Hardware cleaning</li>
 </ul>
-<p>You can find checklists that I made for myself to execute this study with participants in the study data repository. Such notes ensure, that every participant hears all explanations and experience all training and tasks, in the same order and in the same way.</p>
+<p>You can find checklists that I made for myself to execute this study with participants in the study data repository. Such notes ensure, that every participant hears all explanations and experience all trainings and tasks, in the same order and in the same way.</p>
 <p>During the 10 minute task, I make notes of everything interesting the participant might do and say. Furthermore, there is automatical logging of:</p>
 <ul>
 <li>How many coins were collected in which area and round.</li>
@@ -159,10 +160,12 @@
 <li>How fast the participant was for each object interaction.</li>
 <li>Some more logging for position and vectors, but those are mostly debug information that shouldn't matter for the actual study.</li>
 </ul>
+<p>And last but not least, for the final study, the view inside the VR headset is also video recorded for every participant. You can find a playlist of all participant task videos here: TODO</p>
 <p>Here is a video of myself doing the 10 minute task:</p>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WJ9H1r-tjjA?si=LRXK7RNcCNR2oxgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <h3>Study Results</h3>
 <p>Due to time constraints, I could only perform the pre-study and actual study with a small mount of people.</p>
+<p>I made some improvements to the study execution and the automatic logging after the pre-study, but my task instruction and the pre- and post-questionnaire were identical for both.</p>
 <h4>Pre-Study</h4>
 <p>For the pre-study, I had two participants, that were given an implementation that had a very different locomotion methode, no cyber-sickness reduction methode and the interaction was done without and portals or other more complex things directly by the controllers.</p>
 <h4>Study</h4>
