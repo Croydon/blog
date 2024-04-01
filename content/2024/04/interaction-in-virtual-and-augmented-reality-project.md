@@ -103,6 +103,20 @@ Ultimately, I am succesfully using the [Tilia.Visuals.Vignette.Unity](https://gi
 
 ### Interaction
 
+Since I moved away from the superhero-theming my original idea for the interaction task did not fit anymore. I searched for a new thematical inspiration and found one in the game Portal 2.
+
+The original parkour project enabled to grab and rotate the T-objects by moving the controllers on or in the T-objects, pressing the grab button and than control it with regular hand and arm movements. 
+
+This has several advantages:
+  * 6 degress of freedom
+  * rather intuitive and natural
+  * direct way to manipulate
+
+But it also means, that you are limited by your arm lenght and physical environment to reach things. 
+
+I kept the general idea of using this kind of direct, controller-based interaction, but advanced it by adding portals. Now, when the object task is triggered, a blue entry portal appears directly in front of the player. On the left border side of this portal, a "start" button appears. Once the players touches it, an orange exit portal appears together with the moveable T-object and the target T-object. As soon as the players moves one or both physical controller through the blue entry portal, the virtual controllers are getting teleported to the orange exit portal. Being there, they can generally still be controlled as always. However, when the exit portal is not parallel to the entry portal, there is some re-thinking required as the rotation of the controllers is different than their physical counterparts. 
+
+But one of the positive effects of this portal interaction methode is, that objects can be reached that normally could not be reached with the given physical limitations. To conclude, I ended up with the same advantage as my original idea would have had, but ended up with a methode, that still feels more natural than shooting spider webs or some energy laser.
 
 
 ## Unity Quirks and Interation Time (rename, remove?)
