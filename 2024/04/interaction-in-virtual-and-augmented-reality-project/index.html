@@ -112,6 +112,17 @@
 <p>Ultimately, I am succesfully using the <a href="https://github.com/ExtendRealityLtd/Tilia.Visuals.Vignette.Unity">Tilia.Visuals.Vignette.Unity</a> package. The vignette gets bigger/smaller/disabled dynamically, basd on the player's overall velocity, both horizontal and vertical.</p>
 <p><img src="../../../assets/2024/ivar/blockade_and_vignette.jpg" alt="An image from inside VR, that shows both the road blockade before a new area of the race track and the vignette that appears when the player moves quickly." title="An image from inside VR, that shows both the road blockade before a new area of the race track and the vignette that appears when the player moves quickly." /></p>
 <h3>Interaction</h3>
+<p>Since I moved away from the superhero-theming my original idea for the interaction task did not fit anymore. I searched for a new thematical inspiration and found one in the game Portal 2.</p>
+<p>The original parkour project enabled to grab and rotate the T-objects by moving the controllers on or in the T-objects, pressing the grab button and than control it with regular hand and arm movements. </p>
+<p>This has several advantages:</p>
+<ul>
+<li>6 degress of freedom</li>
+<li>rather intuitive and natural</li>
+<li>direct way to manipulate</li>
+</ul>
+<p>But it also means, that you are limited by your arm lenght and physical environment to reach things. </p>
+<p>I kept the general idea of using this kind of direct, controller-based interaction, but advanced it by adding portals. Now, when the object task is triggered, a blue entry portal appears directly in front of the player. On the left border side of this portal, a "start" button appears. Once the players touches it, an orange exit portal appears together with the moveable T-object and the target T-object. As soon as the players moves one or both physical controller through the blue entry portal, the virtual controllers are getting teleported to the orange exit portal. Being there, they can generally still be controlled as always. However, when the exit portal is not parallel to the entry portal, there is some re-thinking required as the rotation of the controllers is different than their physical counterparts. </p>
+<p>But one of the positive effects of this portal interaction methode is, that objects can be reached that normally could not be reached with the given physical limitations. To conclude, I ended up with the same advantage as my original idea would have had, but ended up with a methode, that still feels more natural than shooting spider webs or some energy laser.</p>
 <h2>Unity Quirks and Interation Time (rename, remove?)</h2>
 <p>This was also a major pain point while working with Unity in general...</p>
 <p>Incompatibility between Unity versions, Unity package versions, different implementation methods to accomplish very similar things etc. make it really, really hard to find information and resources that are actually working for my specific use case. Several scripts and packages did not work with my version etc.</p>
