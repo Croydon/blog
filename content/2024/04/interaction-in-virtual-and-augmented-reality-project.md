@@ -201,7 +201,7 @@ All results can be found in the [study data repository](https://github.com/Croyd
 
 ## Future Work
 
-In the future, the study could be performed with more people to get more signifcant data and to have more data to compare it to other implementations.
+In the future, the study could be performed with more people to get more significant data. Furhermore, it should be performed with different locomotions and interactions methods, to have more data to compare it to other implementations.
 
 
 ## Conclusion
