@@ -53,7 +53,7 @@
 					<div>
 						<p>This is my report for my university project for the course Interaction in Virtual and Augmented Reality.</p>
 <h2>Motivation</h2>
-<p>We have been given an existing VR project. In this virtual environment exists a race track through a city. Along the way are collectable coins. The race track is structured in three different areas. Shortly before a new area, a task has to be done, at which a T-shaped object has be selected and be moved in the second T-shaped object. Ideally, those two T-objects are then exactly at the same position with the same rotation, so that you can't distingish them anymore.</p>
+<p>We have been given an <a href="https://github.com/wenjietseng/VR-locomotion-parkour">existing VR project</a>. In this virtual environment exists a race track through a city. Along the way are collectable coins. The race track is structured in three different areas. Shortly before a new area, a task has to be done, at which a T-shaped object has to be selected, rotated and moved in the second T-shaped object. Ideally, those two T-objects are then exactly at the same position with the same rotation, so that you can't distingish them anymore.</p>
 <p>We had the following tasks:</p>
 <ul>
 <li>Implement a locomotion method</li>
@@ -61,8 +61,19 @@
 <li>Implement something that reduces cyber-sickness</li>
 <li>Design and execute a study to evalute the results</li>
 </ul>
-<h2>Concept Idea</h2>
-<h2>Technical Implementation</h2>
+<h2>Initial Implementation Idea</h2>
+<p>My initial idea was to implement some flying. Either some Ironman-like flying locomotion where you put your open hands down horizontally and it applies some upwards force and some force in the direction of where you are looking. Or some Superman-like flying where you have some power-pose that let you fly in the direction of your strechted arm, both horizontal and vertical.</p>
+<p>For the interaction task, I wanted to stay in this superhero-themed setting and either use some Ironman-like energy beams that attach to the T-object on the first hit and then rotates and moves with your hand. Or effectively the same thing with some Spiderman webs.</p>
+<p>For the cyper-sickness reduction, I planned to implement a tunnling vignette.</p>
+<h2>Technical Details and Actual Implementation</h2>
+<h3>General</h3>
+<ul>
+<li>Unity upgrade, Oculus -&gt; Meta SDK migration</li>
+<li>Requirements: Meta Quest 2, Unity version</li>
+</ul>
+<h3>Locomotion</h3>
+<h3>Cyber-Sickness Reduction</h3>
+<h3>Interaction</h3>
 <h2>Unity Quirks (rename, remove?)</h2>
 <h2>CI / CD</h2>
 <h2>Study</h2>
@@ -76,8 +87,11 @@
 <h2>Conclusion</h2>
 <h2>Resources</h2>
 <ul>
-<li><a href="https://github.com/Croydon/tuda-vr-parkour">Implementation repository</a></li>
-<li><a href="https://github.com/Croydon/tuda-vr-parkour-study">Study data repository</a></li>
+<li><a href="https://github.com/Croydon/tuda-vr-parkour">Implementation Repository</a><ul>
+<li><a href="https://github.com/Croydon/tuda-vr-parkour/releases">APK Downloads for Meta Quest 2</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/Croydon/tuda-vr-parkour-study">Study Data Repository</a></li>
 <li><a href="https://www.youtube.com/watch?v=WJ9H1r-tjjA">Study Task Walkthrough</a></li>
 </ul>
 					</div>
