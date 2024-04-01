@@ -165,10 +165,6 @@ The general design of the user study is as follows:
 
 You can find checklists that I made for myself to execute this study with participants in the study data repository. Such notes ensure, that every participant hears all explanations and experience all training and tasks, in the same order and in the same way.
 
-Here is a video of myself doing the 10 minute task:
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WJ9H1r-tjjA?si=LRXK7RNcCNR2oxgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 
 During the 10 minute task, I make notes of everything interesting the participant might do and say. Furthermore, there is automatical logging of:
   * How many coins were collected in which area and round.
@@ -178,12 +174,24 @@ During the 10 minute task, I make notes of everything interesting the participan
   * Some more logging for position and vectors, but those are mostly debug information that shouldn't matter for the actual study.
 
 
+Here is a video of myself doing the 10 minute task:
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WJ9H1r-tjjA?si=LRXK7RNcCNR2oxgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
 ### Study Results
+
+Due to time constraints, I could only perform the pre-study and actual study with a small mount of people.
+
 
 #### Pre-Study
 
+For the pre-study, I had two participants, that were given an implementation that had a very different locomotion methode, no cyber-sickness reduction methode and the interaction was done without and portals or other more complex things directly by the controllers.
+
 
 #### Study
+
+For the final study, I had four participants, that were given the final implementation of the locomation and interaction methode and with enabled tunneling vignette.
 
 
 #### Results
@@ -192,6 +200,8 @@ All results can be found in the [study data repository](https://github.com/Croyd
 
 
 ## Future Work
+
+In the future, the study could be performed with more people to get more signifcant data and to have more data to compare it to other implementations.
 
 
 ## Conclusion
