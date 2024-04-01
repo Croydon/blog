@@ -169,6 +169,15 @@ Here is a video of myself doing the 10 minute task:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WJ9H1r-tjjA?si=LRXK7RNcCNR2oxgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+
+During the 10 minute task, I make notes of everything interesting the participant might do and say. Furthermore, there is automatical logging of:
+  * How many coins were collected in which area and round.
+  * How much time the participant took for each area, for moving through it and for the interaction task.
+  * How precise the participant was for each object interaction.
+  * How fast the participant was for each object interaction.
+  * Some more logging for position and vectors, but those are mostly debug information that shouldn't matter for the actual study.
+
+
 ### Study Results
 
 #### Pre-Study
