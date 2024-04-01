@@ -127,7 +127,7 @@ One of the positive effects of this portal interaction methode is, that objects 
 
 While Unity is a powerful tool with many features, it has also many quirks that, at times, were really frustrating.
 
-My biggest pain point with Unity are the incompatibilities everywhere. Not just between different version of the Unity Editor itself, but also between different versions of official(!) Unity packages. And even within the same Unity Editor version with the same sets of packages and package version, you can find many project-based toggles than switch between some old implementations and behaviours of _something_ or you have many fundamental component choices like which Unity [render pipeline](https://docs.unity3d.com/Manual/render-pipelines.html) your project uses, that have signifiant influrence on what you can do in the first place. And changing later might mean re-work major parts of a project, which is oftentimes not feasiable.
+My biggest pain point with Unity are the incompatibilities everywhere. Not just between different version of the Unity Editor itself, but also between different versions of official(!) Unity packages. And even within the same Unity Editor version with the same sets of packages and package version, you can find many project-based toggles than switch between some old implementations and behaviours of _something_ or you have many fundamental component choices like which Unity [render pipeline](https://docs.unity3d.com/Manual/render-pipelines.html) your project uses, that have signifiant influrence on what you can do in the first place. And changing later might require re-working major parts of a project, which is oftentimes not feasiable.
 
 All of those things, lead to the phenomenon that whenever you are searching for learning resources, packages, scripts, assets etc. there is an enourmously high chance, that it won't work for your project for one reason or another. This does not apply to basics, so while learning the basics of Unity, you should be fine. Unity experts are probably also not that much effected by that, as they have enough knowledge to workaround this or implement everything by themselves in the first place. But for everyone falling in-between, this is frustrating.
 
@@ -174,7 +174,11 @@ During the 10 minute task, I make notes of everything interesting the participan
   * How fast the participant was for each object interaction.
   * Some more logging for position and vectors, but those are mostly debug information that shouldn't matter for the actual study.
 
-And last but not least, for the final study, the view inside the VR headset is also video recorded for every participant. You can find a playlist of all participant task videos here: TODO
+I made some improvements to the study execution and the automatic logging after the pre-study, but my task instruction and the pre- and post-questionnaire were identical for both. You can find the full questionnaires here: 
+  * [Pre-Questionnaire](https://github.com/Croydon/tuda-vr-parkour-study/blob/main/study/pre_questionnaire/pre-questionnaire.md)
+  * [Post-Questionnaire](https://github.com/Croydon/tuda-vr-parkour-study/blob/main/study/post_questionnaire/post-questionnaire.md)
+
+For the final study, the view inside the VR headset was also video recorded for every participant. You can find a playlist of all participant task videos here: TODO
 
 Here is a video of myself doing the 10 minute task:
 
@@ -185,14 +189,9 @@ Here is a video of myself doing the 10 minute task:
 
 Due to time constraints, I could only perform the pre-study and actual study with a small mount of people.
 
-I made some improvements to the study execution and the automatic logging after the pre-study, but my task instruction and the pre- and post-questionnaire were identical for both. You can find the full questionnaires here: 
-  * [Pre-Questionnaire](https://github.com/Croydon/tuda-vr-parkour-study/blob/main/study/pre_questionnaire/pre-questionnaire.md)
-  * [Post-Questionnaire](https://github.com/Croydon/tuda-vr-parkour-study/blob/main/study/post_questionnaire/post-questionnaire.md)
-
-
 #### Pre-Study
 
-For the pre-study, I had two participants, that were given an implementation that had a very different locomotion methode, no cyber-sickness reduction methode and the interaction was done without and portals or other more complex things directly by the controllers.
+For the pre-study, I had two participants, that were given an implementation that had a very different locomotion methode, no cyber-sickness reduction methode and the interaction was done directly by the controllers, without the portals or other more complex things.
 
 TODO
 
@@ -226,4 +225,5 @@ TODO
   * [Implementation Repository](https://github.com/Croydon/tuda-vr-parkour)
     * [APK Downloads for Meta Quest 2](https://github.com/Croydon/tuda-vr-parkour/releases)
   * [Study Data Repository](https://github.com/Croydon/tuda-vr-parkour-study)
-  * [Study Task Walkthrough](https://www.youtube.com/watch?v=WJ9H1r-tjjA)
+  * [Study Task Video Walkthrough](https://www.youtube.com/watch?v=WJ9H1r-tjjA)
+  * [Original Parkour Implementation](https://github.com/wenjietseng/VR-locomotion-parkour)
