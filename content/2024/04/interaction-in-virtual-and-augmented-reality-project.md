@@ -218,7 +218,7 @@ I had two participants (P1, P2), both male, being 29 and 27 years old (average: 
 
 #### Study Participants
 
-For the final study, I had four participants (P3 - P6), that were given the final implementation of the locomation and interaction method and with enabled tunneling vignette.
+For the final study, I had four participants (P3 - P6), that were given the final implementation of the locomation and interaction method and with a enabled tunneling vignette.
 
 One participant was female (P3), the others (P4 - P6) were male. The age average was 41.25 years (56, 50, 32, 27). On a scale from `1` to `5`, P5 estimated their previous VR experience with a `2`, while everyone else answered with a `1`.
 
@@ -334,7 +334,7 @@ In Portal 2, players are test subjects that have to finish experimental test cha
 
 ## Conclusion
 
-During this project I was able to learn a lot about the Unity Engine and VR. I designed and executed an in-lab study with participants and analysed the results, something that I had only done once before, but which is something that I find quite interesting. Figuring out the physiological and psychological reasons, why humans interact with computer systems in the way they do and trying to understand what methods work under which particular conditions can be quite exiting.
+During this project I was able to learn a lot about the Unity Engine and VR. I designed and executed an in-lab study with participants and analysed the results, something that I had only done once before, but which is something that I find quite interesting. Figuring out the physiological and psychological reasons, why humans interact with computer systems in the way they do and trying to understand what methods work under which particular conditions can be quite exciting.
 
 
 ## Resources
