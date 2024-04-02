@@ -6,7 +6,7 @@ Image: /assets/2024/ivar/thumbnail.jpg
 Template: single
 ---
 
-[Off-Topic note: The view of this blog post is not (yet) optimized for mobile browsers, I would recommend to read it on a bigger screen if possible.]
+[Off-Topic note: The view of this blog post is not (yet) optimized for mobile browsers, I would recommend to read it on a bigger screen if possible. Additionally, I will make the tables more readable.]
 
 This is my report for my university project for the course Interaction in Virtual and Augmented Reality.
 
@@ -259,7 +259,7 @@ One participant was female (P3), the others (P4 - P6) were male. The age average
 
 In the pre-study, the participants were able to finish more rounds. While this could correlate with the locomotion system theoretically, it is more plausible, that this due to the increased interaction requirement from solving only one object task in the pre-study per race track part, instead of five in the final study. Thus keeping the participants longer busy with the interaction task and preventing them from moving forward.
 
-In the pre-study, only Part 3 had coins up in the air. In Part 1 and 2 all coins were placed on the ground in the pre-study, while the final study, had for every part some coins on the ground and some in the air. The results shows, that people have collected some more coints on average in the final study in Part 3 than in the pre-study, backing up my overall impression, that people struggled with jumping in the pre-study and had an easier time to collect them in the final study due to the new flying locomotion technique.
+In the pre-study, only Part 3 had coins up in the air. In Part 1 and 2 all coins were placed on the ground in the pre-study, while the final study, had for every part some coins on the ground and some in the air. The results shows, that people have collected some more coins on average in the final study in Part 3 than in the pre-study, backing up my overall impression, that people struggled with jumping in the pre-study and had an easier time to collect them in the final study due to the new flying locomotion technique.
 
 However, there is not enough data, to have a strong guess, why the average collected coins in part 1 and part 2 have mixed results. It might be, that people performed better in part 1 in the final study than in the pre-study, due to the locomotion system slowing down horizontal accerleration more quickly, thus allowing better control in this part of the race track with the most curves. In part 2, however, people collected more coins in the pre-study, this could be due to the fact, that all coins were on the ground in the pre-study, but many were flying in the final study - and simultanously, this part only has a single curve, thus, potential improvements in the horizontal agility might not have a huge impact, in contrast to the results of part 1.
 
@@ -325,7 +325,7 @@ Several ideas did not made it into the final version of my project due to the li
 
 Second, I would have liked to experiment with portals, that allow you to see the camera perspective of the exit portal within the entry portal, thus eleminating the factor, that you have to look at the T-objects from afar, enabling that other objects can be in-between the entry and exit portal that block the natural line-of-sight and making a literal limitless range between the entry and exit portal possible. The precision of such a system might than be virtual identical to the results of the pre-study.
 
-Futhermore, I wanted to thematically go deeper into the Portal 2 direction. I began to create a prototype for a starting area in which the player spawn, when loading the application. While my concept also used this place for some entertainment, it also would have fulfilled the practical purpose of on-boarding the player. It would have explained how to configure the flying height with the right controller and how to use the controls in general, therefore requiring no external knowledge before starting the game.
+Futhermore, I wanted to thematically go deeper into the Portal 2 direction. I began to create a prototype for a starting area in which the player spawns, when loading the application. While my concept also used this place for some entertainment, it also would have fulfilled the practical purpose of on-boarding the player. It would have explained how to configure the flying height with the right controller and how to use the controls in general, therefore requiring no external knowledge before starting the game.
 
 In Portal 2, players are test subjects that have to finish experimental test chambers. Since my project is used for a study and the players are study participants, I wanted to double down on this thematically. You can find a screenshot of the concept starting area down below. Spoiler: Since the player is not particulary safe in Portal 2 either, this starting area might have catched fire and exploded eventually, destroying the starting area and allowing the player to start the parkour.
 
