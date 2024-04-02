@@ -62,11 +62,11 @@ I also changed many implementation details, including the logging for the study 
 
 ### Locomotion
 
-I kept the original idea of enabling the player to fly, but eventually gave up on trying to implement a flying methode that feels "natural". "Natural" meaning, that there is some mechanism that adds some amount of vertical force on the player and the player only slows down through gravity, crashing into another object or through some kind of break mechanism. 
+I kept the original idea of enabling the player to fly, but eventually gave up on trying to implement a flying method that feels "natural". "Natural" meaning, that there is some mechanism that adds some amount of vertical force on the player and the player only slows down through gravity, crashing into another object or through some kind of break mechanism. 
 
 Getting the physics right for a scenario, where players have to constantly and quickly change directions is hard. I went through many interations of differnt kinds of force-logic, some can be found in my git history, many others did not even make it so far. Most of them were really hard to control from a player perspective or caused very strong cyber-sickerness symptoms.
 
-In one of those intermediate interactions, I had added a flying force by pressing the right trigger button. The player would than naturally fall down with gravity again. I eventually figured our physics numbers that made it controllable rather well, but I did not want this to be the final flying methode, as it did not feel creative and innovative enough. It is still possible to turn this control on in my final solution, but it is off by default and can only be changed before a build, not during runtime.
+In one of those intermediate interactions, I had added a flying force by pressing the right trigger button. The player would than naturally fall down with gravity again. I eventually figured our physics numbers that made it controllable rather well, but I did not want this to be the final flying method, as it did not feel creative and innovative enough. It is still possible to turn this control on in my final solution, but it is off by default and can only be changed before a build, not during runtime.
 
 In another one of those intermediate interations, I experimented with using the body height of the player to control the flying height, or to be more preceise, the height of the headset in relation to the floor height. Standing straight would mean having the maximum flying height, getting closer to a pre-determined min-height would bring down the player more and more. The max and min height needs to be determined before the game begins in order for such a logic to work. For the max work to be correct, the game has to be sure that the player is standing straight at the point of taking this value. And a min value has to be recorded in a moment the player is aware of too. One might think, that the floor can be taken as such a point, but that wouldn't be good either:
 
@@ -120,7 +120,7 @@ I also experimented with exit portals that have their front side inverse to the 
 
 Whenever the player thinks that they are done with placing one T-object, they can hit a "done" button on the right side of the entry portal. After a short cool off, the "start" button re-appears and has to be hit again for the next exit portal and T-objects to appear.
 
-One of the positive effects of this portal interaction methode is, that objects can be reached that normally could not be reached with the given physical limitations. To conclude, I ended up with the same advantage as my original interaction idea would have had, but also finished with a methode, that still feels more natural than shooting spider webs or some energy laser.
+One of the positive effects of this portal interaction method is, that objects can be reached that normally could not be reached with the given physical limitations. To conclude, I ended up with the same advantage as my original interaction idea would have had, but also finished with a method, that still feels more natural than shooting spider webs or some energy laser.
 
 
 ## Unity Quirks and Iteration Time
@@ -191,14 +191,14 @@ Due to time constraints, I could only perform the pre-study and actual study wit
 
 #### Pre-Study
 
-For the pre-study, participants were given an implementation that had a very different locomotion methode, no cyber-sickness reduction methode and the interaction was done directly by the controllers, without the portals or other more complex things.
+For the pre-study, participants were given an implementation that had a very different locomotion method, no cyber-sickness reduction method and the interaction was done directly by the controllers, without the portals or other more complex things.
 
 I had two participants.
 TODO
 
 #### Study
 
-For the final study, I had four participants, that were given the final implementation of the locomation and interaction methode and with enabled tunneling vignette.
+For the final study, I had four participants, that were given the final implementation of the locomation and interaction method and with enabled tunneling vignette.
 
 TODO
 
