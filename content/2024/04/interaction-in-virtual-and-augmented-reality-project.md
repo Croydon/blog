@@ -147,7 +147,7 @@ You can find the [CI runs  here](https://github.com/Croydon/tuda-vr-parkour/acti
 
 ## Study
 
-I desinged an user study, made some early test run with a pre-study and then, with some small study adjustments and a heavily changed implementation, I performed the actual study.
+I designed an user study, made some early test run with a pre-study and then, with some small study adjustments and a heavily changed implementation, I performed the actual study.
 
 
 ### Study Design
@@ -155,7 +155,7 @@ I desinged an user study, made some early test run with a pre-study and then, wi
 The general design of the user study is as follows:
 
   * Welcome / Introduction
-  * Ethnical disclaimer (participants are voluntary, unpaied, can end the experiment at any given time)
+  * Ethnical disclaimer (participants are voluntary, unpaid, can end the experiment at any given time)
   * Privacy disclaimer (what data is saved and published?)
   * Pre-Questionnaire
   * Teaching / Explanation of the hardware, virtual environment, tasks and control
@@ -165,7 +165,7 @@ The general design of the user study is as follows:
   * Post-Questionnaire
   * Goodbye / Hardware cleaning
 
-You can find checklists that I made for myself to execute this study with participants in the study data repository. Such notes ensure, that every participant hears all explanations and experience all trainings and tasks, in the same order and in the same way.
+You can find checklists that I made for myself to execute this study with participants in the study data repository ([pre-study checklist](https://github.com/Croydon/tuda-vr-parkour-study/blob/main/pre_study/checklist_for_instructor_to_execute_pre_study.md)), [final study checklist](https://github.com/Croydon/tuda-vr-parkour-study/blob/main/study/checklist_for_instructor_to_execute_post_study.md). Such notes ensure, that every participant hears all explanations and experience all trainings and tasks, in the same order and in the same way.
 
 During the 10 minute task, I make notes of everything interesting the participant might do and say. Furthermore, there is automatical logging of:
   * How many coins were collected in which area and round.
@@ -174,7 +174,7 @@ During the 10 minute task, I make notes of everything interesting the participan
   * How fast the participant was for each object interaction.
   * Some more logging for position and vectors, but those are mostly debug information that shouldn't matter for the actual study.
 
-I made some improvements to the study execution and the automatic logging after the pre-study, but my task instruction and the pre- and post-questionnaire were identical for both. You can find the full questionnaires here: 
+I made some improvements to the study execution and the automatic logging after the pre-study, but my task instruction and the pre- and post-questionnaire were identical for both. You can find the full questionnaires here:
   * [Pre-Questionnaire](https://github.com/Croydon/tuda-vr-parkour-study/blob/main/study/pre_questionnaire/pre-questionnaire.md)
   * [Post-Questionnaire](https://github.com/Croydon/tuda-vr-parkour-study/blob/main/study/post_questionnaire/post-questionnaire.md)
 
@@ -191,8 +191,9 @@ Due to time constraints, I could only perform the pre-study and actual study wit
 
 #### Pre-Study
 
-For the pre-study, I had two participants, that were given an implementation that had a very different locomotion methode, no cyber-sickness reduction methode and the interaction was done directly by the controllers, without the portals or other more complex things.
+For the pre-study, participants were given an implementation that had a very different locomotion methode, no cyber-sickness reduction methode and the interaction was done directly by the controllers, without the portals or other more complex things.
 
+I had two participants.
 TODO
 
 #### Study
