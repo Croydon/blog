@@ -209,24 +209,19 @@ For the pre-study, participants were given an implementation that had a very dif
 Hence, the data between the pre-study and the final study is only compareable with some caution, unfortunately.
 
 
-#### Pre-Study
+#### Pre-Study Participants
 
 I had two participants (P1, P2), both male, being 29 and 27 years old (average: 28), that have rated their pre-existing experience on a scale from `1 - very inexperiened` to `5 - very experienced`, with a `2` and `1` respectively.
 
 
-TODO
-
-
-#### Study
+#### Study Participants
 
 For the final study, I had four participants (P3 - P6), that were given the final implementation of the locomation and interaction method and with enabled tunneling vignette.
 
 One participant was female (P3), the others (P4 - P6) were male. The age average was 41.25 years (56, 50, 32, 27). On a scale from `1` to `5`, P5 estimated their previous VR experience with a `2`, while everyone else answered with a `1`.
 
 
-TODO
-
-#### Comparision
+#### Discussion
 
 ##### Race Track Parts Finished
 
@@ -315,7 +310,7 @@ It it worth noting, that while this particular task spawn was indeed difficult, 
 | **Average total** | 2.5    | 7.17     | 7
 
 
-There seems to be no major difference on average when it comes to cyber-sickness symptoms, between the locomotion system of the pre-study and the final study. P4 has a spike, but individual people have different sensitivity to cyber-sickness. That there is no major difference is an interesting result, since the pre-study had no tunneling vignette, while the final study had one. Thus, one could expect, that the cyber-sickness symptoms in the pre-study are more severe. On the other hand, the pre-study locomotion system was based on a continious teleportion of the player. Teleportion is known to cause less cyber-sickness in general. The final study's locomotion system did use an accerlation system instead. Once more, more data would be required to have deeper insights.
+There seems to be no major difference on average when it comes to cyber-sickness symptoms, between the locomotion system of the pre-study and the final study. P4 has a spike, but individual people have different sensitivity to cyber-sickness. That there is no major difference on average is an interesting result, since the pre-study had no tunneling vignette, while the final study had one. Thus, one could expect, that the cyber-sickness symptoms in the pre-study are more severe. On the other hand, the pre-study locomotion system was based on a continious teleportion of the player. Teleportion is known to cause less cyber-sickness in general. The final study's locomotion system did use an accerlation system instead. Once more, more data would be required to have deeper insights.
 
 The average response for the presence is almost identical (`7` in the pre-study, vs `7.25`). The average value for enjoyment has a small difference (`6.5` in the pre-study vs `7.25`), but there is too little data to make an educated guess why this might be.
 
