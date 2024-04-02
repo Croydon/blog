@@ -215,11 +215,18 @@ TODO
 In the future, the study could be performed with more people to get more significant data. Furhermore, it should be performed with different locomotions and interactions methods, to have more data to compare it to other implementations.
 
 TODO
-Start area
+  * Start area, portal 2 inspired
+  * in-application onboarding
+  * possible to reset race, without having to close+restart the application
+  * Experiment with portals in which you can see the perspective of the exit portal; putting the exit portal out of the natural line-of-sight
+
+TODO 
+
 
 ## Conclusion
 
-TODO 
+TODO
+
 
 ## Resources
 
