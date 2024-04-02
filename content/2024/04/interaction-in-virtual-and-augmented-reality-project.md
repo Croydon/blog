@@ -183,6 +183,7 @@ For the final study, the view inside the VR headset was also video recorded for 
 Here is a video of myself doing the 10 minute task:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WJ9H1r-tjjA?si=LRXK7RNcCNR2oxgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br>
 
 
 ### Study Results
