@@ -244,7 +244,7 @@ TODO
 <br>
 
 
-##### Average Collected Coins Per Round
+##### Collected Coins Per Part Average
 
 |          | Part1 / max 16  | Part 2 / max 30   | Part 3 / max 23
 | -------- | -------- | -------- | -------
@@ -260,7 +260,7 @@ TODO
 
 
 
-In the pre-study, the participants were able to finish more rounds. While this could correlate with the locomotion system theoretically, it is more likely, that this due to the increased interaction requirement from solving only one object task in the pre-study per race track part, instead of five in the final study. Thus keeping the participants longer busy with the interaction task and preventing them from moving forward.
+In the pre-study, the participants were able to finish more rounds. While this could correlate with the locomotion system theoretically, it is more plausible, that this due to the increased interaction requirement from solving only one object task in the pre-study per race track part, instead of five in the final study. Thus keeping the participants longer busy with the interaction task and preventing them from moving forward.
 
 In the pre-study, only Part 3 had coins up in the air. In Part 1 and 2 all coins were placed on the ground in the pre-study, while the final study, had for every part some coins on the ground and some in the air. The results shows, that people have collected some more coints on average in the final study in Part 3 than in the pre-study, backing up my overall impression, that people struggled with jumping in the pre-study and had an easier time to collect them in the final study due to the new flying locomotion technique.
 
@@ -288,7 +288,7 @@ The error offsets describes how far off the placed T-object was compared to the 
 
 It is unfortunate, that the error offset in the pre-study was rounded to only two decimal places and the error vector was not logged. In the final study, this was improved to log exact values and additionally the error vector.
 
-It was to be expected, that the precision for the tasks are better in the pre-study than in the final study. The direct manipulation of the objects with the controller, while standing directly in front of it, allows better precision, than having to look from a distance, hence the pre-study precision was on average 7.8 times better. Future work, should experiment with portals, that let you actually see the camera perspective of the exit portal inside the entry portal, thus eliminating the requirement to look from a distance. Furthermore, this would allow to have objects between the entry and exit portals that can block the view entirely.
+It was to be expected, that the precision for the tasks are better in the pre-study than in the final study. The direct manipulation of the objects with the controller, while standing directly in front of it, allows better precision, than having to look from a distance, hence the pre-study precision was on average 7.8 times better. Future work, should experiment with portals, that let you see the camera perspective of the exit portal inside the entry portal, thus eliminating the requirement to look from a distance. Furthermore, this would allow to have objects between the entry and exit portals that can block the view entirely.
 
 P5 has a noteable spike in the error offset for the part 2 average, both globally and when comparing with P5's part 1 and part 3 average. This can be explained with the observation notes. P5 got once a portal and T-object spawn, that they found so hard, that the task was not even tried. To quote: "What is that? I can't see anything there. I can't reach that. Can I skip that? Yes, I am going to that now."
 
