@@ -188,7 +188,7 @@
 <p>One participant was female (P3), the others (P4 - P6) were male. The age average was 41.25 years (56, 50, 32, 27). On a scale from <code>1</code> to <code>5</code>, P5 estimated their previous VR experience with a <code>2</code>, while everyone else answered with a <code>1</code>.</p>
 <p>TODO</p>
 <h4>Comparision</h4>
-<h5>Race track parts finished</h5>
+<h5>Race Track Parts Finished</h5>
 <table>
 <thead>
 <tr>
@@ -255,7 +255,8 @@
 </tr>
 </tbody>
 </table>
-<h5>Average collected coins per round</h5>
+<p><br></p>
+<h5>Average Collected Coins Per Round</h5>
 <table>
 <thead>
 <tr>
@@ -325,6 +326,82 @@
 <p>In the pre-study, the participants were able to finish more rounds. While this could correlate with the locomotion system theoretically, it is more likely, that this due to the increased interaction requirement from solving only one object task in the pre-study per race track part, instead of five in the final study. Thus keeping the participants longer busy with the interaction task and preventing them from moving forward.</p>
 <p>In the pre-study, only Part 3 had coins up in the air. In Part 1 and 2 all coins were placed on the ground in the pre-study, while the final study, had for every part some coins on the ground and some in the air. The results shows, that people have collected some more coints on average in the final study in Part 3 than in the pre-study, backing up my overall impression, that people struggled with jumping in the pre-study and had an easier time to collect them in the final study due to the new flying locomotion technique.</p>
 <p>However, there is not enough data, to have a strong guess, why the average collected coins in part 1 and part 2 have mixed results. It might be, that people performed better in part 1 in the final study than in the pre-study, due to the locomotion system slowing down horizontal accerleration more quickly, thus allowing better control in this part of the race track with the most curves. In part 2, however, people collected more coins in the pre-study, this could be due to the fact, that all coins were on the ground in the pre-study, but many were flying in the final study - and simultanously, this part only has a single curve, thus, potential improvements in the horizontal agility might not have a huge impact, in contrast to the results of part 1.</p>
+<h5>Task Interaction Error Offset Average</h5>
+<p>Rounded to max. eight decimal places.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Part 1 Average</th>
+<th>Part 2 Average</th>
+<th>Part 3 Average</th>
+<th>Total Average</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1</td>
+<td>0.0005</td>
+<td>0.00666667</td>
+<td>0.00666667</td>
+<td>0.006</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>0.0052</td>
+<td>0.002</td>
+<td>0.005</td>
+<td>0.02071428</td>
+</tr>
+<tr>
+<td><strong>Average pre-study</strong></td>
+<td>0.00285</td>
+<td>0.00433334</td>
+<td>0.005833335</td>
+<td>0.01635714</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>0.22259461</td>
+<td>0.13199556</td>
+<td>0.1298599</td>
+<td>0.16148336</td>
+</tr>
+<tr>
+<td>P4</td>
+<td>0.13538194</td>
+<td>0.24925465</td>
+<td>0.06607917 (only 3 out of 5 finished)</td>
+<td>0.16318619</td>
+</tr>
+<tr>
+<td>P5</td>
+<td>0.17476597  (in the second round, the time run out while working on the first object)</td>
+<td>0.41176774</td>
+<td>0.10948232</td>
+<td>0.2284278825</td>
+</tr>
+<tr>
+<td>P6</td>
+<td>0.05867392</td>
+<td>0.06364694</td>
+<td>0.06099468</td>
+<td>0.06110518</td>
+</tr>
+<tr>
+<td><strong>Average study</strong></td>
+<td>0.14785411</td>
+<td>0.19062511</td>
+<td>0.09160402</td>
+<td>0.14336108</td>
+</tr>
+</tbody>
+</table>
+<p>The error offsets describes how far off the placed T-object was compared to the position of the target T-object. First, an error vector is calculated, one offset for the x, y and z coordinate axis respectively. Then, the magnitude of this vectors gets calculated.</p>
+<p>It is unfortunate, that the error offset in the pre-study was rounded to only two decimal places and the error vector was not logged. In the final study, this was improved to log exact values and additionally the error vector.</p>
+<p>It was to be expected, that the precision for the tasks are better in the pre-study than in the final study. The direct manipulation of the objects with the controller, while standing directly in front of it, allows better precision, than having to look from a distance, hence the pre-study precision was on average 7.8 times better. Future work, should experiment with portals, that let you actually see the camera perspective of the exit portal inside the entry portal, thus eliminating the requirement to look from a distance. Furthermore, this would allow to have objects between the entry and exit portals that can block the view entirely.</p>
+<p>P5 has a noteable spike in the error offset for the part 2 average, both globally and when comparing with P5's part 1 and part 3 average. This can be explained with the observation notes. P5 got once a portal and T-object spawn, that they found so hard, that the task was not even tried. To quote: "What is that? I can't see anything there. I can't reach that. Can I skip that? Yes, I am going to that now."</p>
+<p>It it worth noting, that while this particular task spawn was indeed difficult, it was not impossible to solve (all possible spawns should be solveable). The exit portal was on the far right and very close to the entry portal, hence, the borders of both the entry and exit portals blocked a large portion of the view on the T-objects. However, leaning to the left and right allows to see enough of the T-objects theoretically. P6 had a similar verbal reaction to a difficult task spawn once, but had the patience to try to solve it and therefore has no spike in their error offsets.</p>
 <p>TODO</p>
 <h2>Future Work</h2>
 <p>In the future, the study could be performed with more people to get more significant data. Furhermore, it should be performed with different locomotions and interactions methods, to have more data to compare it to other implementations.</p>
