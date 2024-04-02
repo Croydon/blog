@@ -68,9 +68,9 @@ Getting the physics right for a scenario, where players have to constantly and q
 
 In one of those intermediate interactions, I had added a flying force by pressing the right trigger button. The player would than naturally fall down with gravity again. I eventually figured our physics numbers that made it controllable rather well, but I did not want this to be the final flying method, as it did not feel creative and innovative enough. It is still possible to turn this control on in my final solution, but it is off by default and can only be changed before a build, not during runtime.
 
-In another one of those intermediate interations, I experimented with using the body height of the player to control the flying height, or to be more preceise, the height of the headset in relation to the floor height. Standing straight would mean having the maximum flying height, getting closer to a pre-determined min-height would bring down the player more and more. The max and min height needs to be determined before the game begins in order for such a logic to work. For the max work to be correct, the game has to be sure that the player is standing straight at the point of taking this value. And a min value has to be recorded in a moment the player is aware of too. One might think, that the floor can be taken as such a point, but that wouldn't be good either:
+In another one of those intermediate interations, I experimented with using the body height of the player to control the flying height, or to be more preceise, the height of the headset in relation to the floor height. Standing straight would mean having the maximum flying height, getting closer to a pre-determined min-height would bring down the player more and more. The max and min height need to be determined before the game begins in order for such a logic to work. For the max value to be correct, the game has to be sure that the player is standing straight at the point of taking this value. And a min value has to be recorded in a moment, that the player is aware of too. One might think, that the floor can be taken as such a point, but that wouldn't be good either:
 
-  * It would be a terrible idea that the player have to bring their head completely down on the floor to reach the min flying height.
+  * It would be a terrible idea that the player has to bring their head down on the floor to reach the min flying height.
   * Different people have a different comfort level of how far they can bend their kness, not once, but often and for a longer time.
 
 It turned out, that the to be expected height difference of the headset, between standing straight and going down as far as it is comfortable and holdable for a longer time period, is too small for this use case. Even slight height chances would change the virtual player position dramatically. Therefore this method did not allow a precise enough control.
@@ -79,11 +79,11 @@ However, my final solution build upon this concept. Instead of the height of the
 
   * For the bottom < 45% height positions, the player gets added a vertical force, that pulls them down. The lower the position, the quicker they will fall down, if the are already in the air flying.
   * For 45% until 56% (excluding) height positions, the player gets removed (almost) all vertical forces. This causes an "elevator flight" effect and enables the player to (almost) stand still in the air. (There is still a very tiny force downwards, as I have technically not disabled gravity for the player object, however, that is only noticeable at all, if there is no other velocity and if you really pay attention. For all practical purposes within the parkour it is irrelvant.)
-  * For positions at 56% height and above, the players gets added a vertical force upwards. The force added is bigger the heigher the position is.
+  * For positions at 56% height and above, the player gets added a vertical force upwards. The force added is bigger the higher the position is.
 
-This "elevator flight" has assumingly a big enough range to control the flying preceisily enough and fast enough for our race track. On the other hand, it was also the reason why I gave upon the superhero-theming alltogether.
+This "elevator flight" has assumingly a big enough range to control the flying precisely enough and fast enough for our race track. On the other hand, it was also the reason why I gave upon the superhero-theming alltogether.
 
-For the vertical movement I rather kept it simple: By pressing the left trigger button a certain force is getting added in the direction in which the player looks. The longer the button is pressed the more force is building up, allowing accerlation and giving a "drifting-feel". However, this lead to the problem that sudden changes of directions are really hard to control. In my final solution, I did not just leave it to gravity and player-added counter-forces to let the player slow down, but implemented that the horizontal velocity is artificial reduced to zero over a few seconds, as soon as the player is not adding new horizontal speed.
+For the vertical movement, I rather kept it simple: By pressing the left trigger button a certain force is getting added in the direction in which the player looks. The longer the button is pressed the more force is building up, allowing acceleration and giving a "drifting-feel". However, this lead to the problem that sudden changes of directions are really hard to control. In my final solution, I did not just leave it to gravity and player-added counter-forces to let the player slow down, but implemented a logic, that artificial reduces linearly the horizontal velocity to zero over a few seconds, that start as soon as the player is not adding new horizontal speed and stops when they are adding new horizontal speed.
 
 
 ### Cyber-Sickness Reduction
@@ -94,18 +94,18 @@ For the tunneling vignette, I tried to use several pre-existing implementations,
   * Meta SDK vignette
   * Unity XR vignette
 
-The first two probably did not work due to incompatibilities with my used Unity version. Meta's vignette was surprisingly undocumented and seems to be only directly mentioned in older Meta package versions. So perhabs this is somewhat unmaintained, but one way or another, I couldn't get it working. And finally, the Unity XR vignette is not compatible with the Meta SDKs as it requires to be attached to a singular camera object. Meta's integration has one camera for the left view and one for the right one.
+The first two solutions did probably not work due to incompatibilities with my used Unity version. Meta's vignette was surprisingly undocumented and seems to be only directly mentioned in older Meta package versions. So perhabs this is somewhat unmaintained, but one way or another, I couldn't get it working. And finally, the Unity XR vignette is not compatible with the Meta SDKs as it requires to be attached to a singular camera object. Meta's integration has one camera for the left lens and one for the right lens.
 
-Ultimately, I am succesfully using the [Tilia.Visuals.Vignette.Unity](https://github.com/ExtendRealityLtd/Tilia.Visuals.Vignette.Unity) package. The vignette gets bigger/smaller/disabled dynamically, basd on the player's overall velocity, both horizontal and vertical.
+Ultimately, I am succesfully using the [Tilia.Visuals.Vignette.Unity](https://github.com/ExtendRealityLtd/Tilia.Visuals.Vignette.Unity) package. The vignette gets bigger/smaller/disabled dynamically, based on the player's overall velocity, both horizontal and vertical.
 
 ![An image from inside VR, that shows both the road blockade before a new area of the race track and the vignette that appears when the player moves quickly.](/assets/2024/ivar/blockade_and_vignette.jpg "An image from inside VR, that shows both the road blockade before a new area of the race track and the vignette that appears when the player moves quickly.")
 
 
 ### Interaction
 
-Since I moved away from the superhero-theming my original idea for the interaction task did not fit anymore. I searched for a new thematical inspiration and found one in the game Portal 2.
+Since I moved away from the superhero-theming, my original idea for the interaction task did not fit anymore. I searched for a new thematical inspiration and found one in the game Portal 2.
 
-The original parkour project enabled to grab and rotate the T-objects by moving the controllers on or in the T-objects, pressing the grab button and than control it with regular hand and arm movements. 
+The original parkour project enabled to grab and rotate the T-objects by moving the controllers inside the T-objects, pressing the grab button and than control it with regular hand and arm movements.
 
 This has several advantages:
   * 6 degress of freedom
@@ -116,7 +116,7 @@ But it also means, that you are limited by your arm lenght and physical environm
 
 I kept the general idea of using this kind of direct, controller-based interaction, but advanced it by adding portals. Now, when the object task is triggered, a blue entry portal appears directly in front of the player. On the left border side of this portal, a "start" button appears. Once the players touches it, an orange exit portal appears together with the moveable T-object and the target T-object. As soon as the players moves one or both physical controller through the blue entry portal, the virtual controllers are getting teleported to the orange exit portal. Being there, they can generally still be controlled as always. However, when the exit portal is not parallel to the entry portal, there is some re-thinking required as the rotation of the controllers is different than their physical counterparts.
 
-I also experimented with exit portals that have their front side inverse to the entry portal (basically a rotation of ~180 degree), but this was way too hard to control. Therefore such exit portals are not part of the parkour. Within certain ranges, the exit portal and the T-objects' positions and rotations are randomized, causing sometimes easier interaction task and sometimes tough ones.
+I also experimented with exit portals that have their front side inverse to the entry portal (basically a rotation of ~180 degree), but this was way too hard to control. Therefore such exit portals are not part of the final parkour. Within certain ranges, the exit portal and the T-objects' positions and rotations are randomized, causing sometimes easier interaction tasks and sometimes tough ones.
 
 Whenever the player thinks that they are done with placing one T-object, they can hit a "done" button on the right side of the entry portal. After a short cool off, the "start" button re-appears and has to be hit again for the next exit portal and T-objects to appear.
 
