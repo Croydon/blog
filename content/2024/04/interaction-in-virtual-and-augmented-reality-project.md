@@ -334,7 +334,7 @@ In Portal 2, players are test subjects that have to finish experimental test cha
 
 ## Conclusion
 
-During this project I was able to learn a lot about the Unity Engine and VR. I designed and executed a study with participants and analysed the results, something that I had only done once before, but which is something that I find quite interesting. Figuring out the physiological and psychological reasons, why humans interact with computer systems in the way the do and trying to understand what methods work under which particular conditions can be quite exiting.
+During this project I was able to learn a lot about the Unity Engine and VR. I designed and executed an in-lab study with participants and analysed the results, something that I had only done once before, but which is something that I find quite interesting. Figuring out the physiological and psychological reasons, why humans interact with computer systems in the way the do and trying to understand what methods work under which particular conditions can be quite exiting.
 
 
 ## Resources
