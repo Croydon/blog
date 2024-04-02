@@ -241,6 +241,8 @@ TODO
 
 TODO
 
+![An image that shows a prototype of a starting area.](/assets/2024/ivar/prototype_start_area.jpg "An image that shows a prototype of a starting area.")
+
 
 ## Conclusion
 
