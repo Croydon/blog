@@ -94,7 +94,7 @@ For the tunneling vignette, I tried to use several pre-existing implementations,
   * Meta SDK vignette
   * Unity XR vignette
 
-The first two solutions did probably not work due to incompatibilities with my used Unity version. Meta's vignette was surprisingly undocumented and seems to be only directly mentioned in older Meta package versions. So perhabs this is somewhat unmaintained, but one way or another, I couldn't get it working. And finally, the Unity XR vignette is not compatible with the Meta SDKs as it requires to be attached to a singular camera object. Meta's integration has one camera for the left lens and one for the right lens.
+The first two solutions did probably not work due to incompatibilities with my used Unity version. Meta's vignette was surprisingly undocumented and seems to be only directly mentioned in older Meta package versions. So perhabs this is somewhat unmaintained, but one way or another, I couldn't get it working. And finally, the Unity XR vignette is not compatible with the Meta SDKs as it requires to be attached to a singular camera object. Meta's integration has one camera game object for the left lens and one for the right lens.
 
 Ultimately, I am succesfully using the [Tilia.Visuals.Vignette.Unity](https://github.com/ExtendRealityLtd/Tilia.Visuals.Vignette.Unity) package. The vignette gets bigger/smaller/disabled dynamically, based on the player's overall velocity, both horizontal and vertical.
 
@@ -114,13 +114,13 @@ This has several advantages:
 
 But it also means, that you are limited by your arm lenght and physical environment to reach things.
 
-I kept the general idea of using this kind of direct, controller-based interaction, but advanced it by adding portals. Now, when the object task is triggered, a blue entry portal appears directly in front of the player. On the left border side of this portal, a "start" button appears. Once the players touches it, an orange exit portal appears together with the moveable T-object and the target T-object. As soon as the players moves one or both physical controller through the blue entry portal, the virtual controllers are getting teleported to the orange exit portal. Being there, they can generally still be controlled as always. However, when the exit portal is not parallel to the entry portal, there is some re-thinking required as the rotation of the controllers is different than their physical counterparts.
+I kept the general idea of using this kind of direct, controller-based interaction, but advanced it by adding portals. Now, when the object task is triggered, a blue entry portal appears directly in front of the player. On the left border side of this portal, a "start" button appears. Once the players touches it, an orange exit portal appears together with the moveable T-object and the target T-object. As soon as the players moves one or both physical controller through the blue entry portal, the virtual controllers are getting teleported to the orange exit portal. Being there, they can generally still be controlled as always. However, when the exit portal is not parallel to the entry portal, there is some mental re-thinking required as the rotation of the controllers is different than their physical counterparts.
 
 I also experimented with exit portals that have their front side inverse to the entry portal (basically a rotation of ~180 degree), but this was way too hard to control. Therefore such exit portals are not part of the final parkour. Within certain ranges, the exit portal and the T-objects' positions and rotations are randomized, causing sometimes easier interaction tasks and sometimes tough ones.
 
 Whenever the player thinks that they are done with placing one T-object, they can hit a "done" button on the right side of the entry portal. After a short cool off, the "start" button re-appears and has to be hit again for the next exit portal and T-objects to appear.
 
-One of the positive effects of this portal interaction method is, that objects can be reached that normally could not be reached with the given physical limitations. To conclude, I ended up with the same advantage as my original interaction idea would have had, but also finished with a method, that still feels more natural than shooting spider webs or some energy laser.
+One of the positive effects of this portal interaction method is, that objects can be reached that normally could not be reached with the given physical limitations. To conclude, I ended up with the same advantage as my original interaction idea would have had, but also finished with a method, that still feels more natural than shooting spider webs or some energy beam.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/aYS97-tJnGo?si=ZB0KaX2TCxXjxyqd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <br>
@@ -130,7 +130,7 @@ One of the positive effects of this portal interaction method is, that objects c
 
 While Unity is a powerful tool with many features, it has also many quirks that, at times, were really frustrating.
 
-My biggest pain point with Unity are the incompatibilities everywhere. Not just between different version of the Unity Editor itself, but also between different versions of official(!) Unity packages. And even within the same Unity Editor version with the same sets of packages and package version, you can find many project-based toggles than switch between some old implementations and behaviours of _something_ or you have many fundamental component choices like which Unity [render pipeline](https://docs.unity3d.com/Manual/render-pipelines.html) your project uses, that have signifiant influrence on what you can do in the first place. And changing later might require re-working major parts of a project, which is oftentimes not feasiable.
+My biggest pain point with Unity are the incompatibilities everywhere. Not just between different version of the Unity Editor itself, but also between different versions of official(!) Unity packages. And even within the same Unity Editor version with the same sets of packages and package version, you can find many project-based toggles than switch between some old implementations and behaviours of _something_. Additionally, you have many fundamental component choices like which Unity [render pipeline](https://docs.unity3d.com/Manual/render-pipelines.html) your project uses, that have signifiant influrence on what you can do in the first place. And changing later might require re-working major parts of a project, which is oftentimes not feasiable.
 
 All of those things, lead to the phenomenon that whenever you are searching for learning resources, packages, scripts, assets etc. there is an enourmously high chance, that it won't work for your project for one reason or another. This does not apply to basics, so while learning the basics of Unity, you should be fine. Unity experts are probably also not that much effected by that, as they have enough knowledge to workaround this or implement everything by themselves in the first place. But for everyone falling in-between, this is frustrating.
 
@@ -143,7 +143,7 @@ The Meta integration (and the former Oculus integration) provide another option 
 
 ## CI / CD
 
-I also added CI and CI for my project via GitHub Actions. For each git push, the Unity projects gets build, any warnings and errors get reported and if the build is successful, the APK file is getting uploaded to GitHub as a build artifact. When I tag a new version of my implementation, a GitHub Release gets created and the APK file is getting uploaded to it as well.
+I also added CI and CD for my project via GitHub Actions. For each git push, the Unity projects gets build, any warnings and errors get reported and if the build is successful, the APK file is getting uploaded to GitHub as a build artifact. When I tag a new version of my implementation, a GitHub Release gets created and the APK file is getting uploaded to it as well.
 
 You can find the [CI runs  here](https://github.com/Croydon/tuda-vr-parkour/actions) and the [releases here](https://github.com/Croydon/tuda-vr-parkour/releases).
 
@@ -155,9 +155,9 @@ I designed an user study, made some early test run with a pre-study and then, wi
 
 ### Study Design
 
-The pre-study and study design and their purpose do not match the typical structures of pre-studies and (actual) studies to some degree. Typically, you want to choose between a between-subject and a within-subject study structure, to generate data, that helps to evalute the different levels of the independent variables of the study. The three independing variables being the locomotion system, the interaction system and the cyber-sickness reduction technique.
+The pre-study and study design and their purpose do not match the typical structures of pre-studies and (actual) studies to some degree. Typically, you want to choose between a between-subject and a within-subject study structure and use the study to generate data, that helps to evalute the different levels of the independent variables of the study. In our case, we have three independent variables. Those are the locomotion system, the interaction system and the cyber-sickness reduction technique.
 
-Due to the structure of the IVAR course, we basically only had to have one level of each independent variable, meaning only one implementation of each system / technique. We would then compare the results to the results of the implementation of the other course students. This comparision is rather vague, given our freedoms in the implementation, reaching from only changing the position of some coins to re-doing the entire race track from the ground up in another game engine.
+Due to the structure of the IVAR course, we basically only had to have one level of each independent variable, meaning only one implementation of each system / technique. We would then compare our results to the results of the other course students, that have their own implementations. This comparision is rather vague, given our freedom in the implementation, reaching from only changing the position of some coins to re-doing the entire virtual environment from the ground up in another game engine.
 
 I extended this task a bit to come closer to a typical study structure again, by performing a pre-study with a different implementation / level of all three systems / independent variables.
 
