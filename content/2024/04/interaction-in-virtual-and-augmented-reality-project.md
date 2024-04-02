@@ -317,11 +317,11 @@ The average response for the presence is almost identical (`7` in the pre-study,
 
 ## Future Work
 
-In the future, the study could be performed with more people to get more significant data. Furhermore, it should be performed with different locomotions and interactions methods, to have more data to compare it to other implementations and to find out which locomotion and interaction systems allow people to be the fastest and most preceise and how cyber-sickness symptoms be be reduced at best.
+In the future, the study could be performed with more people to get more significant data. Furhermore, it should be performed with even more locomotions and interactions methods, to have more data to compare it to other implementations and to find out which locomotion and interaction systems allow people to be the fastest and most preceise and how cyber-sickness symptoms can be reduced at best. It should also be ensured, that all other conditions are the exact same to have cleaner data.
 
 Several ideas did not made it into the final version of my project due to the limited time. For once, it would be nice to implement a restarting option directly into the game. Currently to start over, you have to close and re-open the application.
 
-Second, I would have liked to experiment with portals, that allow you to see the camera perspective of the exit portal within the entry portal, thus eleminating the factor, that you have to look at the T-objects from afar, enabling that other objects can be in-between the entry and exit portal that block the natural line-of-sight and making a literal limitless range between the entry and exit portal possible.
+Second, I would have liked to experiment with portals, that allow you to see the camera perspective of the exit portal within the entry portal, thus eleminating the factor, that you have to look at the T-objects from afar, enabling that other objects can be in-between the entry and exit portal that block the natural line-of-sight and making a literal limitless range between the entry and exit portal possible. The precision of such a system might than be virtual identical to the results of the pre-study.
 
 Futhermore, I wanted to thematically go deeper into the Portal 2 direction. I began to create a prototype for a starting area in which the player spawn, when loading the application. While my concept also used this place for some entertainment, it also would have fulfilled the practical purpose of on-boarding the player. It would have explained how to configure the flying height with the right controller and how to use the controls in general, therefore requiring no external knowledge before starting the game.
 
@@ -332,7 +332,7 @@ In Portal 2, players are test subjects that have to finish experimental test cha
 
 ## Conclusion
 
-TODO
+During this project I was able to learn a lot about the Unity Engine and VR. I designed and executed a study with participants and analysed the results, something that I had only done once before, but which is something that I find quite interesting. Figuring out the physiological and psychological reasons, why humans interact with computer systems in the way the do and trying to understand what methods work under which particular conditions can be quite exiting.
 
 
 ## Resources
@@ -343,5 +343,5 @@ TODO
   * Videos
     * [Study Task Walkthrough](https://www.youtube.com/watch?v=WJ9H1r-tjjA)
     * [Portals Showcase](https://www.youtube.com/watch?v=aYS97-tJnGo)
-    * [TODO: Video Playlist of all Recorded Participant Tasks](https://www.youtube.com/playlist?list=PL2N-uWvcQaWtL2H0RFa1sC37JADNsBbkO)
+    * [Video Playlist of all Recorded Participant Tasks](https://www.youtube.com/playlist?list=PL2N-uWvcQaWtL2H0RFa1sC37JADNsBbkO)
   * [Original Parkour Implementation](https://github.com/wenjietseng/VR-locomotion-parkour)
