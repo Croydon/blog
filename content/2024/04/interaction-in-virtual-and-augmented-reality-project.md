@@ -315,7 +315,7 @@ It it worth noting, that while this particular task spawn was indeed difficult, 
 | **Average total** | 2.5    | 7.17     | 7
 
 
-There seems to be no major difference on average when it comes to cyber-sickness symptoms, between the locomotion system of the pre-study and the final study. P4 has a spike, but individual people have different sensitivity to cyber-sickness. Once more, more data would be required to have deeper insights.
+There seems to be no major difference on average when it comes to cyber-sickness symptoms, between the locomotion system of the pre-study and the final study. P4 has a spike, but individual people have different sensitivity to cyber-sickness. That there is no major difference is an interesting result, since the pre-study had no tunneling vignette, while the final study had one. Thus, one could expect, that the cyber-sickness symptoms in the pre-study are more severe. On the other hand, the pre-study locomotion system was based on a continious teleportion of the player. Teleportion is known to cause less cyber-sickness in general. The final study's locomotion system did use an accerlation system instead. Once more, more data would be required to have deeper insights.
 
 The average response for the presence is almost identical (`7` in the pre-study, vs `7.25`). The average value for enjoyment has a small difference (`6.5` in the pre-study vs `7.25`), but there is too little data to make an educated guess why this might be.
 
