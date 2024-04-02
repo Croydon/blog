@@ -155,9 +155,9 @@ I designed an user study, made some early test run with a pre-study and then, wi
 
 ### Study Design
 
-The pre-study and study design and purpose do not match the typical structures of pre-studies and (actual) studies to same degreee. Typically, you want to choose between a between-subject and a within-subject study structure, to generate data, that helps to evalute the different levels of the independent variables of the study. The three independing variables being the locomotion system, the interaction system and the cyber-sickness reduction technique.
+The pre-study and study design and their purpose do not match the typical structures of pre-studies and (actual) studies to some degree. Typically, you want to choose between a between-subject and a within-subject study structure, to generate data, that helps to evalute the different levels of the independent variables of the study. The three independing variables being the locomotion system, the interaction system and the cyber-sickness reduction technique.
 
-Due to the structure of the IVAR course, we basically only had to have one level of each independent variable, meaning only one implementation of each system / technique. We would then compare the results to the results of the implementation of the other course students. This comparision is rather vague, given our freedoms in the implementation, reaching from only changing the position of some coins to re-doing the entire race track from the group up in another game engine.
+Due to the structure of the IVAR course, we basically only had to have one level of each independent variable, meaning only one implementation of each system / technique. We would then compare the results to the results of the implementation of the other course students. This comparision is rather vague, given our freedoms in the implementation, reaching from only changing the position of some coins to re-doing the entire race track from the ground up in another game engine.
 
 I extended this task a bit to come closer to a typical study structure again, by performing a pre-study with a different implementation / level of all three systems / independent variables.
 
@@ -179,7 +179,7 @@ The general procedure  of the user study is as follows:
 
 You can find checklists that I made for myself to execute this study with participants in the study data repository ([pre-study checklist](https://github.com/Croydon/tuda-vr-parkour-study/blob/main/pre_study/checklist_for_instructor_to_execute_pre_study.md), [final study checklist](https://github.com/Croydon/tuda-vr-parkour-study/blob/main/study/checklist_for_instructor_to_execute_post_study.md)). Such notes ensure, that every participant hears all explanations and experience all trainings and tasks, in the same order and in the same way. Avoiding accidental manipulation of the study results.
 
-During the entire study, I make notes of everything interesting the participant might do and say ([pre-study](https://github.com/Croydon/tuda-vr-parkour-study/tree/main/pre_study/observations), [final study](https://github.com/Croydon/tuda-vr-parkour-study/tree/main/study/observations)). Furthermore, there is automatical logging of:
+During the entire study, I make notes of everything interesting the participant might do and say ([pre-study](https://github.com/Croydon/tuda-vr-parkour-study/tree/main/pre_study/observations), [final study](https://github.com/Croydon/tuda-vr-parkour-study/tree/main/study/observations)). Furthermore, there is automatical logging of ([pre-study](https://github.com/Croydon/tuda-vr-parkour-study/tree/main/pre_study/logs), [final study](https://github.com/Croydon/tuda-vr-parkour-study/tree/main/study/logs)):
   * How many coins were collected in which area and round.
   * How much time the participant took for each area, for moving through it and for the interaction task.
   * How precise the participant was for each object interaction.
