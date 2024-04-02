@@ -92,7 +92,7 @@
 <li>Different people have a different comfort level of how far they can bend their kness, not once, but often and for a longer time.</li>
 </ul>
 <p>It turned out, that the to be expected height difference of the headset, between standing straight and going down as far as it is comfortable and holdable for a longer time period, is too small for this use case. Even slight height chances would change the virtual player position dramatically. Therefore this method did not allow a precise enough control.</p>
-<p>However, my final solution build upon this concept. Instead of the height of the headset in relation to the floor, I used the right controller height in relation to the virtual player object. Now, the implememtation requires the player at the start to put up their right hand as far as comfortable and press a specific button. Then, they have to put their right hand down as far as comfortable and press another button. These min and max heights are then mapped to specific vertical forces. Within this height range:</p>
+<p>However, my final solution build upon this concept. Instead of the height of the headset in relation to the floor, I used the right controller height in relation to the virtual player object. Now, the implementation requires the player at the start to put up their right hand as far as comfortable and press a specific button. Then, they have to put their right hand down as far as comfortable and press another button. These min and max heights are then mapped to specific vertical forces. Within this height range:</p>
 <ul>
 <li>For the bottom &lt; 45% height positions, the player gets added a vertical force, that pulls them down. The lower the position, the quicker they will fall down, if the are already in the air flying.</li>
 <li>For 45% until 56% (excluding) height positions, the player gets removed (almost) all vertical forces. This causes an "elevator flight" effect and enables the player to (almost) stand still in the air. (There is still a very tiny force downwards, as I have technically not disabled gravity for the player object, however, that is only noticeable at all, if there is no other velocity and if you really pay attention. For all practical purposes within the parkour it is irrelvant.)</li>
@@ -125,6 +125,8 @@
 <p>I also experimented with exit portals that have their front side inverse to the entry portal (basically a rotation of ~180 degree), but this was way too hard to control. Therefore such exit portals are not part of the final parkour. Within certain ranges, the exit portal and the T-objects' positions and rotations are randomized, causing sometimes easier interaction tasks and sometimes tough ones.</p>
 <p>Whenever the player thinks that they are done with placing one T-object, they can hit a "done" button on the right side of the entry portal. After a short cool off, the "start" button re-appears and has to be hit again for the next exit portal and T-objects to appear.</p>
 <p>One of the positive effects of this portal interaction method is, that objects can be reached that normally could not be reached with the given physical limitations. To conclude, I ended up with the same advantage as my original interaction idea would have had, but also finished with a method, that still feels more natural than shooting spider webs or some energy laser.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=aYS97-tJnGo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p><br></p>
 <h2>Unity Quirks and Iteration Time</h2>
 <p>While Unity is a powerful tool with many features, it has also many quirks that, at times, were really frustrating.</p>
 <p>My biggest pain point with Unity are the incompatibilities everywhere. Not just between different version of the Unity Editor itself, but also between different versions of official(!) Unity packages. And even within the same Unity Editor version with the same sets of packages and package version, you can find many project-based toggles than switch between some old implementations and behaviours of <em>something</em> or you have many fundamental component choices like which Unity <a href="https://docs.unity3d.com/Manual/render-pipelines.html">render pipeline</a> your project uses, that have signifiant influrence on what you can do in the first place. And changing later might require re-working major parts of a project, which is oftentimes not feasiable.</p>
@@ -177,20 +179,22 @@
 <p>TODO</p>
 <h4>Study</h4>
 <p>For the final study, I had four participants (P3 - P6), that were given the final implementation of the locomation and interaction method and with enabled tunneling vignette.</p>
-<p>One participant was female (P3), the others (P4 - P6) are male. The age average was 41.25 years (56, 50, 32, 27). On a scale from 1 to 5, P5 estimated their previous VR experience with a <code>2</code>, while everyone else answered with a <code>1</code>.</p>
-<h4>Results</h4>
+<p>One participant was female (P3), the others (P4 - P6) were male. The age average was 41.25 years (56, 50, 32, 27). On a scale from <code>1</code> to <code>5</code>, P5 estimated their previous VR experience with a <code>2</code>, while everyone else answered with a <code>1</code>.</p>
+<p>TODO</p>
+<h4>Raw Study Data</h4>
 <p>All results can be found in the <a href="https://github.com/Croydon/tuda-vr-parkour-study">study data repository</a>.</p>
 <p>TODO</p>
 <h2>Future Work</h2>
 <p>In the future, the study could be performed with more people to get more significant data. Furhermore, it should be performed with different locomotions and interactions methods, to have more data to compare it to other implementations.</p>
 <p>TODO</p>
 <ul>
-<li>Start area, portal 2 inspired</li>
+<li>Start area, Portal 2 inspired</li>
 <li>in-application onboarding</li>
 <li>possible to reset race, without having to close+restart the application</li>
 <li>Experiment with portals in which you can see the perspective of the exit portal; putting the exit portal out of the natural line-of-sight</li>
+<li>Experiment with controlling adding horizontal accerlation force by moving the left controller horizontal back and forth. Too exhausting after a while?</li>
 </ul>
-<p>TODO </p>
+<p>TODO</p>
 <h2>Conclusion</h2>
 <p>TODO</p>
 <h2>Resources</h2>
@@ -200,7 +204,11 @@
 </ul>
 </li>
 <li><a href="https://github.com/Croydon/tuda-vr-parkour-study">Study Data Repository</a></li>
-<li><a href="https://www.youtube.com/watch?v=WJ9H1r-tjjA">Study Task Video Walkthrough</a></li>
+<li>Videos<ul>
+<li><a href="https://www.youtube.com/watch?v=WJ9H1r-tjjA">Study Task Walkthrough</a></li>
+<li><a href="https://www.youtube.com/watch?v=aYS97-tJnGo">Portals Showcase</a></li>
+</ul>
+</li>
 <li><a href="https://github.com/wenjietseng/VR-locomotion-parkour">Original Parkour Implementation</a></li>
 </ul>
 					</div>
