@@ -75,7 +75,7 @@ In another one of those intermediate interations, I experimented with using the 
 
 It turned out, that the to be expected height difference of the headset, between standing straight and going down as far as it is comfortable and holdable for a longer time period, is too small for this use case. Even slight height chances would change the virtual player position dramatically. Therefore this method did not allow a precise enough control.
 
-However, my final solution build upon this concept. Instead of the height of the headset in relation to the floor, I used the right controller height in relation to the virtual player object. Now, the implememtation requires the player at the start to put up their right hand as far as comfortable and press a specific button. Then, they have to put their right hand down as far as comfortable and press another button. These min and max heights are then mapped to specific vertical forces. Within this height range:
+However, my final solution build upon this concept. Instead of the height of the headset in relation to the floor, I used the right controller height in relation to the virtual player object. Now, the implementation requires the player at the start to put up their right hand as far as comfortable and press a specific button. Then, they have to put their right hand down as far as comfortable and press another button. These min and max heights are then mapped to specific vertical forces. Within this height range:
 
   * For the bottom < 45% height positions, the player gets added a vertical force, that pulls them down. The lower the position, the quicker they will fall down, if the are already in the air flying.
   * For 45% until 56% (excluding) height positions, the player gets removed (almost) all vertical forces. This causes an "elevator flight" effect and enables the player to (almost) stand still in the air. (There is still a very tiny force downwards, as I have technically not disabled gravity for the player object, however, that is only noticeable at all, if there is no other velocity and if you really pay attention. For all practical purposes within the parkour it is irrelvant.)
@@ -121,6 +121,9 @@ I also experimented with exit portals that have their front side inverse to the 
 Whenever the player thinks that they are done with placing one T-object, they can hit a "done" button on the right side of the entry portal. After a short cool off, the "start" button re-appears and has to be hit again for the next exit portal and T-objects to appear.
 
 One of the positive effects of this portal interaction method is, that objects can be reached that normally could not be reached with the given physical limitations. To conclude, I ended up with the same advantage as my original interaction idea would have had, but also finished with a method, that still feels more natural than shooting spider webs or some energy laser.
+
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=aYS97-tJnGo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br>
 
 
 ## Unity Quirks and Iteration Time
@@ -203,10 +206,12 @@ TODO
 
 For the final study, I had four participants (P3 - P6), that were given the final implementation of the locomation and interaction method and with enabled tunneling vignette.
 
-One participant was female (P3), the others (P4 - P6) are male. The age average was 41.25 years (56, 50, 32, 27). On a scale from 1 to 5, P5 estimated their previous VR experience with a `2`, while everyone else answered with a `1`.
+One participant was female (P3), the others (P4 - P6) were male. The age average was 41.25 years (56, 50, 32, 27). On a scale from `1` to `5`, P5 estimated their previous VR experience with a `2`, while everyone else answered with a `1`.
 
 
-#### Results
+TODO
+
+#### Raw Study Data
 
 All results can be found in the [study data repository](https://github.com/Croydon/tuda-vr-parkour-study).
 
@@ -218,12 +223,14 @@ TODO
 In the future, the study could be performed with more people to get more significant data. Furhermore, it should be performed with different locomotions and interactions methods, to have more data to compare it to other implementations.
 
 TODO
-  * Start area, portal 2 inspired
+  * Start area, Portal 2 inspired
   * in-application onboarding
   * possible to reset race, without having to close+restart the application
   * Experiment with portals in which you can see the perspective of the exit portal; putting the exit portal out of the natural line-of-sight
+  * Experiment with controlling adding horizontal accerlation force by moving the left controller horizontal back and forth. Too exhausting after a while?
 
-TODO 
+
+TODO
 
 
 ## Conclusion
@@ -236,5 +243,7 @@ TODO
   * [Implementation Repository](https://github.com/Croydon/tuda-vr-parkour)
     * [APK Downloads for Meta Quest 2](https://github.com/Croydon/tuda-vr-parkour/releases)
   * [Study Data Repository](https://github.com/Croydon/tuda-vr-parkour-study)
-  * [Study Task Video Walkthrough](https://www.youtube.com/watch?v=WJ9H1r-tjjA)
+  * Videos
+    * [Study Task Walkthrough](https://www.youtube.com/watch?v=WJ9H1r-tjjA)
+    * [Portals Showcase](https://www.youtube.com/watch?v=aYS97-tJnGo)
   * [Original Parkour Implementation](https://github.com/wenjietseng/VR-locomotion-parkour)
