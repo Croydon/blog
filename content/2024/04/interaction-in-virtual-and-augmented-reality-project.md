@@ -170,7 +170,7 @@ The general design of the user study is as follows:
 
 You can find checklists that I made for myself to execute this study with participants in the study data repository ([pre-study checklist](https://github.com/Croydon/tuda-vr-parkour-study/blob/main/pre_study/checklist_for_instructor_to_execute_pre_study.md), [final study checklist](https://github.com/Croydon/tuda-vr-parkour-study/blob/main/study/checklist_for_instructor_to_execute_post_study.md)). Such notes ensure, that every participant hears all explanations and experience all trainings and tasks, in the same order and in the same way.
 
-During the 10 minute task, I make notes of everything interesting the participant might do and say. Furthermore, there is automatical logging of:
+During the entire study, I make notes of everything interesting the participant might do and say ([pre-study](https://github.com/Croydon/tuda-vr-parkour-study/tree/main/pre_study/observations), [final study](https://github.com/Croydon/tuda-vr-parkour-study/tree/main/study/observations)). Furthermore, there is automatical logging of:
   * How many coins were collected in which area and round.
   * How much time the participant took for each area, for moving through it and for the interaction task.
   * How precise the participant was for each object interaction.
