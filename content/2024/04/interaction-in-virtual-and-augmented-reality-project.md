@@ -55,23 +55,23 @@ At the end, I also enabled Meta Quest 3 as a build target, however, this is comp
 
 I made several changes and enhancements to the game loop logic. As my study design has the task to get as many rounds done in 10 minutes as possible I had to change the logic that previously ended the parkour after a single round. Now, the logic resets everything so that an endless amount of rounds are doable within the time limit. All coins, even previously collected ones, do re-spawn.
 
-Originally, the interaction task was completely ignoreable as people could just walk (or fly) past it. I added a road blockade until all 5 T-objects for each area are done. The blockade also displays the number of objects that have yet to be positioned. Furthermore, when the appearance of the task is triggerd, all locomotion techniques are disabled for the duration of the task, preventing (most) escape and cheat attempts.
+Originally, the interaction task was completely ignoreable as people could just walk (or fly) past it. I added a road blockade until all 5 T-objects for each area are done. The blockade also displays the number of objects that have yet to be positioned. Furthermore, when the appearance of the task is triggered, all locomotion techniques are disabled for the duration of the task, preventing (most) escape and cheat attempts.
 
 I also changed many implementation details, including the logging for the study data.
 
 
 ### Locomotion
 
-I kept the original idea of enabling the player to fly, but eventually gave up on trying to implement a flying method that feels "natural". "Natural" meaning, that there is some mechanism that adds some amount of vertical force on the player and the player only slows down through gravity, crashing into another object or through some kind of break mechanism. 
+I kept the original idea of enabling the player to fly, but eventually gave up on trying to implement a flying method that feels "natural". "Natural" meaning, that there is some mechanism that adds some amount of vertical force on the player and the player only slows down through gravity, crashing into another object or through some kind of break mechanism.
 
-Getting the physics right for a scenario, where players have to constantly and quickly change directions is hard. I went through many interations of differnt kinds of force-logic, some can be found in my git history, many others did not even make it so far. Most of them were really hard to control from a player perspective or caused very strong cyber-sickerness symptoms.
+Getting the physics right for a scenario, where players have to constantly and quickly change directions is hard. I went through many iterations of differnt kinds of force-logic, some can be found in my git history, many others did not even make it so far. Most of them were really hard to control from a player perspective or caused very strong cyber-sickerness symptoms.
 
 In one of those intermediate interactions, I had added a flying force by pressing the right trigger button. The player would than naturally fall down with gravity again. I eventually figured our physics numbers that made it controllable rather well, but I did not want this to be the final flying method, as it did not feel creative and innovative enough. It is still possible to turn this control on in my final solution, but it is off by default and can only be changed before a build, not during runtime.
 
-In another one of those intermediate interations, I experimented with using the body height of the player to control the flying height, or to be more preceise, the height of the headset in relation to the floor height. Standing straight would mean having the maximum flying height, getting closer to a pre-determined min-height would bring down the player more and more. The max and min height need to be determined before the game begins in order for such a logic to work. For the max value to be correct, the game has to be sure that the player is standing straight at the point of taking this value. And a min value has to be recorded in a moment, that the player is aware of too. One might think, that the floor can be taken as such a point, but that wouldn't be good either:
+In another one of those intermediate interations, I experimented with using the body height of the player to control the flying height, or to be more preceise, the height of the headset in relation to the floor height. Standing straight would mean having the maximum flying height, getting closer to a pre-determined min-height would bring down the player more and more. The max and min height need to be determined before the game begins in order for such a logic to work. For the max value to be correct, the game has to be sure that the player is standing straight, at the time of taking this value. And a min value has to be recorded in a moment, that the player is aware of too. One might think, that the floor can be taken as such a reference point, but that wouldn't be good either:
 
   * It would be a terrible idea that the player has to bring their head down on the floor to reach the min flying height.
-  * Different people have a different comfort level of how far they can bend their kness, not once, but often and for a longer time.
+  * Different people have a different comfort level of how far they can bend their knees, not once, but often and for a longer time.
 
 It turned out, that the to be expected height difference of the headset, between standing straight and going down as far as it is comfortable and holdable for a longer time period, is too small for this use case. Even slight height chances would change the virtual player position dramatically. Therefore this method did not allow a precise enough control.
 
@@ -202,11 +202,16 @@ Here is a video of myself doing the 10 minute task:
 
 Due to time constraints, I could only perform the pre-study and actual study with a small mount of people.
 
+the raw data of all results can be found in the [study data repository](https://github.com/Croydon/tuda-vr-parkour-study).
+
 #### Pre-Study
 
 For the pre-study, participants were given an implementation that had a very different locomotion method, no cyber-sickness reduction method and the interaction was done directly by the controllers, without the portals or other more complex things.
 
 I had two participants (P1, P2), both male, being 29 and 27 years old (average: 28), that have rated their pre-existing experience on a scale from `1 - very inexperiened` to `5 - very experienced`, with a `2` and `1` respectively.
+
+
+
 
 TODO
 
@@ -220,9 +225,19 @@ One participant was female (P3), the others (P4 - P6) were male. The age average
 
 TODO
 
-#### Raw Study Data
+#### Comparision
 
-All results can be found in the [study data repository](https://github.com/Croydon/tuda-vr-parkour-study).
+##### Average collected coints per round per participant
+
+|          | Part1 / max 16  | Part 2 / max 30   | Part 3 / max 23
+| -------- | -------- | -------- | -------
+| P1       | 0.75     | 20.33    | 15.33
+| P2       | 13.4     | 29       | 17
+| P3       | 10       | 20       | /
+| P4       | 11     |   14  | /
+| P5       | 14     |  30   | 23
+| P6       | 9.5     |  12.5   | 16.5
+
 
 TODO
 
