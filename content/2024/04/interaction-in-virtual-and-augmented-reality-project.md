@@ -294,7 +294,31 @@ P5 has a noteable spike in the error offset for the part 2 average, both globall
 
 It it worth noting, that while this particular task spawn was indeed difficult, it was not impossible to solve (all possible spawns should be solveable). The exit portal was on the far right and very close to the entry portal, hence, the borders of both the entry and exit portals blocked a large portion of the view on the T-objects. However, leaning to the left and right allows to see enough of the T-objects theoretically. P6 had a similar verbal reaction to a difficult task spawn once, but had the patience to try to solve it and therefore has no spike in their error offsets.
 
-TODO
+
+
+##### Cyber-Sickness, Presence, Enjoyment
+
+  * **Cyber-Sickness**: On a scale from 1 to 10, how much motion sickness do you perceive right now? On a scale from `1 - very low` to `10 - very high`.
+  * **Presence**: On a scale from 1 to 10 how present did you feel in the virtual world? On a scale from `1 - very low` to `10 - very high`.
+  * **Enjoyment**: On a scale from 1 to 10, how much fun did you have during the task? On a scale from `1 - very low` to `10 - very high`.
+
+
+|          | Cyber-Sickness  | Presence | Enjoyment
+| -------- | --------        | ----     | ---
+| P1       | 2               | 6        | 6
+| P2       | 2               | 8        | 7
+| **Average pre-study** | 2  | 7        | 6.5
+| P3       | 1               | 10       | 9
+| P4       | 6               | 7        | 8
+| P5       | 3               | 6        | 7
+| P6       | 1               | 6        | 5
+| **Average study** | 2.75   | 7.25     | 7.25
+| **Average total** | 2.5    | 7.17     | 7
+
+
+There seems to be no major difference on average when it comes to cyber-sickness symptoms, between the locomotion system of the pre-study and the final study. P4 has a spike, but individual people have different sensitivity to cyber-sickness. Once more, more data would be required to have deeper insights.
+
+The average response for the presence is almost identical (`7` in the pre-study, vs `7.25`). The average value for enjoyment has a small difference (`6.5` in the pre-study vs `7.25`), but there is too little data to make an educated guess why this might be.
 
 
 ## Future Work
