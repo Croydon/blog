@@ -39,7 +39,7 @@ The original implementation used Unity 2021.3.10f1 and the Oculus Integration 46
 
 Upgrading Unity to the 2022.3 LTS version also forced me to migrate from the now legacy Oculus integration, that was directly available from the Unity package registry, to the new Meta SDKs, that are either available from the Unity Asset Store or directly via Meta's npm registry. (Side note: The Unity package manager builds upon npm. Therefore other npm registries can be added and then directly used inside the Unity Editor's package manager.) I first went with the Asset Store version as I was already used to its integration workflow as I am also using other assets from there, but I had to switch to Meta's npm registry later on, when I added continuous integration (CI) and continuous delivery (CD) to my git repository, since the Asset Store always requires authentication with an Unity account, even for free assets, and my CI system does not support this for the Asset Store at the moment.
 
-As part of the modernization of Meta's integration I also switched from the existing, standard game objects that have Meta scripts attached, to [Meta SDKs' building blocks](https://developer.oculus.com/blog/accelerate-development-mixed-reality-building-blocks-unity-meta-quest-developers/).
+As part of the modernization of Meta's integration, I also switched from the existing, standard game objects that have Meta scripts attached, to [Meta SDKs' building blocks](https://developer.oculus.com/blog/accelerate-development-mixed-reality-building-blocks-unity-meta-quest-developers/).
 
 Unity itself has several official packages for XR development. I experimented around with several of them, but ultimately do not use them in my final state of the project. Those XR packages do not seem to be compatible with Meta SDKs, therefore would have required me to re-implement everything and re-learn a lot. For this, the time was to limited. However, I have the impression that Unity's XR packages are probably a solid choice for any new project, for several reason:
 
@@ -51,7 +51,7 @@ Unity itself has several official packages for XR development. I experimented ar
 At the end, I also enabled Meta Quest 3 as a build target, however, this is completely untested and my project might not work at all with Quest 3 hardware.
 
 
-### Game-Loop Logic
+### Game Loop Logic
 
 I made several changes and enhancements to the game loop logic. As my study design has the task to get as many rounds done in 10 minutes as possible I had to change the logic that previously ended the parkour after a single round. Now, the logic resets everything so that an endless amount of rounds are doable within the time limit. All coins, even previously collected ones, do re-spawn.
 
@@ -60,7 +60,7 @@ Originally, the interaction task was completely ignoreable as people could just 
 I also changed many implementation details, including the logging for the study data.
 
 
-### Locomotion 
+### Locomotion
 
 I kept the original idea of enabling the player to fly, but eventually gave up on trying to implement a flying methode that feels "natural". "Natural" meaning, that there is some mechanism that adds some amount of vertical force on the player and the player only slows down through gravity, crashing into another object or through some kind of break mechanism. 
 
@@ -68,7 +68,7 @@ Getting the physics right for a scenario, where players have to constantly and q
 
 In one of those intermediate interactions, I had added a flying force by pressing the right trigger button. The player would than naturally fall down with gravity again. I eventually figured our physics numbers that made it controllable rather well, but I did not want this to be the final flying methode, as it did not feel creative and innovative enough. It is still possible to turn this control on in my final solution, but it is off by default and can only be changed before a build, not during runtime.
 
-In another one of those intermediate interations, I experimented with using the body height of the player to control the flying height, or to be more preceise, the height of the headset in relation to the floor height. Standing straight would mean having the maximum flying height, getting closer to a pre-determined min-height would bring down the player more and more. The max and min height needs to be determined before the game begins in order for such a logic to work. For the max work to be correct, the game has to be sure that the player is standing straight at the point of taking this value. And a min value has to be recorded in a moment the player is aware of too. One might think, that the floor can be taken as such a point, but that wouldn't be good either: 
+In another one of those intermediate interations, I experimented with using the body height of the player to control the flying height, or to be more preceise, the height of the headset in relation to the floor height. Standing straight would mean having the maximum flying height, getting closer to a pre-determined min-height would bring down the player more and more. The max and min height needs to be determined before the game begins in order for such a logic to work. For the max work to be correct, the game has to be sure that the player is standing straight at the point of taking this value. And a min value has to be recorded in a moment the player is aware of too. One might think, that the floor can be taken as such a point, but that wouldn't be good either:
 
   * It would be a terrible idea that the player have to bring their head completely down on the floor to reach the min flying height.
   * Different people have a different comfort level of how far they can bend their kness, not once, but often and for a longer time.
@@ -112,9 +112,9 @@ This has several advantages:
   * rather intuitive and natural
   * direct way to manipulate
 
-But it also means, that you are limited by your arm lenght and physical environment to reach things. 
+But it also means, that you are limited by your arm lenght and physical environment to reach things.
 
-I kept the general idea of using this kind of direct, controller-based interaction, but advanced it by adding portals. Now, when the object task is triggered, a blue entry portal appears directly in front of the player. On the left border side of this portal, a "start" button appears. Once the players touches it, an orange exit portal appears together with the moveable T-object and the target T-object. As soon as the players moves one or both physical controller through the blue entry portal, the virtual controllers are getting teleported to the orange exit portal. Being there, they can generally still be controlled as always. However, when the exit portal is not parallel to the entry portal, there is some re-thinking required as the rotation of the controllers is different than their physical counterparts. 
+I kept the general idea of using this kind of direct, controller-based interaction, but advanced it by adding portals. Now, when the object task is triggered, a blue entry portal appears directly in front of the player. On the left border side of this portal, a "start" button appears. Once the players touches it, an orange exit portal appears together with the moveable T-object and the target T-object. As soon as the players moves one or both physical controller through the blue entry portal, the virtual controllers are getting teleported to the orange exit portal. Being there, they can generally still be controlled as always. However, when the exit portal is not parallel to the entry portal, there is some re-thinking required as the rotation of the controllers is different than their physical counterparts.
 
 I also experimented with exit portals that have their front side inverse to the entry portal (basically a rotation of ~180 degree), but this was way too hard to control. Therefore such exit portals are not part of the parkour. Within certain ranges, the exit portal and the T-objects' positions and rotations are randomized, causing sometimes easier interaction task and sometimes tough ones.
 
@@ -135,7 +135,7 @@ Moreover, I encountered some things, that might or might not be (directly) Unity
 
 Another annoying obstacles has been the iteration time for each (change -> build -> test) cyclus. Whenever I changed a script of my project, the Unity Editor starts to re-import all Assets (scripts count as assets in Unity's terminology), leaving me with a progress bar that takes one to two minutes. Only after that, I can even trigger a new build. If you are doing this for a few months, it becomes almost like a trance where you oftentimes don't even know anymore if you waited for the first process to finish or the second one. Unity lacks a clear indication if there were any project changes after the last build.
 
-The Meta integration (and the former Oculus integration) provide another option to build the project for a Meta Quest device, besides the default Unity build options. Those Meta build dialogs promise to be quicker, since they are using better caching. For my project it turns out, that those builds took ~ 12 - 14 minutes for each build, while the default Unity build option took around 8 - 9 minutes (at the time where I made the switch, it is now even faster, since I removed a lot of unused assets from the project).
+The Meta integration (and the former Oculus integration) provide another option to build the project for a Meta Quest device, besides the default Unity build options. Those Meta build dialogs promise to be quicker, since they are using better caching. For my project it turns out, that those builds took ~ 12 - 14 minutes for each build, while the default Unity build option took around 8 - 9 minutes, at the time when I started to use the default build. It is now even faster, since I removed a lot of unused assets from the project and applied some more recommended settings (e.g. [disabling strip engine code](https://blog.unity.com/engine-platform/better-build-times-and-iteration-speed-for-quest), [commit](https://github.com/Croydon/tuda-vr-parkour/commit/473850f2f4146e91d7c7cc7c50a0de7b05028dd5)).
 
 
 ## CI / CD
@@ -160,7 +160,7 @@ The general design of the user study is as follows:
   * Pre-Questionnaire
   * Teaching / Explanation of the hardware, virtual environment, tasks and control
   * Participants can try the controls, locomotion and and interaction for some time
-  * Explain the task once more: As many rounds as possible, as many collected coins as possible, as precisie at the interaction task as possible. Your own choice where your priorities are.
+  * Explain the task once more: As many rounds as possible, as many collected coins as possible, as precise at the interaction task as possible. Your own choice where your priorities are.
   * 10 minute task performance
   * Post-Questionnaire
   * Goodbye / Hardware cleaning
