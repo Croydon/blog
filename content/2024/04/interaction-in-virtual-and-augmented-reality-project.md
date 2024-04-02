@@ -181,7 +181,7 @@ I made some improvements to the study execution and the automatic logging after 
   * [Pre-Questionnaire](https://github.com/Croydon/tuda-vr-parkour-study/blob/main/study/pre_questionnaire/pre-questionnaire.md)
   * [Post-Questionnaire](https://github.com/Croydon/tuda-vr-parkour-study/blob/main/study/post_questionnaire/post-questionnaire.md)
 
-For the final study, the view inside the VR headset was also video recorded for every participant. You can find a playlist of all participant task videos here: TODO
+For the final study, the view inside the VR headset was also video recorded for every participant. You can find a playlist of all [participant task videos on YouTube](https://www.youtube.com/playlist?list=PL2N-uWvcQaWtL2H0RFa1sC37JADNsBbkO).
 
 Here is a video of myself doing the 10 minute task:
 
@@ -246,4 +246,5 @@ TODO
   * Videos
     * [Study Task Walkthrough](https://www.youtube.com/watch?v=WJ9H1r-tjjA)
     * [Portals Showcase](https://www.youtube.com/watch?v=aYS97-tJnGo)
+    * [TODO: Video Playlist of all Recorded Participant Tasks](https://www.youtube.com/playlist?list=PL2N-uWvcQaWtL2H0RFa1sC37JADNsBbkO)
   * [Original Parkour Implementation](https://github.com/wenjietseng/VR-locomotion-parkour)
