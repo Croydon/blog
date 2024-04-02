@@ -281,7 +281,7 @@ Rounded to max. eight decimal places.
 | **Average study** | 0.14785411  | 0.19062511 | 0.09160402 | 0.14336108
 
 
-The error offsets describes how far off the placed T-object was compared to the position of the target T-object. First, an error vector is calculated, one offset for the x, y and z coordinate axis respectively. Then, the magnitude of this vectors gets calculated.
+The error offsets describes how far off the placed T-object was compared to the position of the target T-object. First, an error vector is calculated, one offset for the x, y and z coordinate axis respectively. Then, the magnitude of these vectors get calculated.
 
 It is unfortunate, that the error offset in the pre-study was rounded to only two decimal places and the error vector was not logged. In the final study, this was improved to log exact values and additionally the error vector.
 
