@@ -165,7 +165,7 @@ The general design of the user study is as follows:
   * Post-Questionnaire
   * Goodbye / Hardware cleaning
 
-You can find checklists that I made for myself to execute this study with participants in the study data repository ([pre-study checklist](https://github.com/Croydon/tuda-vr-parkour-study/blob/main/pre_study/checklist_for_instructor_to_execute_pre_study.md)), [final study checklist](https://github.com/Croydon/tuda-vr-parkour-study/blob/main/study/checklist_for_instructor_to_execute_post_study.md). Such notes ensure, that every participant hears all explanations and experience all trainings and tasks, in the same order and in the same way.
+You can find checklists that I made for myself to execute this study with participants in the study data repository ([pre-study checklist](https://github.com/Croydon/tuda-vr-parkour-study/blob/main/pre_study/checklist_for_instructor_to_execute_pre_study.md), [final study checklist](https://github.com/Croydon/tuda-vr-parkour-study/blob/main/study/checklist_for_instructor_to_execute_post_study.md)). Such notes ensure, that every participant hears all explanations and experience all trainings and tasks, in the same order and in the same way.
 
 During the 10 minute task, I make notes of everything interesting the participant might do and say. Furthermore, there is automatical logging of:
   * How many coins were collected in which area and round.
@@ -194,14 +194,16 @@ Due to time constraints, I could only perform the pre-study and actual study wit
 
 For the pre-study, participants were given an implementation that had a very different locomotion method, no cyber-sickness reduction method and the interaction was done directly by the controllers, without the portals or other more complex things.
 
-I had two participants.
+I had two participants (P1, P2), both male, being 29 and 27 years old (average: 28), that have rated their pre-existing experience on a scale from `1 - very inexperiened` to `5 - very experienced`, with a `2` and `1` respectively.
+
 TODO
+
 
 #### Study
 
-For the final study, I had four participants, that were given the final implementation of the locomation and interaction method and with enabled tunneling vignette.
+For the final study, I had four participants (P3 - P6), that were given the final implementation of the locomation and interaction method and with enabled tunneling vignette.
 
-TODO
+One participant was female (P3), the others (P4 - P6) are male. The age average was 41.25 years (56, 50, 32, 27). On a scale from 1 to 5, P5 estimated their previous VR experience with a `2`, while everyone else answered with a `1`.
 
 
 #### Results
