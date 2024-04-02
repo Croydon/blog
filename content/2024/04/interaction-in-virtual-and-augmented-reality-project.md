@@ -202,15 +202,16 @@ Here is a video of myself doing the 10 minute task:
 
 Due to time constraints, I could only perform the pre-study and actual study with a small mount of people.
 
-the raw data of all results can be found in the [study data repository](https://github.com/Croydon/tuda-vr-parkour-study).
+The raw data of all results can be found in the [study data repository](https://github.com/Croydon/tuda-vr-parkour-study).
+
+For the pre-study, participants were given an implementation that had a very different locomotion method, no cyber-sickness reduction method and the interaction was done directly by the controllers, without the portals or other more complex things. Furthermore, in the pre-study, they only had to do one interaction trask per race track part, instead of five.
+
+Hence, the data between the pre-study and the final study is only compareable with some caution, unfortunately.
+
 
 #### Pre-Study
 
-For the pre-study, participants were given an implementation that had a very different locomotion method, no cyber-sickness reduction method and the interaction was done directly by the controllers, without the portals or other more complex things.
-
 I had two participants (P1, P2), both male, being 29 and 27 years old (average: 28), that have rated their pre-existing experience on a scale from `1 - very inexperiened` to `5 - very experienced`, with a `2` and `1` respectively.
-
-
 
 
 TODO
@@ -227,16 +228,41 @@ TODO
 
 #### Comparision
 
-##### Average collected coints per round per participant
+##### Race track parts finished
+
+|          | Part1  | Part 2   | Part 3
+| -------- | -------- | -------- | -------
+| P1       | 4     | 3    | 3
+| P2       | 5     | 5       | 4
+| **Average pre-study** | 4.5 |  4 | 3.5
+| P3       | 1       | 1       | 0
+| P4       | 1     |   1  | 0
+| P5       | 1     |  1   | 1
+| P6       | 2     |  2   | 2
+| **Average study** | 1.25 |  1.25 | 0.75
+| **Average total** | 2.33 |  2.17 | 1.67
+
+
+##### Average collected coins per round
 
 |          | Part1 / max 16  | Part 2 / max 30   | Part 3 / max 23
 | -------- | -------- | -------- | -------
 | P1       | 0.75     | 20.33    | 15.33
 | P2       | 13.4     | 29       | 17
+| **Average pre-study** | 7.08  | 24.67  | 16.17
 | P3       | 10       | 20       | /
 | P4       | 11     |   14  | /
 | P5       | 14     |  30   | 23
 | P6       | 9.5     |  12.5   | 16.5
+| **Average study** | 11.13  | 19.13  | 19.75
+| **Average total** | 9.78 | 20.97  | 17.96
+
+
+In the pre-study, the participants were able to finish more rounds. While this could correlate with the locomotion system theoretically, it is more likely, that this due to the increased interaction requirement from solving only one object task in the pre-study per race track part, instead of five in the final study. Thus keeping the participants longer busy with the interaction task and preventing them from moving forward.
+
+In the pre-study, only Part 3 had coins up in the air. In Part 1 and 2 all coins were placed on the ground in the pre-study, while the final study, had for every part some coins on the ground and some in the air. The results shows, that people have collected some more coints on average in the final study in Part 3 than in the pre-study, backing up my overall impression, that people struggled with jumping in the pre-study and had an easier time to collect them in the final study due to the new flying locomotion technique.
+
+However, there is not enough data, to have a strong guess, why the average collected coins in part 1 and part 2 have mixed results. It might be, that people performed better in part 1 in the final study than in the pre-study, due to the locomotion system slowing down horizontal accerleration more quickly, thus allowing better control in this part of the race track with the most curves. In part 2, however, people collected more coins in the pre-study, this could be due to the fact, that all coins were on the ground in the pre-study, but many were flying in the final study - and simultanously, this part only has a single curve, thus, potential improvements in the horizontal agility might not have a huge impact, in contrast to the results of part 1.
 
 
 TODO
