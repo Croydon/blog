@@ -161,7 +161,7 @@ The pre-study and study design and their purpose do not match the typical struct
 
 Due to the structure of the IVAR course, we basically only had to have one level of each independent variable, meaning only one implementation of each system / technique. We would then compare our results to the results of the other course students, that have their own implementations. This comparision is rather vague, given our freedom in the implementation, reaching from only changing the position of some coins to re-doing the entire virtual environment from the ground up in another game engine.
 
-I extended this task a bit to come closer to a typical study structure again, by performing a pre-study with a different implementation / level of all three systems / independent variables.
+I extended this task a bit to come closer to a typical study structure again, by performing two user studies with a different implementation / level of all three systems / independent variables. I am going to call the first one pre-study, and the second just study or final study for the purpose of this report, even though the term `pre-study` is commonly used differently.
 
 The study is therefore a between-subject in-lab design, with two levels of each independent variable. Even though it is not a clean comparision, due to the fact that other conditions as the independent variables changed, which should not be the case ideally.
 
