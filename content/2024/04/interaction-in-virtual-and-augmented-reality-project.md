@@ -132,7 +132,7 @@ One of the positive effects of this portal interaction method is, that objects c
 
 While Unity is a powerful tool with many features, it has also many quirks that, at times, were really frustrating.
 
-My biggest pain point with Unity are the incompatibilities everywhere. Not just between different version of the Unity Editor itself, but also between different versions of official(!) Unity packages. And even within the same Unity Editor version with the same sets of packages and package version, you can find many project-based toggles than switch between some old implementations and behaviours of _something_. Additionally, you have many fundamental component choices like which Unity [render pipeline](https://docs.unity3d.com/Manual/render-pipelines.html) your project uses, that have signifiant influrence on what you can do in the first place. And changing later might require re-working major parts of a project, which is oftentimes not feasiable.
+My biggest pain point with Unity are the incompatibilities everywhere. Not just between different version of the Unity Editor itself, but also between different versions of official(!) Unity packages. And even within the same Unity Editor version with the same sets of packages and package version, you can find many project-based toggles than switch between some old implementations and behaviours of _something_. Additionally, you have many fundamental component choices like which Unity [render pipeline](https://docs.unity3d.com/Manual/render-pipelines.html) your project uses, that have signifiant influrence on what you can do in the first place. And changing later might require re-working major parts of a project, which is oftentimes not feasible.
 
 All of those things, lead to the phenomenon that whenever you are searching for learning resources, packages, scripts, assets etc. there is an enourmously high chance, that it won't work for your project for one reason or another. This does not apply to basics, so while learning the basics of Unity, you should be fine. Unity experts are probably also not that much effected by that, as they have enough knowledge to workaround this or implement everything by themselves in the first place. But for everyone falling in-between, this is frustrating.
 
@@ -163,7 +163,7 @@ Due to the structure of the IVAR course, we basically only had to have one level
 
 I extended this task a bit to come closer to a typical study structure again, by performing a pre-study with a different implementation / level of all three systems / independent variables.
 
-The study is therefore a between-subject design, with two levels of each independent variable.
+The study is therefore a between-subject in-lab design, with two levels of each independent variable. Even though it is not a clean comparision, due to the fact that other conditions as the independent variables changed, which should not be the case ideally.
 
 
 The general procedure  of the user study is as follows:
@@ -261,7 +261,7 @@ In the pre-study, the participants were able to finish more rounds. While this c
 
 In the pre-study, only Part 3 had coins up in the air. In Part 1 and 2 all coins were placed on the ground in the pre-study, while the final study, had for every part some coins on the ground and some in the air. The results shows, that people have collected some more coins on average in the final study in Part 3 than in the pre-study, backing up my overall impression, that people struggled with jumping in the pre-study and had an easier time to collect them in the final study due to the new flying locomotion technique.
 
-However, there is not enough data, to have a strong guess, why the average collected coins in part 1 and part 2 have mixed results. It might be, that people performed better in part 1 in the final study than in the pre-study, due to the locomotion system slowing down horizontal accerleration more quickly, thus allowing better control in this part of the race track with the most curves. In part 2, however, people collected more coins in the pre-study, this could be due to the fact, that all coins were on the ground in the pre-study, but many were flying in the final study - and simultanously, this part only has a single curve, thus, potential improvements in the horizontal agility might not have a huge impact, in contrast to the results of part 1.
+However, there is not enough data, to have a strong guess, why the average collected coins in part 1 and part 2 have mixed results. It might be, that people performed better in part 1 in the final study than in the pre-study, due to the locomotion system slowing down horizontal accerleration more quickly, thus allowing better control in this part of the race track with the most curves. In part 2, however, people collected more coins in the pre-study, this could be due to the fact, that all coins were on the ground in the pre-study, but many coins were flying in the final study - and simultanously, this part only has a single curve, thus, potential improvements in the horizontal agility might not have a huge impact, in contrast to the results of part 1.
 
 
 ##### Task Interaction Error Offset Average
@@ -323,9 +323,9 @@ In the future, the study could be performed with more people to get more signifi
 
 Several ideas did not made it into the final version of my project due to the limited time. For once, it would be nice to implement a restarting option directly into the game. Currently to start over, you have to close and re-open the application.
 
-Second, I would have liked to experiment with portals, that allow you to see the camera perspective of the exit portal within the entry portal, thus eleminating the factor, that you have to look at the T-objects from afar, enabling that other objects can be in-between the entry and exit portal that block the natural line-of-sight and making a literal limitless range between the entry and exit portal possible. The precision of such a system might than be virtual identical to the results of the pre-study.
+Second, I would have liked to experiment with portals, that allow you to see the camera perspective of the exit portal within the entry portal, thus eleminating the factor, that you have to look at the T-objects from afar, enabling that other objects can be in-between the entry and exit portal that block the natural line-of-sight and making a literal limitless range between the entry and exit portal possible. The precision of such a system might than be virtual identical to the results of the pre-study, that used direct controller grabbing manipulations.
 
-Futhermore, I wanted to thematically go deeper into the Portal 2 direction. I began to create a prototype for a starting area in which the player spawns, when loading the application. While my concept also used this place for some entertainment, it also would have fulfilled the practical purpose of on-boarding the player. It would have explained how to configure the flying height with the right controller and how to use the controls in general, therefore requiring no external knowledge before starting the game.
+Futhermore, I wanted thematically to go deeper into the Portal 2 direction. I began to create a prototype for a starting area in which the player spawns, when loading the application. While my concept also used this place for some entertainment, it also would have fulfilled the practical purpose of on-boarding the player. It would have explained how to configure the flying height with the right controller and how to use the controls in general and what the goals are, therefore requiring no external knowledge before starting the game.
 
 In Portal 2, players are test subjects that have to finish experimental test chambers. Since my project is used for a study and the players are study participants, I wanted to double down on this thematically. You can find a screenshot of the concept starting area down below. Spoiler: Since the player is not particulary safe in Portal 2 either, this starting area might have catched fire and exploded eventually, destroying the starting area and allowing the player to start the parkour.
 
@@ -334,7 +334,7 @@ In Portal 2, players are test subjects that have to finish experimental test cha
 
 ## Conclusion
 
-During this project I was able to learn a lot about the Unity Engine and VR. I designed and executed an in-lab study with participants and analysed the results, something that I had only done once before, but which is something that I find quite interesting. Figuring out the physiological and psychological reasons, why humans interact with computer systems in the way they do and trying to understand what methods work under which particular conditions can be quite exciting.
+During this project I was able to learn a lot about the Unity Engine and VR. I designed and executed an in-lab user study with participants and analysed the results, something that I had only done once before, but which is something that I find quite interesting. Figuring out the physiological and psychological reasons, why humans interact with computer systems in the way they do and trying to understand what methods work under which particular conditions can be quite exciting.
 
 
 ## Resources
