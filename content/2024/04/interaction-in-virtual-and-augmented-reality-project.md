@@ -110,7 +110,7 @@ Since I moved away from the superhero-theming, my original idea for the interact
 The original parkour project enabled to grab and rotate the T-objects by moving the controllers inside the T-objects, pressing the grab button and than control it with regular hand and arm movements.
 
 This has several advantages:
-  * 6 degress of freedom
+  * 6 degrees of freedom
   * rather intuitive and natural
   * direct way to manipulate
 
@@ -161,12 +161,12 @@ The pre-study and study design and their purpose do not match the typical struct
 
 Due to the structure of the IVAR course, we basically only had to have one level of each independent variable, meaning only one implementation of each system / technique. We would then compare our results to the results of the other course students, that have their own implementations. This comparision is rather vague, given our freedom in the implementation, reaching from only changing the position of some coins to re-doing the entire virtual environment from the ground up in another game engine.
 
-I extended this task a bit to come closer to a typical study structure again, by performing two user studies with a different implementation / level of all three systems / independent variables. I am going to call the first one pre-study, and the second just study or final study for the purpose of this report, even though the term `pre-study` is commonly used differently.
+I extended this task a bit to come closer to a typical study structure again, by performing two user studies with a different implementation / level of all three systems / independent variables. I am going to call the first one pre-study, and the second just study or final study for the purpose of this report, even though the term `pre-study` is commonly used differently in most aspects.
 
 The study is therefore a between-subject in-lab design, with two levels of each independent variable. Even though it is not a clean comparision, due to the fact that other conditions as the independent variables changed, which should not be the case ideally.
 
 
-The general procedure  of the user study is as follows:
+The general procedure of the user study is as follows:
 
   * Welcome / Introduction
   * Ethnical disclaimer (participants are voluntary, unpaid, can end the experiment at any given time)
