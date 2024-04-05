@@ -6,7 +6,7 @@ Image: /assets/2024/ivar/thumbnail.jpg
 Template: single
 ---
 
-[Off-Topic note: The view of this blog post is not (yet) optimized for mobile browsers, I would recommend to read it on a bigger screen if possible. Additionally, I will make the tables more readable.]
+[Off-Topic note: The view of this blog post is not (yet) optimized for mobile browsers, I would recommend to read it on a bigger screen if possible.]
 
 This is my report for my university project for the course Interaction in Virtual and Augmented Reality.
 
