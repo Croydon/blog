@@ -27,7 +27,8 @@
             "extensions": [
                 "bmewburn.vscode-intelephense-client",
                 "mrmlnc.vscode-apache",
-                "mblode.twig-language-2"
+                "mblode.twig-language-2",
+                "znck.grammarly"
             ]
         }
     },
