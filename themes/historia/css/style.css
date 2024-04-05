@@ -62,6 +62,22 @@
   animation: loader 1s linear infinite;
 }
 
+table,
+th,
+tr,
+td {
+  border: 1px solid black;
+}
+
+th,
+td {
+  padding: 6px;
+}
+
+thead tr {
+  border-bottom: 2px solid black;
+}
+
 /* End of new section */
 
 /* =======================================================
