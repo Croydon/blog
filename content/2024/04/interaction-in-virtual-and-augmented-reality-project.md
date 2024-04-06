@@ -147,7 +147,7 @@ The Meta integration (and the former Oculus integration) provides another option
 
 I also added CI and CD for my project via GitHub Actions. For each git push, the Unity project gets build, any warnings and errors get reported and if the build is successful, the APK file is uploaded to GitHub as a build artifact. When I tag a new version of my implementation, a GitHub Release gets created and the APK file is uploaded to it as well.
 
-You can find the [CI runs  here](https://github.com/Croydon/tuda-vr-parkour/actions) and the [releases here](https://github.com/Croydon/tuda-vr-parkour/releases).
+You can find the [CI runs here](https://github.com/Croydon/tuda-vr-parkour/actions) and the [releases here](https://github.com/Croydon/tuda-vr-parkour/releases).
 
 
 ## Study
@@ -173,8 +173,8 @@ The general procedure of the user study is as follows:
   * Privacy disclaimer (what data is saved and published?)
   * Pre-Questionnaire
   * Teaching / Explanation of the hardware, virtual environment, tasks and control
-  * Participants can try the controls, locomotion and and interaction for some time
-  * Explain the task once more: As many rounds as possible, as many collected coins as possible, as precise at the interaction task as possible. Your own choice where your priorities are.
+  * Participants can try the controls, locomotion and interaction for some time
+  * Explain the task once more: As many rounds as possible, as many collected coins as possible, as precise at the interaction task as possible. Your own choice where your priorities are
   * 10 minute task performance
   * Post-Questionnaire
   * Goodbye / Hardware cleaning
