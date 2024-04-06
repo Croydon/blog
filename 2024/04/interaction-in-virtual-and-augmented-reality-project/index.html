@@ -137,7 +137,7 @@
 <p>The Meta integration (and the former Oculus integration) provides another option to build the project for a Meta Quest device, besides the default Unity build options. Those Meta build dialogs promise to be quicker, since they are using better caching. For my project it turns out, that those builds took ~ 12 - 14 minutes for each build, while the default Unity build option took around 8 - 9 minutes, at the time when I started to use the default build. It is now even faster, since I removed a lot of unused assets from the project and applied some more recommended settings (e.g. <a href="https://blog.unity.com/engine-platform/better-build-times-and-iteration-speed-for-quest">disabling strip engine code</a>, <a href="https://github.com/Croydon/tuda-vr-parkour/commit/473850f2f4146e91d7c7cc7c50a0de7b05028dd5">commit</a>).</p>
 <h2>CI / CD</h2>
 <p>I also added CI and CD for my project via GitHub Actions. For each git push, the Unity project gets build, any warnings and errors get reported and if the build is successful, the APK file is uploaded to GitHub as a build artifact. When I tag a new version of my implementation, a GitHub Release gets created and the APK file is uploaded to it as well.</p>
-<p>You can find the <a href="https://github.com/Croydon/tuda-vr-parkour/actions">CI runs  here</a> and the <a href="https://github.com/Croydon/tuda-vr-parkour/releases">releases here</a>.</p>
+<p>You can find the <a href="https://github.com/Croydon/tuda-vr-parkour/actions">CI runs here</a> and the <a href="https://github.com/Croydon/tuda-vr-parkour/releases">releases here</a>.</p>
 <h2>Study</h2>
 <p>I designed a user study, made some early test runs with a pre-study and then, with some small study adjustments and a heavily changed implementation, I performed the actual study.</p>
 <h3>Study Design</h3>
@@ -152,8 +152,8 @@
 <li>Privacy disclaimer (what data is saved and published?)</li>
 <li>Pre-Questionnaire</li>
 <li>Teaching / Explanation of the hardware, virtual environment, tasks and control</li>
-<li>Participants can try the controls, locomotion and and interaction for some time</li>
-<li>Explain the task once more: As many rounds as possible, as many collected coins as possible, as precise at the interaction task as possible. Your own choice where your priorities are.</li>
+<li>Participants can try the controls, locomotion and interaction for some time</li>
+<li>Explain the task once more: As many rounds as possible, as many collected coins as possible, as precise at the interaction task as possible. Your own choice where your priorities are</li>
 <li>10 minute task performance</li>
 <li>Post-Questionnaire</li>
 <li>Goodbye / Hardware cleaning</li>
