@@ -157,13 +157,30 @@ I designed a user study, made some early test runs with a pre-study and then, wi
 
 ### Study Design
 
-The pre-study and study design and their purpose do not match the typical structures of pre-studies and (actual) studies to some degree. Typically, you want to choose between a between-subject and a within-subject study structure and use the study to generate data, that helps to evaluate the different levels of the independent variables of the study. In our case, we have three independent variables. Those are the locomotion system, the interaction system and the cyber-sickness reduction technique.
+The pre-study design and (final-)study design and their purpose do not match the typical structures of pre-studies and (actual) studies to some degree. A pre-study typically tests the study design itself, before you go all out and search for more study participants.
+
+Typically, you formulate your research questions and one or more hypotheses for which you are trying to find evidence or counter-evidence, based on your aggregrated data from your study. Those data points are dependent variables (DV), that depend on the independent variables (IV) - the conditions that are controlled within the experiment.
+
+If you change these IVs within the experiment for a single participant, you have a so called within-subject study design. If you change the IVs only between pariticpants, you have a so called between-subject study design.
+
+In our case, we have three IVs:
+  * the locomotion system
+  * the interaction system
+  * the cyber-sickness reduction technique
+
+And the following DVs:
+  * cyber-sickness
+  * presence
+  * enjoyment
+  * speed (finished rounds)
+  * locomotion precision (collected coins)
+  * interaction precision (T-objects error offset)
 
 Due to the structure of the IVAR course, we basically only had to have one level of each independent variable, meaning only one implementation of each system / technique. We would then compare our results to the results of the other course students, who have their own implementations. This comparison is rather vague, given our freedom in the implementation, reaching from only changing the position of some coins to re-doing the entire virtual environment from the ground up in another game engine.
 
 I extended this task a bit to come closer to a typical study structure again, by performing two user studies with a different implementation / level of all three systems / independent variables. I am going to call the first one pre-study, and the second just study or final study for the purpose of this report, even though the term `pre-study` is commonly used differently in most aspects.
 
-The study is therefore a between-subject in-lab design, with two levels of each independent variable. Even though it is not a clean comparison, due to the fact that other conditions as the independent variables changed, which should not be the case ideally.
+The user study is therefore a between-subject in-lab design, with two levels of each independent variable. Even though it is not a clean comparison, since other conditions as the independent variables changed, which should not be the case ideally.
 
 
 The general procedure of the user study is as follows:
@@ -202,13 +219,13 @@ Here is a video of myself doing the 10 minute task:
 
 ### Study Results
 
-Due to time constraints, I could only perform the pre-study and actual study with a small mount of people.
+Due to time constraints, I could only perform the pre-study and actual study with a small amount of people.
 
 The raw data of all results can be found in the [study data repository](https://github.com/Croydon/tuda-vr-parkour-study).
 
-For the pre-study, participants were given an implementation that had a very different locomotion method, no cyber-sickness reduction method and the interaction was done directly by the controllers, without the portals or other more complex things. Furthermore, in the pre-study, they only had to do one interaction task per race track part, instead of five.
+For the pre-study, participants were given an implementation that had a very different, teleportation-based locomotion method, no cyber-sickness reduction method and the interaction was done directly by the controllers within the physical length of your arms, without the portals or other more complex things. Furthermore, in the pre-study, they only had to do one interaction task per race track part, instead of five.
 
-Hence, the data between the pre-study and the final study is only comparable with some caution, unfortunately.
+Hence, the collected data between the pre-study and the final study is only comparable with some caution, unfortunately.
 
 
 #### Pre-Study Participants
