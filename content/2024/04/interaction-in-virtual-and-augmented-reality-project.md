@@ -96,7 +96,7 @@ For the tunneling vignette, I tried to use several pre-existing implementations,
   * Meta SDK vignette
   * Unity XR vignette
 
-The first two solutions did probably not work due to incompatibilities with my used Unity version. Meta's vignette was surprisingly undocumented and seems to be only directly mentioned in older Meta package versions. So perhaps this is somewhat unmaintained, but one way or another, I couldn't get it working. And finally, the Unity XR vignette is not compatible with the Meta SDKs as it requires to be attached to a singular camera object. Meta's integration has one camera game object for the left lens and one for the right lens.
+The first two solutions did probably not work due to incompatibilities with my used Unity version. Meta's vignette was sparsely undocumented and seems to be only directly mentioned in older Meta package versions. So perhaps this is somewhat unmaintained, but one way or another, I couldn't get it working. And finally, the Unity XR vignette is not compatible with the Meta SDKs as it requires to be attached to a singular camera object. Meta's integration has one camera game object for the left lens and one for the right lens.
 
 Ultimately, I am successfully using the [Tilia.Visuals.Vignette.Unity](https://github.com/ExtendRealityLtd/Tilia.Visuals.Vignette.Unity) package. The vignette gets bigger/smaller/disabled dynamically, based on the player's overall velocity, both horizontal and vertical.
 
