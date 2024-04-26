@@ -61,5 +61,5 @@ for subdir, dirs, files in os.walk("./"):
 
 
 # TODO: Fix timezone
-# Make feed being parserd as actual xml
+# Make feed being parsed as actual xml
 os.rename("feed.html", "feed.xml")
