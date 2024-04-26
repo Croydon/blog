@@ -28,7 +28,7 @@ pages_order: asc
 ##
 # Custom
 
-custom_html_head_content: '<link rel="me" href="https://mastodon.social/@croydon">Mastodon</a>'
+custom_html_head_content: '<link rel="me" href="https://mastodon.social/@croydon">'
 
 # Note im Footer
 footnote: "© Cr0ydon"
