@@ -28,6 +28,8 @@ pages_order: asc
 ##
 # Custom
 
+custom_html_head_content: '<link rel="me" href="https://mastodon.social/@croydon">Mastodon</a>'
+
 # Note im Footer
 footnote: "© Cr0ydon"
 icon_png: "/assets/general/icon/icon.png"
