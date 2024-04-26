@@ -131,12 +131,13 @@ class QR {
 	generateCode(content = null, moduleSize = null) {
 		const targetElement = document.querySelector(this.elementSelector);
 		
+		if(content == null) {
+			content = targetElement.dataset.qrContent;
+		}
+		
 		switch (content) {
 			case "dynamic:thisPage":
 				content = window.location.href;
-				break;
-			case null:
-				content = targetElement.dataset.qrContent;
 				break;
 		}
 
