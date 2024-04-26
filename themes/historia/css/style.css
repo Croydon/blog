@@ -78,8 +78,12 @@
   border-bottom: 2px solid black;
 }
 
+.qr-container .qr-title {
+  margin-bottom: 4px;
+}
+
 /* center QR codes horizontal */
-.qr {
+.qr-container .qr {
   display: flex;
   justify-content: center;
 }

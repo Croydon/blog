@@ -128,26 +128,41 @@ class QR {
 	constructor(elementSelector) {
 		this.elementSelector = elementSelector;
 	}
-	generateCode(content) {
+	generateCode(content = null, moduleSize = null) {
+		const targetElement = document.querySelector(this.elementSelector);
+		
 		switch (content) {
 			case "dynamic:thisPage":
 				content = window.location.href;
 				break;
+			case null:
+				content = targetElement.dataset.qrContent;
+				break;
 		}
-		let qrHtml = QRCode.generateHTML(content, {ecclevel: "M", modulesize: 12});
-		document.querySelector(this.elementSelector).innerHTML = "";
-		document.querySelector(this.elementSelector).appendChild(qrHtml);
+
+		if(moduleSize == null) {
+			if (targetElement.dataset.hasOwnProperty("qrModulesize")) {
+				moduleSize = targetElement.dataset.qrModulesize;
+			}
+			else {
+				moduleSize = 10;
+			}
+		}
+
+		let qrHtml = QRCode.generateHTML(content, {ecclevel: "M", modulesize: moduleSize});
+	 	targetElement.innerHTML = "";
+		targetElement.appendChild(qrHtml);
 	}
 }
 
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("div.qr").forEach(function (element) {
 	    let qr = new QR(`#${element.id}`);
-	    qr.generateCode(element.dataset.qr);
+	    qr.generateCode();
 	    // add eventlistener to element that triggers when the data-content attributes changes
 	    const observer = new MutationObserver(function (mutations) {
 		    mutations.forEach(function (mutation) {
-			    qr.generateCode(mutation.target.dataset.qr);
+			    qr.generateCode();
 		    });
 		}).observe(element, { attributes: true });		
     });
