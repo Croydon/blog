@@ -121,3 +121,34 @@
 
 
 }());
+
+
+// Abstracing my use of qr.js for the case that I will exchange the QR lib in the future
+class QR {
+	constructor(elementSelector) {
+		this.elementSelector = elementSelector;
+	}
+	generateCode(content) {
+		switch (content) {
+			case "dynamic:thisPage":
+				content = window.location.href;
+				break;
+		}
+		let qrHtml = QRCode.generateHTML(content, {ecclevel: "M", modulesize: 12});
+		document.querySelector(this.elementSelector).innerHTML = "";
+		document.querySelector(this.elementSelector).appendChild(qrHtml);
+	}
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("div.qr").forEach(function (element) {
+	    let qr = new QR(`#${element.id}`);
+	    qr.generateCode(element.dataset.qr);
+	    // add eventlistener to element that triggers when the data-content attributes changes
+	    const observer = new MutationObserver(function (mutations) {
+		    mutations.forEach(function (mutation) {
+			    qr.generateCode(mutation.target.dataset.qr);
+		    });
+		}).observe(element, { attributes: true });		
+    });
+});

@@ -62,20 +62,26 @@
   animation: loader 1s linear infinite;
 }
 
-table,
-th,
-tr,
-td {
+.historia-post table:not(.qrcode),
+.historia-post table:not(.qrcode) th,
+.historia-post table:not(.qrcode) tr,
+.historia-post table:not(.qrcode) td {
   border: 1px solid black;
 }
 
-th,
-td {
+.historia-post table:not(.qrcode) th,
+.historia-post table:not(.qrcode) td {
   padding: 6px;
 }
 
-thead tr {
+.historia-post table:not(.qrcode) thead tr {
   border-bottom: 2px solid black;
+}
+
+/* center QR codes horizontal */
+.qr {
+  display: flex;
+  justify-content: center;
 }
 
 /* End of new section */
